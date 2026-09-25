@@ -1,0 +1,9 @@
+CAR_TRAFFIC_DONE
+CAR_GAUNTLET_DONE
+== decider seed 42 real time
+timeout, last status: {"phase":"grounded","altitude":0,"distanceToPad":192.1,"simSeconds":172,"decisions":0,"stale":13,"errors":0,"landingCommitted":false}
+null
+== decider seed 42 timescale 0.1
+timeout, last status: {"phase":"grounded","altitude":0,"distanceToPad":192.1,"simSeconds":53,"decisions":91,"stale":17,"errors":0,"landingCommitted":false}
+null
+DECIDER_RUNS_DONE

@@ -1,0 +1,221 @@
+[
+ {
+  "words": 1,
+  "chars": 3,
+  "n_questions": 1,
+  "input_tokens": 276,
+  "output_tokens": 21,
+  "ms": 646
+ },
+ {
+  "words": 1,
+  "chars": 3,
+  "n_questions": 5,
+  "input_tokens": 340,
+  "output_tokens": 89,
+  "ms": 558
+ },
+ {
+  "words": 1,
+  "chars": 3,
+  "n_questions": 10,
+  "input_tokens": 420,
+  "output_tokens": 174,
+  "ms": 580
+ },
+ {
+  "words": 1,
+  "chars": 3,
+  "n_questions": 20,
+  "input_tokens": 590,
+  "output_tokens": 354,
+  "ms": 555
+ },
+ {
+  "words": 75,
+  "chars": 463,
+  "n_questions": 1,
+  "input_tokens": 358,
+  "output_tokens": 21,
+  "ms": 579
+ },
+ {
+  "words": 75,
+  "chars": 463,
+  "n_questions": 5,
+  "input_tokens": 422,
+  "output_tokens": 89,
+  "ms": 613
+ },
+ {
+  "words": 75,
+  "chars": 463,
+  "n_questions": 10,
+  "input_tokens": 502,
+  "output_tokens": 174,
+  "ms": 550
+ },
+ {
+  "words": 75,
+  "chars": 463,
+  "n_questions": 20,
+  "input_tokens": 672,
+  "output_tokens": 354,
+  "ms": 620
+ },
+ {
+  "words": 375,
+  "chars": 2280,
+  "n_questions": 1,
+  "input_tokens": 689,
+  "output_tokens": 21,
+  "ms": 576
+ },
+ {
+  "words": 375,
+  "chars": 2280,
+  "n_questions": 5,
+  "input_tokens": 753,
+  "output_tokens": 89,
+  "ms": 556
+ },
+ {
+  "words": 375,
+  "chars": 2280,
+  "n_questions": 10,
+  "input_tokens": 833,
+  "output_tokens": 174,
+  "ms": 640
+ },
+ {
+  "words": 375,
+  "chars": 2280,
+  "n_questions": 20,
+  "input_tokens": 1003,
+  "output_tokens": 354,
+  "ms": 587
+ },
+ {
+  "words": 750,
+  "chars": 4565,
+  "n_questions": 1,
+  "input_tokens": 1104,
+  "output_tokens": 21,
+  "ms": 601
+ },
+ {
+  "words": 750,
+  "chars": 4565,
+  "n_questions": 5,
+  "input_tokens": 1168,
+  "output_tokens": 89,
+  "ms": 572
+ },
+ {
+  "words": 750,
+  "chars": 4565,
+  "n_questions": 10,
+  "input_tokens": 1248,
+  "output_tokens": 174,
+  "ms": 630
+ },
+ {
+  "words": 750,
+  "chars": 4565,
+  "n_questions": 20,
+  "input_tokens": 1418,
+  "output_tokens": 354,
+  "ms": 588
+ },
+ {
+  "words": 1500,
+  "chars": 9124,
+  "n_questions": 1,
+  "input_tokens": 1931,
+  "output_tokens": 21,
+  "ms": 607
+ },
+ {
+  "words": 1500,
+  "chars": 9124,
+  "n_questions": 5,
+  "input_tokens": 1995,
+  "output_tokens": 89,
+  "ms": 636
+ },
+ {
+  "words": 1500,
+  "chars": 9124,
+  "n_questions": 10,
+  "input_tokens": 2075,
+  "output_tokens": 174,
+  "ms": 569
+ },
+ {
+  "words": 1500,
+  "chars": 9124,
+  "n_questions": 20,
+  "input_tokens": 2245,
+  "output_tokens": 354,
+  "ms": 704
+ },
+ {
+  "words": 3000,
+  "chars": 18250,
+  "n_questions": 1,
+  "input_tokens": 3587,
+  "output_tokens": 21,
+  "ms": 753
+ },
+ {
+  "words": 3000,
+  "chars": 18250,
+  "n_questions": 5,
+  "input_tokens": 3651,
+  "output_tokens": 89,
+  "ms": 732
+ },
+ {
+  "words": 3000,
+  "chars": 18250,
+  "n_questions": 10,
+  "input_tokens": 3731,
+  "output_tokens": 174,
+  "ms": 716
+ },
+ {
+  "words": 3000,
+  "chars": 18250,
+  "n_questions": 20,
+  "input_tokens": 3901,
+  "output_tokens": 354,
+  "ms": 735
+ },
+ {
+  "words": 1,
+  "chars": 1,
+  "n_questions": 1,
+  "q_words": 5,
+  "input_tokens": 272,
+  "output_tokens": 21,
+  "ms": 570
+ },
+ {
+  "words": 1,
+  "chars": 1,
+  "n_questions": 1,
+  "q_words": 50,
+  "input_tokens": 317,
+  "output_tokens": 21,
+  "ms": 615
+ },
+ {
+  "words": 1,
+  "chars": 1,
+  "n_questions": 1,
+  "q_words": 200,
+  "input_tokens": 467,
+  "output_tokens": 21,
+  "ms": 569
+ }
+]

@@ -1,0 +1,72 @@
+{
+ "jev": {
+  "n": 87,
+  "agree": 55,
+  "timid": 24,
+  "go": 58,
+  "reckless": 0,
+  "brake": 10,
+  "stall": 1,
+  "stall_cases": 6,
+  "ped_fa": 0,
+  "ms": 387,
+  "top": "speed_up",
+  "top_share": 41
+ },
+ "llm": {
+  "n": 87,
+  "agree": 24,
+  "timid": 53,
+  "go": 58,
+  "reckless": 0,
+  "brake": 10,
+  "stall": 3,
+  "stall_cases": 6,
+  "ped_fa": 0,
+  "ms": 1918,
+  "top": "hold",
+  "top_share": 74
+ },
+ "laya": {
+  "n": 87,
+  "agree": 67,
+  "timid": 0,
+  "go": 58,
+  "reckless": 10,
+  "brake": 10,
+  "stall": 3,
+  "stall_cases": 6,
+  "ped_fa": 7,
+  "ms": 2741,
+  "top": "speed_up",
+  "top_share": 100
+ },
+ "decider": {
+  "n": 87,
+  "agree": 18,
+  "timid": 58,
+  "go": 58,
+  "reckless": 0,
+  "brake": 10,
+  "stall": 6,
+  "stall_cases": 6,
+  "ped_fa": 1,
+  "ms": 7007,
+  "top": "hold",
+  "top_share": 97
+ },
+ "kev": {
+  "n": 87,
+  "agree": 82,
+  "timid": 2,
+  "go": 58,
+  "reckless": 2,
+  "brake": 10,
+  "stall": 0,
+  "stall_cases": 6,
+  "ped_fa": 0,
+  "ms": 45415,
+  "top": "speed_up",
+  "top_share": 68
+ }
+}

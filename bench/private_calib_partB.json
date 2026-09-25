@@ -1,0 +1,2556 @@
+{
+ "states": {
+  "pb0": "Priya's toddler keeps pulling books off the low shelf and dropping them on the tile floor. Priya moves the books to a high shelf and fills the low shelf with soft toys. The next day the toddler pulls the toys off and drops them. What did Priya's change most likely achieve?",
+  "pb1": "A bakery starts giving each customer a free slice of yesterday's bread with any purchase. Within a month the bakery throws away much less bread at closing, while daily sales of fresh loaves are unchanged. What is the most likely reason waste dropped?",
+  "pb2": "Idris returned a borrowed ladder together with a box of pastries the neighbor had not asked for. Two weeks later the neighbor felt comfortable asking to borrow Idris's drill. What did the pastries most likely communicate?",
+  "pb3": "A hotel sign reads: 'Towels left on the floor will be replaced; towels hung on the rack will be left for you.' Which cost is the sign chiefly meant to reduce?",
+  "pb4": "A theater dims the lobby lights five minutes before the show while the lights inside the auditorium stay bright until curtain. What is the lobby dimming most likely meant to do?",
+  "pb5": "Sana always takes milk cartons from the back of the shelf, where the store places its newest deliveries. What is she most likely after?",
+  "pb6": "Whenever a doorbell rings on television, Ken's dog runs to the front door, though no visitor has ever arrived during a show. What does the dog's behavior show?",
+  "pb7": "Farida washes her new red sweater by hand, in cold water and on its own, even though the label says it can go in the machine with other clothes. What is she most likely worried about?",
+  "pb8": "The library removed the comfortable armchairs from the study room and replaced them with plain wooden chairs. The room now serves more students per day. What most likely explains the increase?",
+  "pb9": "A supermarket moved its hand baskets from the entrance to a spot halfway through the store. Shoppers who came in for one item now often leave with several. Why does the new basket position most likely increase purchases?",
+  "pb10": "Miguel wraps a rubber band around his wallet before a crowded festival, and a friend says it is a pickpocket trick. How does the band help?",
+  "pb11": "A dentist's office started sending appointment reminders two days ahead instead of the day before, and the number of missed appointments fell. What most likely explains the improvement?",
+  "pb12": "A ferry company stopped announcing the exact departure time and instead tells passengers 'boarding closes ten minutes before departure.' Fewer passengers now arrive late. Why does the new wording most likely help?",
+  "pb13": "On the coldest mornings Aunt Jo pours warm, not hot, water over her frozen car windshield. What is she avoiding by not using hot water?",
+  "pb14": "A pharmacy places its most-requested cold medicine at the far end of the store, past the shelves of snacks and cosmetics. What is the placement most likely intended to do?",
+  "pb15": "A restaurant reprinted its menu without currency symbols and without the '.00' after prices. Since then diners spend more on average. What effect was the design most likely aiming for?",
+  "pb16": "Ben's phone battery drains faster on the train than at home, even when he does not touch it. What is the most likely cause?",
+  "pb17": "A cinema sells a large popcorn that costs only a little more than the medium, and hardly anyone buys the medium. Why does the cinema keep the medium on the menu?",
+  "pb18": "Grandpa Ilan sets his watch five minutes fast and knows it. He still arrives exactly on time rather than early. Why does the trick no longer help him?",
+  "pb19": "A campsite asks visitors to hang food bags from a high branch far from the tents, though there are no bears in the region. What is the rule most likely for?",
+  "pb20": "A landlord replaced the coin-operated washing machines with free ones. The electricity bill rose by more than the lost coin revenue. What most likely happened?",
+  "pb21": "Dev never carries an umbrella but keeps a folded one in his desk drawer at work. What kind of rain is he most likely preparing for?",
+  "pb22": "After a restaurant started listing calories next to each dish, salad sales stayed flat but dessert sales fell. What does this suggest about the diners?",
+  "pb23": "A nursery school makes children put on their own coats before going out, even though a teacher could do it much faster. What is the school most likely valuing?",
+  "pb24": "A town's bus route was changed so the last stop is now the hospital instead of the mall. Complaints came from shop owners, not from patients. Why the shop owners?",
+  "pb25": "Host: 'Would you like some more cake?' Guest: 'I really should be getting home before the roads ice over.' What is the guest most likely conveying?",
+  "pb26": "Manager: 'How is the report coming along?' Employee: 'The data finally arrived this morning.' What is the employee most likely implying?",
+  "pb27": "A: 'Did you enjoy the concert?' B: 'The seats were very comfortable.' What does B most likely think of the music?",
+  "pb28": "Customer: 'Is this jacket available in blue?' Clerk: 'The grey one is our best seller.' What is the clerk most likely telling the customer?",
+  "pb29": "Roommate A: 'Are you using the kitchen tonight?' Roommate B: 'I've got leftovers.' What does B most likely mean?",
+  "pb30": "A: 'Are you coming to the reunion?' B: 'I wouldn't miss it for the world... if I weren't on call that weekend.' What is B saying?",
+  "pb31": "Friend: 'Want to come to the game on Saturday?' Reply: 'Who else is going?' What does the reply most likely mean?",
+  "pb32": "Diner: 'Could I get this without the sauce?' Waiter: 'The chef prefers it served as on the menu.' What is the waiter most likely saying?",
+  "pb33": "Neighbor, the next morning: 'Your party last night sounded like fun.' What is the neighbor most likely communicating?",
+  "pb34": "Two colleagues. A: 'Should we ask Dana to join the project?' B: 'Dana is very... thorough.' What does B most likely think?",
+  "pb35": "Parent: 'Have you finished your homework?' Child: 'I finished the math.' What has the child most likely implied?",
+  "pb36": "Landlord's notice: 'Tenants are reminded that the courtyard is not a storage area.' What most likely prompted the notice?",
+  "pb37": "A: 'Can you lend me fifty for the weekend?' B: 'Payday is Tuesday.' What is B most likely saying?",
+  "pb38": "A: 'You haven't seen my keys, have you?' B: 'Not since you put them in the fridge.' What is B most likely telling A?",
+  "pb39": "Interviewer: 'Why did you leave your last job?' Candidate: 'I'm really looking for a place where ideas are heard.' What is the candidate most likely implying?",
+  "pb40": "Doctor: 'How is the new medication?' Patient: 'I can sleep through the night now.' What has the patient most likely conveyed?",
+  "pb41": "Coach, after a match: 'Well, at least everyone showed up.' What is the coach most likely conveying?",
+  "pb42": "Text from a friend: 'I'll be there at 8, unless you hear from me.' What does 'unless you hear from me' mean?",
+  "pb43": "Shopkeeper to a browsing customer: 'We close in five minutes.' What is the shopkeeper most likely asking the customer to do?",
+  "pb44": "A: 'Did Lena like the gift?' B: 'She said thank you.' What does B most likely suggest about Lena's reaction?",
+  "pb45": "Sign in a shared office kitchen: 'Your mother does not work here.' What is the sign asking people to do?",
+  "pb46": "Email opening: 'Per my last email, the figures are attached again.' What does the sender most likely feel?",
+  "pb47": "Colleague, to someone walking into a meeting: 'Nice of you to join us.' What is most likely true?",
+  "pb48": "A: 'Is the bridge safe to cross?' B: 'The mayor drives over it every morning.' What is B most likely arguing?",
+  "pb49": "At a party at 11 p.m., a guest asks the host: 'Do you know where the coats are?' What is the guest most likely signaling?",
+  "pb50": "A sealed glass jar half full of water is placed upside down on a table. Where is the water inside the jar?",
+  "pb51": "Nour faces north, turns right twice, then left once, then right three times. Which way does she face?",
+  "pb52": "A pine ball and a steel ball of the same size are dropped into a bucket of water. Which statement is true?",
+  "pb53": "Two identical lit candles are each covered by a jar sealed to the table, one jar small and one large. Which candle goes out first?",
+  "pb54": "A ladder leans against a wall. Its foot is pulled farther from the wall while it keeps leaning. What happens to the top end?",
+  "pb55": "A map has north at the top. You stand at the town hall facing the river, which lies due west of the hall. What direction is on your right?",
+  "pb56": "Amir stacks three books: the dictionary at the bottom, the poetry book on it, and the atlas on top. He then moves the bottom book to the top. What is the new order, bottom to top?",
+  "pb57": "A helium balloon is tied by a string to the floor of a closed car. When the car accelerates forward, which way does the balloon lean?",
+  "pb58": "A rectangular room has one door in the middle of the south wall. Lena enters, walks straight to the far wall, turns left, walks to the corner, and stops. Which corner is she in?",
+  "pb59": "An ice cube floats in a glass of water filled exactly to the brim. What happens when the ice melts completely?",
+  "pb60": "Four copper coins lie on a table and a book is laid over three of them. A strong magnet is passed over the book. What happens?",
+  "pb61": "A see-saw balances with a 30 kg child sitting 2 m from the pivot on the left. A 20 kg child sits on the right. How far from the pivot must the second child sit to balance?",
+  "pb62": "A cube is painted red on all sides and then cut into 27 equal small cubes. How many small cubes have exactly one red face?",
+  "pb63": "A sheet of paper is folded in half twice, and a single hole is punched through all layers near the centre. How many holes are there when it is unfolded?",
+  "pb64": "Kofi walks 3 blocks east, 2 blocks north, 5 blocks west, and 2 blocks south. Where is he relative to his start?",
+  "pb65": "A flat metal ring is heated evenly. What happens to the hole in the middle?",
+  "pb66": "A bottle of oil and water is shaken and left to settle into two layers. A cork is dropped in. Where does the cork come to rest?",
+  "pb67": "Two runners start at the same point on a circular track and run in opposite directions at the same speed. Where do they first meet?",
+  "pb68": "A door has its hinges on your left when you face it from the hallway, and it opens away from you into the room. You go in and turn to face the door from inside. On which side are the hinges?",
+  "pb69": "A candle burns on a plate in a room whose only draft comes in through an open window on the north wall. Which way does the flame lean?",
+  "pb70": "A ball is thrown straight up inside a train moving at constant speed on a straight track. Where does it land?",
+  "pb71": "A tall thin glass and a short wide bowl each hold the same volume of water. In which is the water pressure at the bottom greater?",
+  "pb72": "Yara stands with her back to the setting sun. In which direction does her shadow point?",
+  "pb73": "An empty plastic bottle is sealed tightly at sea level and carried to a mountain top. What happens to the bottle?",
+  "pb74": "A shelf is fixed to a wall by two brackets with screws at the top and bottom of each. A heavy vase is placed at the far end of the shelf, away from the wall. Where is the shelf most likely to pull loose?",
+  "pb75": "Mira is three times as old as her son. In 12 years she will be twice as old as he is. How old is the son now?",
+  "pb76": "A tap fills an empty tub in 20 minutes, and the open drain empties a full tub in 30 minutes. With both open from empty, how long does the tub take to fill?",
+  "pb77": "A meeting is set for the last Thursday of a 30-day month whose first day is a Saturday. On what date is the meeting?",
+  "pb78": "Jonah pays for a 3.40 sandwich and a 1.85 drink with a 10 note. The cashier gives change using the fewest coins from 2, 1, 0.50, 0.20, 0.10 and 0.05. How many coins does Jonah receive?",
+  "pb79": "A bus leaves every 12 minutes starting at 6:00. Rina reaches the stop at 8:35. How long does she wait for the next bus?",
+  "pb80": "A train leaves at 22:40 and the journey takes 5 hours 35 minutes. What time does it arrive?",
+  "pb81": "Lin reads 40 pages a day on weekdays and 10 pages a day on weekends. Starting on a Monday, on which day does she finish a 300-page book?",
+  "pb82": "A shop sells pens at 3 for 2.00 or 0.80 each. What is the cheapest price for exactly 7 pens?",
+  "pb83": "A candle burns down 2 cm per hour. It was lit at 3 p.m., and at 7 p.m. it is 12 cm tall. How tall was it at 1 p.m., before it was lit?",
+  "pb84": "A car park charges 2 for the first hour and 1.50 for each additional hour or part of an hour. How much does a car parked from 9:20 to 13:05 pay?",
+  "pb85": "A lift carries at most 450 kg. Six people whose average weight is 70 kg are inside, and a 40 kg crate is added. How much more can the lift carry?",
+  "pb86": "Today is Wednesday. What day of the week was it 100 days ago?",
+  "pb87": "A grandmother turned 60 in the year her grandson was born. The grandson is now 17. In how many years will she be exactly four times his age?",
+  "pb88": "A 600-litre tank is one third full. A pump adds 25 litres per minute while a leak loses 5 litres per minute. How long until the tank is full?",
+  "pb89": "A clock loses 5 minutes every hour. It was set correctly at noon. When it shows 5:30 p.m., what is the true time?",
+  "pb90": "Three friends split a 90 bill. Ana pays twice what Bo pays, and Cy pays 6 more than Bo. How much does Ana pay?",
+  "pb91": "A ribbon 2 metres long is cut into pieces of 35 cm. How many full pieces are there, and how much is left over?",
+  "pb92": "A ferry sails from A to B in 40 minutes, waits 10 minutes, sails back in 40 minutes, and waits 10 minutes at A. Its first departure from A is at 7:00. When is its third departure from A?",
+  "pb93": "Olga's phone is at 40%. It charges 1% every 2 minutes when idle, but she uses it for the first 30 minutes, during which it gains only 1% every 3 minutes. How long until it reaches 100%?",
+  "pb94": "A garden is 12 m by 8 m with a path 1 m wide running all around its inside edge. What area is left for planting?",
+  "pb95": "A worker earns 15 per hour for the first 8 hours in a day and 1.5 times that rate afterward. She works 10 hours Monday and 6 hours Tuesday. What does she earn in total?",
+  "pb96": "A jug holds 1.5 litres and glasses hold 200 ml. After 6 glasses are poured from a full jug, how many more full glasses can be poured?",
+  "pb97": "Two candles are the same height. One burns out in 4 hours, the other in 6 hours. Both are lit together. After how long is the faster candle exactly half the height of the slower one?",
+  "pb98": "A subscription started on 15 January and renews every 45 days. In a non-leap year, on what date is the second renewal?",
+  "pb99": "One printer prints 12 pages per minute and another prints 8. Together they must print 300 pages, but the slower printer starts 5 minutes late. How long does the job take from the first printer's start?",
+  "pb100": "To repaint a wooden chair: sand, wipe off dust, prime, paint, let dry. Which step must come immediately after sanding?",
+  "pb101": "Four houses stand in a row: red, blue, green and yellow. The red house is immediately to the right of the blue one. The yellow house is at one end. The green house is not next to the yellow one. Which house is second from the left?",
+  "pb102": "Which word is the odd one out under the rule 'the word contains exactly two vowels'?",
+  "pb103": "Making a pot of tea involves: warm the pot, boil the water, add the leaves, steep, strain into cups. Which step must come last?",
+  "pb104": "Four runners: Ada finished before Ben. Dee finished after Cal. Ben was not last. Cal was not first. Who finished first?",
+  "pb105": "Which is the odd one out under the rule 'can be done while the jar of honey stays sealed'?",
+  "pb106": "Assembling a flat-pack bookshelf: attach the back panel, stand it upright, slide in the shelves, fix the sides to the top and bottom. Which must come first?",
+  "pb107": "Five people sit in a row of five seats. Pat sits at one end. Quinn sits next to Pat. Ravi does not sit next to Quinn. Sam sits between Ravi and Tina. Who is in the middle seat?",
+  "pb108": "Every member of the club owns a bike. Some club members own a car. Nobody who owns a car rides the bus. Which statement must be true?",
+  "pb109": "Which word is the odd one out under the rule 'the number of letters is a prime number'?",
+  "pb110": "A gardener plants seeds, waters them, waits, thins the seedlings, and harvests. She skipped one step and later found the plants crowded and small. Which step did she skip?",
+  "pb111": "A code has three different digits from 1 to 5. The first digit is larger than the second. The third digit is the sum of the first two. Which code is possible?",
+  "pb112": "Sending a parcel: wrap the item, write the address, weigh the parcel, buy postage, seal the box. Which step must come after weighing?",
+  "pb113": "Five students: Ivy scored higher than Jun. Kai scored lower than Jun. Lou scored higher than Ivy. Mo scored between Jun and Kai. Who scored second lowest?",
+  "pb114": "Which word does NOT fit the rule 'every letter appears only once'?",
+  "pb115": "Nina works exactly three days a week, never two days in a row, never on Sunday, and always on Wednesday. Which schedule is possible?",
+  "pb116": "Fixing a bicycle puncture: remove the wheel, lever off the tyre, inflate the tube slightly, find the hole, patch the tube. Which step must come immediately before patching?",
+  "pb117": "The picnic is on Saturday or Sunday. If it rains on Saturday, the picnic is on Sunday. Ola only ever comes on Saturday. Ola came to the picnic. Which statement must be true?",
+  "pb118": "Which is the odd one out under the rule 'the word is also commonly used as a verb'?",
+  "pb119": "Building a campfire: clear the ground, gather wood, arrange the tinder, light the kindling, add the large logs. Which step must come last?",
+  "pb120": "Which is the odd one out under the rule 'has more legs than a chair'?",
+  "pb121": "Five people: Ada is older than Bea. Cy is younger than Bea. Dan is older than Ada. The youngest is not Cy. Who is the youngest?",
+  "pb122": "Box A is heavier than box B. Box C is lighter than box B. Box D is heavier than box A. Which option lists the boxes from lightest to heaviest?",
+  "pb123": "Which word does NOT fit the rule 'its plural is not made by simply adding s'?",
+  "pb124": "Five tasks A to E are done one after another. B must come before D. C must come immediately after A. E must be last. D must come before C. Which order works?",
+  "pb125": "A 'twin word' reads the same backwards as forwards. Which of these is NOT a twin word?",
+  "pb126": "A shop discounts any item that is both priced under 20 and taken from the clearance bin. Which purchase gets the discount?",
+  "pb127": "A word is 'balanced' if it has the same number of vowels and consonants. Which word is balanced?",
+  "pb128": "Which of these does NOT normally follow the verb 'run' in everyday English?",
+  "pb129": "Hotel rule: guests may bring a pet if it is caged or on a leash, but no pet may enter the dining room. Which is allowed?",
+  "pb130": "Which word has exactly five letters and starts and ends with the same letter?",
+  "pb131": "In this game a number is a 'left-over' if it leaves remainder 1 when divided by 3 and also remainder 1 when divided by 4. Which number is a left-over?",
+  "pb132": "Office rule: every window must be shut at night, except the server room windows, which stay open unless it is raining. It is a dry night. What should be done?",
+  "pb133": "A 'stem word' becomes another common word when its first letter is removed. Which of these is a stem word?",
+  "pb134": "Which of these words does NOT contain a shorter word naming an animal?",
+  "pb135": "A return ticket is valid if the return date is within 30 days of the outbound date and in the same calendar year. The outbound date is 10 December. Which return date is valid?",
+  "pb136": "A number is 'tidy' if its digits add to 10 and the number is even. Which is tidy?",
+  "pb137": "A 'near-miss pair' is two words that differ by exactly one letter in the same position, with all other letters unchanged. Which is a near-miss pair?",
+  "pb138": "At the buffet, children eat free, except on Saturdays, when only children under 5 eat free. A 7-year-old comes on Saturday and another 7-year-old comes on Sunday. Who eats free?",
+  "pb139": "In which sentence does 'left' name a direction?",
+  "pb140": "A 'ladder word' has its letters in alphabetical order from first to last. Which of these is a ladder word?",
+  "pb141": "Which of these is NOT something one can 'break' in ordinary English?",
+  "pb142": "A password is valid if it has at least 8 characters, at least one digit, and no spaces. Which password is valid?",
+  "pb143": "A 'quiet' word uses none of the letters in the word NOISE. Which word is quiet?",
+  "pb144": "In which sentence does 'right' mean 'correct'?",
+  "pb145": "A 'triple' is a list of three items that are all the same kind of thing. Which of these is a triple?",
+  "pb146": "Which of these words does NOT describe something that is NOT wet?",
+  "pb147": "A word is 'even' if it has an even number of letters. Which pair consists of two even words?",
+  "pb148": "A 'hidden number' word contains a number word spelled out in consecutive letters. Which of these is a hidden number word?",
+  "pb149": "A parking permit is required for any vehicle parked overnight, unless it displays a resident sticker. Which vehicle needs a permit?"
+ },
+ "items": [
+  {
+   "id": "PB0",
+   "category": "private-mcq",
+   "state": "pb0",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "stopped the toddler dropping things",
+    "taught the toddler tidiness",
+    "made the toddler stop playing",
+    "made the dropping harmless",
+    "kept the low shelf empty"
+   ],
+   "gold": "made the dropping harmless",
+   "why": "The toddler still drops things; the only change is that dropped soft toys cannot break or hurt anyone."
+  },
+  {
+   "id": "PB1",
+   "category": "private-mcq",
+   "state": "pb1",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "customers buy more fresh loaves",
+    "customers stopped buying bread",
+    "bread now stays fresh longer",
+    "customers eat more slowly",
+    "day-old bread is given away"
+   ],
+   "gold": "day-old bread is given away",
+   "why": "Fresh sales are unchanged, so the drop in waste comes from the new outlet for day-old bread, the free slices."
+  },
+  {
+   "id": "PB2",
+   "category": "private-mcq",
+   "state": "pb2",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "favors between them are welcome",
+    "the ladder was damaged",
+    "Idris wanted more tools",
+    "the neighbor should bake too",
+    "the ladder now belongs to Idris"
+   ],
+   "gold": "favors between them are welcome",
+   "why": "An unrequested thank-you gift signals goodwill and openness to continued exchange, which is what made the neighbor comfortable asking."
+  },
+  {
+   "id": "PB3",
+   "category": "private-mcq",
+   "state": "pb3",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "towel theft",
+    "towel purchases",
+    "floor cleaning",
+    "laundry",
+    "guest complaints"
+   ],
+   "gold": "laundry",
+   "why": "Hung towels are reused instead of washed, so the direct saving is laundry; purchases and cleaning are not affected by where a towel is left."
+  },
+  {
+   "id": "PB4",
+   "category": "private-mcq",
+   "state": "pb4",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "save electricity",
+    "start the performance",
+    "hide the ticket counter",
+    "cool the lobby",
+    "nudge people to their seats"
+   ],
+   "gold": "nudge people to their seats",
+   "why": "Dimming only the lobby makes lingering there less inviting and steers guests inside; an electricity motive would apply to both spaces."
+  },
+  {
+   "id": "PB5",
+   "category": "private-mcq",
+   "state": "pb5",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "a colder carton",
+    "a lower price",
+    "a later expiry date",
+    "a larger carton",
+    "a cleaner carton"
+   ],
+   "gold": "a later expiry date",
+   "why": "The newest stock has the latest expiry date; nothing in the setup ties the back of the shelf to price, size, or cleanliness."
+  },
+  {
+   "id": "PB6",
+   "category": "private-mcq",
+   "state": "pb6",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "it understands television",
+    "it dislikes the show",
+    "it can see the screen",
+    "it links the sound to visitors",
+    "it wants to go outside"
+   ],
+   "gold": "it links the sound to visitors",
+   "why": "The dog reacts to the sound alone, an association learned from real doorbells, not to any understanding of the program."
+  },
+  {
+   "id": "PB7",
+   "category": "private-mcq",
+   "state": "pb7",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "dye staining other clothes",
+    "the sweater shrinking",
+    "the machine breaking",
+    "the water bill",
+    "the sweater fading"
+   ],
+   "gold": "dye staining other clothes",
+   "why": "Washing it alone protects the other garments, not the sweater itself, so the concern is dye bleeding from a new red item."
+  },
+  {
+   "id": "PB8",
+   "category": "private-mcq",
+   "state": "pb8",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "wooden chairs are more attractive",
+    "students prefer hard seats",
+    "armchairs blocked the door",
+    "people leave sooner, freeing seats",
+    "the room got bigger"
+   ],
+   "gold": "people leave sooner, freeing seats",
+   "why": "Less comfortable seating shortens stays, so the same seats serve more people; nothing suggests students like the new chairs."
+  },
+  {
+   "id": "PB9",
+   "category": "private-mcq",
+   "state": "pb9",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "baskets are now bigger",
+    "shoppers walk faster",
+    "full hands prompt taking a basket",
+    "the entrance is less crowded",
+    "prices dropped"
+   ],
+   "gold": "full hands prompt taking a basket",
+   "why": "A shopper already holding items takes the basket when they reach it and then has room to add more; nothing else changed."
+  },
+  {
+   "id": "PB10",
+   "category": "private-mcq",
+   "state": "pb10",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "it makes the wallet heavier",
+    "it grips the pocket lining",
+    "it hides the wallet",
+    "it locks the wallet shut",
+    "it sets off an alarm"
+   ],
+   "gold": "it grips the pocket lining",
+   "why": "Rubber against fabric creates friction, so the wallet cannot be slid out unnoticed; the other options describe things a band cannot do."
+  },
+  {
+   "id": "PB11",
+   "category": "private-mcq",
+   "state": "pb11",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "patients forget faster",
+    "reminders became cheaper",
+    "appointments got shorter",
+    "the dentist works more days",
+    "patients have time to rearrange"
+   ],
+   "gold": "patients have time to rearrange",
+   "why": "A reminder that arrives earlier lets a patient move a clash or cancel in time, which a day-before reminder often cannot."
+  },
+  {
+   "id": "PB12",
+   "category": "private-mcq",
+   "state": "pb12",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "the ferry now leaves later",
+    "passengers walk faster",
+    "people aim at the earlier deadline",
+    "departure times are secret",
+    "the ferry is smaller"
+   ],
+   "gold": "people aim at the earlier deadline",
+   "why": "Giving the boarding cutoff as the target moves the time people plan around ten minutes earlier, absorbing small delays."
+  },
+  {
+   "id": "PB13",
+   "category": "private-mcq",
+   "state": "pb13",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "melting the ice too fast",
+    "burning her hands",
+    "wasting energy",
+    "cracking the glass",
+    "fogging the windows"
+   ],
+   "gold": "cracking the glass",
+   "why": "A sudden large temperature change can crack cold glass; melting the ice quickly is the goal, not the risk."
+  },
+  {
+   "id": "PB14",
+   "category": "private-mcq",
+   "state": "pb14",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "keep the medicine cool",
+    "hide it from children",
+    "shorten the checkout line",
+    "make customers pass other goods",
+    "help staff restock"
+   ],
+   "gold": "make customers pass other goods",
+   "why": "Routing every buyer of a popular item past other displays increases impulse purchases; the other options do not follow from the location described."
+  },
+  {
+   "id": "PB15",
+   "category": "private-mcq",
+   "state": "pb15",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "saving printing ink",
+    "confusing tourists",
+    "hiding the prices",
+    "making prices feel less like money",
+    "shortening the menu"
+   ],
+   "gold": "making prices feel less like money",
+   "why": "Stripping the money cues makes the numbers register less as spending, which fits the rise in average spend; the prices are still shown."
+  },
+  {
+   "id": "PB16",
+   "category": "private-mcq",
+   "state": "pb16",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "the train is warmer",
+    "the screen stays on",
+    "trains use more apps",
+    "vibration wastes power",
+    "it keeps searching for signal"
+   ],
+   "gold": "it keeps searching for signal",
+   "why": "Moving through areas of weak coverage forces the radio to work harder; the other options are either false or not implied."
+  },
+  {
+   "id": "PB17",
+   "category": "private-mcq",
+   "state": "pb17",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "some staff prefer it",
+    "it uses leftover popcorn",
+    "it is the most profitable",
+    "it makes the large look cheap",
+    "regulations require three sizes"
+   ],
+   "gold": "it makes the large look cheap",
+   "why": "The medium exists as a comparison point that makes the large seem like a bargain; low sales of the medium are expected, not a problem."
+  },
+  {
+   "id": "PB18",
+   "category": "private-mcq",
+   "state": "pb18",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "the watch is broken",
+    "he stopped wearing it",
+    "he corrects for it automatically",
+    "five minutes is too short",
+    "he leaves later now"
+   ],
+   "gold": "he corrects for it automatically",
+   "why": "Knowing the offset, he mentally subtracts it, so the buffer disappears; nothing says the watch failed or his habits changed."
+  },
+  {
+   "id": "PB19",
+   "category": "private-mcq",
+   "state": "pb19",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "keeping smaller animals out",
+    "keeping food cool",
+    "drying the bags",
+    "preventing theft",
+    "stopping fires"
+   ],
+   "gold": "keeping smaller animals out",
+   "why": "Raccoons, rodents, and similar animals raid food; the height and distance rules address animals, not temperature or people."
+  },
+  {
+   "id": "PB20",
+   "category": "private-mcq",
+   "state": "pb20",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "the machines are older",
+    "tenants run smaller, more frequent loads",
+    "tenants stopped washing",
+    "electricity got cheaper",
+    "the coins were counterfeit"
+   ],
+   "gold": "tenants run smaller, more frequent loads",
+   "why": "With no cost per load, tenants no longer wait for a full basket, so the machines run more often; the other options contradict the rise."
+  },
+  {
+   "id": "PB21",
+   "category": "private-mcq",
+   "state": "pb21",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "rain on the way to work",
+    "rain that starts during the workday",
+    "rain at home",
+    "heavy storms",
+    "rain on weekends"
+   ],
+   "gold": "rain that starts during the workday",
+   "why": "An umbrella kept at the office only helps when rain begins while he is there, typically for the trip home."
+  },
+  {
+   "id": "PB22",
+   "category": "private-mcq",
+   "state": "pb22",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "they dislike salads",
+    "they read only dessert prices",
+    "desserts got smaller",
+    "they already saw salads as light",
+    "they stopped eating out"
+   ],
+   "gold": "they already saw salads as light",
+   "why": "Information changes behavior only where it surprises; salad orders did not move because those choices were already made with calories in mind."
+  },
+  {
+   "id": "PB23",
+   "category": "private-mcq",
+   "state": "pb23",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "independence over speed",
+    "warmth over play",
+    "cleanliness over comfort",
+    "teachers' rest",
+    "longer indoor time"
+   ],
+   "gold": "independence over speed",
+   "why": "Letting children do it themselves costs time but builds a skill; the other options are not what a slower process buys."
+  },
+  {
+   "id": "PB24",
+   "category": "private-mcq",
+   "state": "pb24",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "they need the hospital",
+    "buses got louder",
+    "patients shop more",
+    "they lost passing customers",
+    "the mall closed"
+   ],
+   "gold": "they lost passing customers",
+   "why": "The mall stop delivered foot traffic to the shops, and its removal cuts their business; patients gained service and had no reason to complain."
+  },
+  {
+   "id": "PB25",
+   "category": "private-mcq",
+   "state": "pb25",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "yes, but quickly",
+    "a request for a ride",
+    "no, and starting to leave",
+    "concern for the host",
+    "a complaint about weather"
+   ],
+   "gold": "no, and starting to leave",
+   "why": "Raising an urgent reason to go, in reply to an offer, is a polite refusal that also announces departure."
+  },
+  {
+   "id": "PB26",
+   "category": "private-mcq",
+   "state": "pb26",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "the report is finished",
+    "the report is not done yet",
+    "the data was wrong",
+    "the manager sent the data",
+    "nothing is left to do"
+   ],
+   "gold": "the report is not done yet",
+   "why": "Mentioning that inputs only just arrived explains a delay; if the report were done, the employee would simply say so."
+  },
+  {
+   "id": "PB27",
+   "category": "private-mcq",
+   "state": "pb27",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "it was excellent",
+    "it was too loud",
+    "it was too short",
+    "B did not attend",
+    "it was disappointing"
+   ],
+   "gold": "it was disappointing",
+   "why": "Praising an irrelevant detail instead of the music implies there was nothing good to say about the music itself."
+  },
+  {
+   "id": "PB28",
+   "category": "private-mcq",
+   "state": "pb28",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "blue is in stock",
+    "grey costs less",
+    "the customer looks good in grey",
+    "the store is closing",
+    "no blue is available"
+   ],
+   "gold": "no blue is available",
+   "why": "Redirecting to another color rather than answering the yes-or-no question signals that blue cannot be offered."
+  },
+  {
+   "id": "PB29",
+   "category": "private-mcq",
+   "state": "pb29",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "B will cook a big meal",
+    "the kitchen is free",
+    "B needs the kitchen",
+    "A should buy food",
+    "the fridge is full"
+   ],
+   "gold": "the kitchen is free",
+   "why": "Leftovers need only reheating, so B is saying they will not occupy the kitchen."
+  },
+  {
+   "id": "PB30",
+   "category": "private-mcq",
+   "state": "pb30",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "B will come",
+    "B is undecided",
+    "B cannot come",
+    "B dislikes reunions",
+    "B wants a different date"
+   ],
+   "gold": "B cannot come",
+   "why": "The enthusiastic opening is cancelled by the conditional, which states as fact that B is on call that weekend."
+  },
+  {
+   "id": "PB31",
+   "category": "private-mcq",
+   "state": "pb31",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "a firm yes",
+    "a firm no",
+    "they dislike the sport",
+    "they want more tickets",
+    "it depends on the company"
+   ],
+   "gold": "it depends on the company",
+   "why": "Asking about the guest list before answering signals that attendance hinges on who will be there."
+  },
+  {
+   "id": "PB32",
+   "category": "private-mcq",
+   "state": "pb32",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "the sauce is free",
+    "the chef will remove it",
+    "the sauce is mild",
+    "the request is refused",
+    "the dish is sold out"
+   ],
+   "gold": "the request is refused",
+   "why": "Citing the chef's preference in place of a yes is a soft refusal."
+  },
+  {
+   "id": "PB33",
+   "category": "private-mcq",
+   "state": "pb33",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "the party was too loud",
+    "a wish to be invited",
+    "genuine praise",
+    "interest in the music",
+    "a question about attendance"
+   ],
+   "gold": "the party was too loud",
+   "why": "Remarking that a party could be heard next door is a polite way to complain about noise."
+  },
+  {
+   "id": "PB34",
+   "category": "private-mcq",
+   "state": "pb34",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "Dana is ideal",
+    "Dana is careless",
+    "Dana is unavailable",
+    "Dana is dishonest",
+    "Dana is slow"
+   ],
+   "gold": "Dana is slow",
+   "why": "The hesitation before a faint, double-edged compliment signals a reservation about pace, which 'thorough' hints at."
+  },
+  {
+   "id": "PB35",
+   "category": "private-mcq",
+   "state": "pb35",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "all homework is done",
+    "math was the only subject",
+    "other homework remains",
+    "the child needs help",
+    "the child dislikes math"
+   ],
+   "gold": "other homework remains",
+   "why": "Naming only one subject in reply to a question about all homework implies the rest is unfinished."
+  },
+  {
+   "id": "PB36",
+   "category": "private-mcq",
+   "state": "pb36",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "someone left items outside",
+    "the courtyard is closing",
+    "storage rooms are full",
+    "a tenant asked for storage",
+    "the courtyard was cleaned"
+   ],
+   "gold": "someone left items outside",
+   "why": "Reminders of a rule are issued when the rule is being broken."
+  },
+  {
+   "id": "PB37",
+   "category": "private-mcq",
+   "state": "pb37",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "B cannot lend it now",
+    "B will lend it now",
+    "A should wait for A's payday",
+    "B is paid weekly",
+    "B refuses forever"
+   ],
+   "gold": "B cannot lend it now",
+   "why": "Pointing to a future payday explains a current lack of funds; the refusal is temporary and concerns B's own money."
+  },
+  {
+   "id": "PB38",
+   "category": "private-mcq",
+   "state": "pb38",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "B never saw the keys",
+    "check the fridge",
+    "the keys are lost",
+    "check your pockets",
+    "B hid the keys"
+   ],
+   "gold": "check the fridge",
+   "why": "B reports the last known location; the natural implication is that the keys are still there."
+  },
+  {
+   "id": "PB39",
+   "category": "private-mcq",
+   "state": "pb39",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "their ideas were ignored before",
+    "they were fired",
+    "they were promoted",
+    "the old job paid poorly",
+    "they have no ideas"
+   ],
+   "gold": "their ideas were ignored before",
+   "why": "Stating what they want, phrased as a contrast, implies the previous job lacked it."
+  },
+  {
+   "id": "PB40",
+   "category": "private-mcq",
+   "state": "pb40",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "the medication causes drowsiness",
+    "the medication is working",
+    "they stopped taking it",
+    "they need a stronger dose",
+    "they sleep too much"
+   ],
+   "gold": "the medication is working",
+   "why": "Reporting a resolved symptom in reply to a question about the drug credits the drug with the improvement."
+  },
+  {
+   "id": "PB41",
+   "category": "private-mcq",
+   "state": "pb41",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "attendance was the goal",
+    "the team won",
+    "some players were absent",
+    "the team played badly",
+    "the match was cancelled"
+   ],
+   "gold": "the team played badly",
+   "why": "Praising the bare minimum implies nothing above the minimum deserves praise."
+  },
+  {
+   "id": "PB42",
+   "category": "private-mcq",
+   "state": "pb42",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "silence means 8 is confirmed",
+    "they will call at 8",
+    "they will not come",
+    "call them to confirm",
+    "they may arrive early"
+   ],
+   "gold": "silence means 8 is confirmed",
+   "why": "The plan stands by default and only a message would change it."
+  },
+  {
+   "id": "PB43",
+   "category": "private-mcq",
+   "state": "pb43",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "come back tomorrow",
+    "buy more items",
+    "help close the shop",
+    "wait five minutes",
+    "decide or leave soon"
+   ],
+   "gold": "decide or leave soon",
+   "why": "Announcing the closing time to a browser is an indirect request to wrap up."
+  },
+  {
+   "id": "PB44",
+   "category": "private-mcq",
+   "state": "pb44",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "it was lukewarm",
+    "she loved it",
+    "she returned it",
+    "she never received it",
+    "she was angry"
+   ],
+   "gold": "it was lukewarm",
+   "why": "Reporting only the formal words, rather than any enthusiasm, implies enthusiasm was absent."
+  },
+  {
+   "id": "PB45",
+   "category": "private-mcq",
+   "state": "pb45",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "call their mothers",
+    "hire more staff",
+    "cook at home",
+    "clean up after themselves",
+    "stop bringing children"
+   ],
+   "gold": "clean up after themselves",
+   "why": "The line implies no one else will tidy up for them, so they must do it themselves."
+  },
+  {
+   "id": "PB46",
+   "category": "private-mcq",
+   "state": "pb46",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "irritated",
+    "grateful",
+    "apologetic",
+    "confused",
+    "enthusiastic"
+   ],
+   "gold": "irritated",
+   "why": "'Per my last email' points out that the information was already sent and ignored."
+  },
+  {
+   "id": "PB47",
+   "category": "private-mcq",
+   "state": "pb47",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "the person was invited late",
+    "the person is late",
+    "the meeting is optional",
+    "the person is the boss",
+    "the meeting just ended"
+   ],
+   "gold": "the person is late",
+   "why": "The phrase is a sarcastic remark reserved for latecomers."
+  },
+  {
+   "id": "PB48",
+   "category": "private-mcq",
+   "state": "pb48",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "no, avoid it",
+    "yes, it is safe",
+    "only cars may cross",
+    "the mayor is reckless",
+    "B does not know"
+   ],
+   "gold": "yes, it is safe",
+   "why": "Citing regular use by a cautious public figure is offered as evidence of safety."
+  },
+  {
+   "id": "PB49",
+   "category": "private-mcq",
+   "state": "pb49",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "they are cold",
+    "they lost their coat",
+    "they want to help",
+    "they are about to leave",
+    "they just arrived"
+   ],
+   "gold": "they are about to leave",
+   "why": "Asking for one's coat late in the evening is a preface to departure."
+  },
+  {
+   "id": "PB50",
+   "category": "private-mcq",
+   "state": "pb50",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "at the lid end",
+    "at the base end",
+    "spread along the sides",
+    "floating in the middle",
+    "evenly filling the jar"
+   ],
+   "gold": "at the lid end",
+   "why": "Water settles to the lowest point, which is now the lid."
+  },
+  {
+   "id": "PB51",
+   "category": "private-mcq",
+   "state": "pb51",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "south",
+    "north",
+    "east",
+    "west",
+    "northeast"
+   ],
+   "gold": "north",
+   "why": "Five rights and one left equal four rights net, a full circle back to north."
+  },
+  {
+   "id": "PB52",
+   "category": "private-mcq",
+   "state": "pb52",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "both sink",
+    "both float",
+    "only the pine ball sinks",
+    "only the steel ball sinks",
+    "the pine ball sinks slower"
+   ],
+   "gold": "only the steel ball sinks",
+   "why": "Steel is denser than water and pine is less dense, so only the steel ball sinks."
+  },
+  {
+   "id": "PB53",
+   "category": "private-mcq",
+   "state": "pb53",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "the large-jar candle",
+    "the small-jar candle",
+    "both at once",
+    "neither goes out",
+    "it cannot be determined"
+   ],
+   "gold": "the small-jar candle",
+   "why": "The smaller jar holds less oxygen, so its flame exhausts it sooner."
+  },
+  {
+   "id": "PB54",
+   "category": "private-mcq",
+   "state": "pb54",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "it rises higher",
+    "it stays put",
+    "it moves sideways",
+    "it leaves the wall",
+    "it slides lower"
+   ],
+   "gold": "it slides lower",
+   "why": "The ladder's length is fixed, so a wider base means a lower top."
+  },
+  {
+   "id": "PB55",
+   "category": "private-mcq",
+   "state": "pb55",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "south",
+    "east",
+    "west",
+    "north",
+    "northwest"
+   ],
+   "gold": "north",
+   "why": "Facing west, north is on your right hand."
+  },
+  {
+   "id": "PB56",
+   "category": "private-mcq",
+   "state": "pb56",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "dictionary, poetry, atlas",
+    "atlas, poetry, dictionary",
+    "poetry, dictionary, atlas",
+    "atlas, dictionary, poetry",
+    "poetry, atlas, dictionary"
+   ],
+   "gold": "poetry, atlas, dictionary",
+   "why": "Removing the dictionary leaves poetry then atlas; placing it on top gives poetry, atlas, dictionary."
+  },
+  {
+   "id": "PB57",
+   "category": "private-mcq",
+   "state": "pb57",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "backward",
+    "it stays vertical",
+    "left",
+    "downward",
+    "forward"
+   ],
+   "gold": "forward",
+   "why": "The denser air is pushed toward the back, and the lighter balloon is displaced the opposite way, forward."
+  },
+  {
+   "id": "PB58",
+   "category": "private-mcq",
+   "state": "pb58",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "northeast",
+    "southwest",
+    "southeast",
+    "northwest",
+    "north wall centre"
+   ],
+   "gold": "northwest",
+   "why": "She walks north across the room, turns left to face west, and ends at the northwest corner."
+  },
+  {
+   "id": "PB59",
+   "category": "private-mcq",
+   "state": "pb59",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "water overflows",
+    "the level stays the same",
+    "the level drops",
+    "the glass cracks",
+    "the water evaporates"
+   ],
+   "gold": "the level stays the same",
+   "why": "Floating ice displaces exactly the volume of water it becomes when melted."
+  },
+  {
+   "id": "PB60",
+   "category": "private-mcq",
+   "state": "pb60",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "nothing moves",
+    "three coins stick",
+    "one coin sticks",
+    "all coins stick",
+    "the book lifts"
+   ],
+   "gold": "nothing moves",
+   "why": "Copper is not magnetic, so the magnet has no effect regardless of the book."
+  },
+  {
+   "id": "PB61",
+   "category": "private-mcq",
+   "state": "pb61",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "2 m",
+    "1.5 m",
+    "4 m",
+    "3 m",
+    "2.5 m"
+   ],
+   "gold": "3 m",
+   "why": "30 times 2 is 60, so the second child needs 20 times 3 to match."
+  },
+  {
+   "id": "PB62",
+   "category": "private-mcq",
+   "state": "pb62",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "8",
+    "6",
+    "12",
+    "9",
+    "1"
+   ],
+   "gold": "6",
+   "why": "The one-face cubes are the centres of the six faces."
+  },
+  {
+   "id": "PB63",
+   "category": "private-mcq",
+   "state": "pb63",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "2",
+    "1",
+    "8",
+    "4",
+    "3"
+   ],
+   "gold": "4",
+   "why": "Two folds make four layers, and one punch through all of them leaves four holes."
+  },
+  {
+   "id": "PB64",
+   "category": "private-mcq",
+   "state": "pb64",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "2 blocks east",
+    "at the start",
+    "2 blocks west",
+    "2 blocks north",
+    "8 blocks away"
+   ],
+   "gold": "2 blocks west",
+   "why": "East and west net to 2 blocks west; north and south cancel."
+  },
+  {
+   "id": "PB65",
+   "category": "private-mcq",
+   "state": "pb65",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "it gets smaller",
+    "it stays the same",
+    "it closes up",
+    "it becomes oval",
+    "it gets larger"
+   ],
+   "gold": "it gets larger",
+   "why": "Every dimension of the ring expands, including the hole, like an enlarged photograph."
+  },
+  {
+   "id": "PB66",
+   "category": "private-mcq",
+   "state": "pb66",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "on top of the oil",
+    "between oil and water",
+    "at the bottom",
+    "on the water, under oil",
+    "suspended in the water"
+   ],
+   "gold": "on top of the oil",
+   "why": "Cork is lighter than both liquids, so it floats on the upper layer, which is the oil."
+  },
+  {
+   "id": "PB67",
+   "category": "private-mcq",
+   "state": "pb67",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "at the start",
+    "at the opposite point",
+    "a quarter of the way",
+    "never",
+    "a third of the way"
+   ],
+   "gold": "at the opposite point",
+   "why": "Each covers half the track when they meet, which is the point opposite the start."
+  },
+  {
+   "id": "PB68",
+   "category": "private-mcq",
+   "state": "pb68",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "on your left",
+    "at the top",
+    "on your right",
+    "it depends on handedness",
+    "on the hallway side"
+   ],
+   "gold": "on your right",
+   "why": "Turning around swaps left and right, so the hinge side appears on your right from inside."
+  },
+  {
+   "id": "PB69",
+   "category": "private-mcq",
+   "state": "pb69",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "north",
+    "south",
+    "straight up",
+    "east",
+    "toward the window"
+   ],
+   "gold": "south",
+   "why": "Air flows in from the window and across the room, pushing the flame away from the window, toward the south."
+  },
+  {
+   "id": "PB70",
+   "category": "private-mcq",
+   "state": "pb70",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "back in the thrower's hand",
+    "behind the thrower",
+    "ahead of the thrower",
+    "against the back wall",
+    "on the floor beside them"
+   ],
+   "gold": "back in the thrower's hand",
+   "why": "The ball shares the train's steady velocity, so relative to the train it goes straight up and down."
+  },
+  {
+   "id": "PB71",
+   "category": "private-mcq",
+   "state": "pb71",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "the wide bowl",
+    "the thin glass",
+    "equal in both",
+    "depends on glass weight",
+    "neither has pressure"
+   ],
+   "gold": "the thin glass",
+   "why": "Pressure at the bottom depends on water height, not volume, and the height is greater in the thin glass."
+  },
+  {
+   "id": "PB72",
+   "category": "private-mcq",
+   "state": "pb72",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "west, behind her",
+    "north",
+    "south",
+    "straight down",
+    "east, ahead of her"
+   ],
+   "gold": "east, ahead of her",
+   "why": "Shadows fall away from the sun; with the sun behind her in the west, the shadow lies to the east."
+  },
+  {
+   "id": "PB73",
+   "category": "private-mcq",
+   "state": "pb73",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "it crumples inward",
+    "it bulges outward",
+    "it stays the same",
+    "it fills with water",
+    "it gets heavier"
+   ],
+   "gold": "it bulges outward",
+   "why": "Outside pressure drops with altitude while the trapped air keeps its pressure, so the bottle expands; crumpling happens on the way down."
+  },
+  {
+   "id": "PB74",
+   "category": "private-mcq",
+   "state": "pb74",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "at the bottom screws",
+    "evenly at all screws",
+    "at the top screws",
+    "at the far end",
+    "in the vase"
+   ],
+   "gold": "at the top screws",
+   "why": "The load levers the shelf downward, pulling the top screws out of the wall and pressing the bottom ones in."
+  },
+  {
+   "id": "PB75",
+   "category": "private-mcq",
+   "state": "pb75",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "6",
+    "18",
+    "12",
+    "24",
+    "36"
+   ],
+   "gold": "12",
+   "why": "If the son is s, then 3s + 12 = 2(s + 12), so s = 12."
+  },
+  {
+   "id": "PB76",
+   "category": "private-mcq",
+   "state": "pb76",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "50 minutes",
+    "10 minutes",
+    "12 minutes",
+    "25 minutes",
+    "60 minutes"
+   ],
+   "gold": "60 minutes",
+   "why": "Net rate is 1/20 minus 1/30, which is 1/60 of the tub per minute."
+  },
+  {
+   "id": "PB77",
+   "category": "private-mcq",
+   "state": "pb77",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "the 26th",
+    "the 28th",
+    "the 29th",
+    "the 27th",
+    "the 20th"
+   ],
+   "gold": "the 27th",
+   "why": "With the 1st a Saturday, Thursdays fall on the 6th, 13th, 20th and 27th."
+  },
+  {
+   "id": "PB78",
+   "category": "private-mcq",
+   "state": "pb78",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "5",
+    "4",
+    "6",
+    "7",
+    "3"
+   ],
+   "gold": "5",
+   "why": "Change is 4.75, which is 2 + 2 + 0.50 + 0.20 + 0.05, five coins."
+  },
+  {
+   "id": "PB79",
+   "category": "private-mcq",
+   "state": "pb79",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "1 minute",
+    "12 minutes",
+    "5 minutes",
+    "7 minutes",
+    "11 minutes"
+   ],
+   "gold": "1 minute",
+   "why": "8:35 is 155 minutes after 6:00; the next multiple of 12 is 156, so the bus comes at 8:36."
+  },
+  {
+   "id": "PB80",
+   "category": "private-mcq",
+   "state": "pb80",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "03:15",
+    "04:15",
+    "05:15",
+    "04:05",
+    "04:25"
+   ],
+   "gold": "04:15",
+   "why": "22:40 plus 5 hours is 03:40, plus 35 minutes is 04:15."
+  },
+  {
+   "id": "PB81",
+   "category": "private-mcq",
+   "state": "pb81",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "the second Monday",
+    "the first Sunday",
+    "the second Tuesday",
+    "the second Wednesday",
+    "the first Friday"
+   ],
+   "gold": "the second Tuesday",
+   "why": "She reaches 200 by Friday, 220 by Sunday, 260 on Monday and 300 on the second Tuesday."
+  },
+  {
+   "id": "PB82",
+   "category": "private-mcq",
+   "state": "pb82",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "5.60",
+    "4.80",
+    "6.00",
+    "4.67",
+    "4.00"
+   ],
+   "gold": "4.80",
+   "why": "Two packs of three cost 4.00 and one single pen 0.80; a third pack would cost more than the single."
+  },
+  {
+   "id": "PB83",
+   "category": "private-mcq",
+   "state": "pb83",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "24 cm",
+    "20 cm",
+    "16 cm",
+    "12 cm",
+    "22 cm"
+   ],
+   "gold": "20 cm",
+   "why": "Four hours of burning removed 8 cm, so it was 20 cm at 3 p.m., and it had not been lit before that."
+  },
+  {
+   "id": "PB84",
+   "category": "private-mcq",
+   "state": "pb84",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "5.00",
+    "6.00",
+    "6.50",
+    "7.00",
+    "8.00"
+   ],
+   "gold": "6.50",
+   "why": "The stay is 3 hours 45 minutes: 2 for the first hour plus three additional part-hours at 1.50 each."
+  },
+  {
+   "id": "PB85",
+   "category": "private-mcq",
+   "state": "pb85",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "10 kg more",
+    "30 kg more",
+    "none, already 10 kg over",
+    "40 kg more",
+    "exactly at the limit"
+   ],
+   "gold": "none, already 10 kg over",
+   "why": "Six people at 70 kg average weigh 420 kg; with the crate the load is 460 kg, ten over the limit."
+  },
+  {
+   "id": "PB86",
+   "category": "private-mcq",
+   "state": "pb86",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "Tuesday",
+    "Monday",
+    "Friday",
+    "Thursday",
+    "Sunday"
+   ],
+   "gold": "Monday",
+   "why": "100 is 14 weeks and 2 days, so two days before Wednesday is Monday."
+  },
+  {
+   "id": "PB87",
+   "category": "private-mcq",
+   "state": "pb87",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "4 years",
+    "never",
+    "6 years",
+    "2 years",
+    "3 years"
+   ],
+   "gold": "3 years",
+   "why": "She is 77; 77 + x = 4(17 + x) gives x = 3, when she is 80 and he is 20."
+  },
+  {
+   "id": "PB88",
+   "category": "private-mcq",
+   "state": "pb88",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "16 minutes",
+    "24 minutes",
+    "30 minutes",
+    "10 minutes",
+    "20 minutes"
+   ],
+   "gold": "20 minutes",
+   "why": "400 litres are needed at a net 20 litres per minute."
+  },
+  {
+   "id": "PB89",
+   "category": "private-mcq",
+   "state": "pb89",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "6:00 p.m.",
+    "5:55 p.m.",
+    "5:05 p.m.",
+    "6:05 p.m.",
+    "5:30 p.m."
+   ],
+   "gold": "6:00 p.m.",
+   "why": "The clock advances 55 minutes per real hour; showing 5.5 hours elapsed means 5.5 x 60/55 = 6 real hours."
+  },
+  {
+   "id": "PB90",
+   "category": "private-mcq",
+   "state": "pb90",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "21",
+    "27",
+    "45",
+    "30",
+    "42"
+   ],
+   "gold": "42",
+   "why": "With Bo paying b, 2b + b + b + 6 = 90 gives b = 21, so Ana pays 42."
+  },
+  {
+   "id": "PB91",
+   "category": "private-mcq",
+   "state": "pb91",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "6 pieces, none left",
+    "5 pieces, 15 cm left",
+    "4 pieces, 60 cm left",
+    "5 pieces, 25 cm left",
+    "5 pieces, 30 cm left"
+   ],
+   "gold": "5 pieces, 25 cm left",
+   "why": "200 divided by 35 is 5 with remainder 25."
+  },
+  {
+   "id": "PB92",
+   "category": "private-mcq",
+   "state": "pb92",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "9:40",
+    "10:00",
+    "11:00",
+    "10:20",
+    "9:20"
+   ],
+   "gold": "10:20",
+   "why": "A full round trip takes 100 minutes, so departures from A are at 7:00, 8:40 and 10:20."
+  },
+  {
+   "id": "PB93",
+   "category": "private-mcq",
+   "state": "pb93",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "2 hours",
+    "1 hour 50 minutes",
+    "2 hours 10 minutes",
+    "2 hours 30 minutes",
+    "1 hour 40 minutes"
+   ],
+   "gold": "2 hours 10 minutes",
+   "why": "The first 30 minutes add 10% to reach 50%; the remaining 50% takes 100 minutes, 130 minutes in total."
+  },
+  {
+   "id": "PB94",
+   "category": "private-mcq",
+   "state": "pb94",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "96 square metres",
+    "77 square metres",
+    "56 square metres",
+    "72 square metres",
+    "60 square metres"
+   ],
+   "gold": "60 square metres",
+   "why": "The path takes 1 m off each side, leaving 10 m by 6 m."
+  },
+  {
+   "id": "PB95",
+   "category": "private-mcq",
+   "state": "pb95",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "240",
+    "270",
+    "260",
+    "225",
+    "255"
+   ],
+   "gold": "255",
+   "why": "Monday is 120 plus 2 overtime hours at 22.50, or 165; Tuesday is 90; total 255."
+  },
+  {
+   "id": "PB96",
+   "category": "private-mcq",
+   "state": "pb96",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "1",
+    "2",
+    "3",
+    "0",
+    "1.5"
+   ],
+   "gold": "1",
+   "why": "1500 minus 1200 leaves 300 ml, enough for one full glass."
+  },
+  {
+   "id": "PB97",
+   "category": "private-mcq",
+   "state": "pb97",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "2 hours",
+    "4 hours",
+    "3 hours",
+    "2.5 hours",
+    "1.5 hours"
+   ],
+   "gold": "3 hours",
+   "why": "1 - t/4 = (1 - t/6)/2 gives t = 3, when the heights are one quarter and one half."
+  },
+  {
+   "id": "PB98",
+   "category": "private-mcq",
+   "state": "pb98",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "14 April",
+    "16 April",
+    "1 March",
+    "15 April",
+    "30 March"
+   ],
+   "gold": "15 April",
+   "why": "45 days after 15 January is 1 March, and 45 days after 1 March is 15 April."
+  },
+  {
+   "id": "PB99",
+   "category": "private-mcq",
+   "state": "pb99",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "17 minutes",
+    "15 minutes",
+    "20 minutes",
+    "12 minutes",
+    "25 minutes"
+   ],
+   "gold": "17 minutes",
+   "why": "The first 5 minutes produce 60 pages; the remaining 240 at 20 per minute take 12 more minutes."
+  },
+  {
+   "id": "PB100",
+   "category": "private-mcq",
+   "state": "pb100",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "prime",
+    "wipe off dust",
+    "paint",
+    "let dry",
+    "sand again"
+   ],
+   "gold": "wipe off dust",
+   "why": "Dust left after sanding must be removed before primer, or it is trapped under the coat."
+  },
+  {
+   "id": "PB101",
+   "category": "private-mcq",
+   "state": "pb101",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "red",
+    "green",
+    "yellow",
+    "cannot be determined",
+    "blue"
+   ],
+   "gold": "blue",
+   "why": "The only arrangements that fit are yellow-blue-red-green and green-blue-red-yellow; blue is second in both."
+  },
+  {
+   "id": "PB102",
+   "category": "private-mcq",
+   "state": "pb102",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "table",
+    "chair",
+    "stool",
+    "bench",
+    "couch"
+   ],
+   "gold": "bench",
+   "why": "Bench has one vowel; table, chair, stool and couch each have two."
+  },
+  {
+   "id": "PB103",
+   "category": "private-mcq",
+   "state": "pb103",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "boil the water",
+    "add the leaves",
+    "steep",
+    "strain into cups",
+    "warm the pot"
+   ],
+   "gold": "strain into cups",
+   "why": "Straining separates leaves from finished tea, which only exists after steeping."
+  },
+  {
+   "id": "PB104",
+   "category": "private-mcq",
+   "state": "pb104",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "Ben",
+    "Cal",
+    "Dee",
+    "Ada",
+    "cannot be determined"
+   ],
+   "gold": "Ada",
+   "why": "Only Ada or Cal can be first, since Ben and Dee each trail someone; Cal is ruled out, so Ada is first."
+  },
+  {
+   "id": "PB105",
+   "category": "private-mcq",
+   "state": "pb105",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "weigh the jar",
+    "taste the honey",
+    "read the label",
+    "count the jars",
+    "photograph the jar"
+   ],
+   "gold": "taste the honey",
+   "why": "Tasting requires opening the jar; the others do not."
+  },
+  {
+   "id": "PB106",
+   "category": "private-mcq",
+   "state": "pb106",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "attach the back panel",
+    "stand it upright",
+    "fix sides to top and bottom",
+    "slide in the shelves",
+    "load the books"
+   ],
+   "gold": "fix sides to top and bottom",
+   "why": "The frame must exist before a back panel, shelves or standing are possible."
+  },
+  {
+   "id": "PB107",
+   "category": "private-mcq",
+   "state": "pb107",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "Sam",
+    "Ravi",
+    "Tina",
+    "Quinn",
+    "Pat"
+   ],
+   "gold": "Tina",
+   "why": "With Pat and Quinn at seats 1 and 2, Ravi must be at 5, forcing Sam at 4 and Tina at 3; the mirror case gives the same middle."
+  },
+  {
+   "id": "PB108",
+   "category": "private-mcq",
+   "state": "pb108",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "every member rides the bus",
+    "some member owns both",
+    "no member rides the bus",
+    "every bike owner is a member",
+    "bus riders own no bikes"
+   ],
+   "gold": "some member owns both",
+   "why": "Those members who own a car also own a bike, since all members do; the other options are not entailed."
+  },
+  {
+   "id": "PB109",
+   "category": "private-mcq",
+   "state": "pb109",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "rabbit",
+    "cat",
+    "horse",
+    "dog",
+    "giraffe"
+   ],
+   "gold": "rabbit",
+   "why": "Rabbit has six letters; the others have three, five, three and seven."
+  },
+  {
+   "id": "PB110",
+   "category": "private-mcq",
+   "state": "pb110",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "watering",
+    "thinning the seedlings",
+    "planting",
+    "harvesting",
+    "waiting"
+   ],
+   "gold": "thinning the seedlings",
+   "why": "Crowding is exactly what thinning prevents; the other steps cannot have been skipped if plants grew."
+  },
+  {
+   "id": "PB111",
+   "category": "private-mcq",
+   "state": "pb111",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "4-1-3",
+    "2-3-5",
+    "1-2-3",
+    "2-2-4",
+    "3-1-4"
+   ],
+   "gold": "3-1-4",
+   "why": "3 is larger than 1 and 3 + 1 = 4; the others fail the order, the sum, or the distinct-digit rule."
+  },
+  {
+   "id": "PB112",
+   "category": "private-mcq",
+   "state": "pb112",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "buy postage",
+    "wrap the item",
+    "seal the box",
+    "write the address",
+    "choose the box"
+   ],
+   "gold": "buy postage",
+   "why": "Postage cost depends on weight; every other step can be done before weighing."
+  },
+  {
+   "id": "PB113",
+   "category": "private-mcq",
+   "state": "pb113",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "Kai",
+    "Jun",
+    "Mo",
+    "Ivy",
+    "Lou"
+   ],
+   "gold": "Mo",
+   "why": "The order is Lou, Ivy, Jun, Mo, Kai, so Mo is second lowest."
+  },
+  {
+   "id": "PB114",
+   "category": "private-mcq",
+   "state": "pb114",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "planet",
+    "garden",
+    "orbit",
+    "silver",
+    "moment"
+   ],
+   "gold": "moment",
+   "why": "Moment repeats the letter m; the others have no repeated letters."
+  },
+  {
+   "id": "PB115",
+   "category": "private-mcq",
+   "state": "pb115",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "Tuesday, Wednesday, Friday",
+    "Monday, Wednesday, Sunday",
+    "Wednesday, Thursday, Saturday",
+    "Wednesday, Friday, Sunday",
+    "Monday, Wednesday, Friday"
+   ],
+   "gold": "Monday, Wednesday, Friday",
+   "why": "Only Monday, Wednesday, Friday avoids consecutive days and Sunday while including Wednesday."
+  },
+  {
+   "id": "PB116",
+   "category": "private-mcq",
+   "state": "pb116",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "inflate the tube slightly",
+    "remove the wheel",
+    "find the hole",
+    "lever off the tyre",
+    "refit the tyre"
+   ],
+   "gold": "find the hole",
+   "why": "You cannot patch a hole you have not located; inflating helps find the hole, so it precedes finding, not patching."
+  },
+  {
+   "id": "PB117",
+   "category": "private-mcq",
+   "state": "pb117",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "it rained Sunday",
+    "it did not rain Saturday",
+    "the picnic was Sunday",
+    "Ola came on Sunday",
+    "it rained Saturday"
+   ],
+   "gold": "it did not rain Saturday",
+   "why": "Ola's attendance puts the picnic on Saturday, and by the rain rule that can only happen if it did not rain on Saturday."
+  },
+  {
+   "id": "PB118",
+   "category": "private-mcq",
+   "state": "pb118",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "hammer",
+    "saw",
+    "pliers",
+    "drill",
+    "nail"
+   ],
+   "gold": "pliers",
+   "why": "You can hammer, saw, drill or nail something, but 'pliers' is not a verb."
+  },
+  {
+   "id": "PB119",
+   "category": "private-mcq",
+   "state": "pb119",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "light the kindling",
+    "add the large logs",
+    "arrange the tinder",
+    "clear the ground",
+    "gather wood"
+   ],
+   "gold": "add the large logs",
+   "why": "Large logs only catch once the kindling is burning; the other steps all precede lighting."
+  },
+  {
+   "id": "PB120",
+   "category": "private-mcq",
+   "state": "pb120",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "spider",
+    "ant",
+    "crab",
+    "cat",
+    "beetle"
+   ],
+   "gold": "cat",
+   "why": "A cat has four legs, the same as a chair, not more; the others have six or more."
+  },
+  {
+   "id": "PB121",
+   "category": "private-mcq",
+   "state": "pb121",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "Cy",
+    "Bea",
+    "Eve",
+    "Ada",
+    "Dan"
+   ],
+   "gold": "Eve",
+   "why": "Dan, Ada, Bea and Cy are ordered oldest to youngest, so if Cy is not the youngest, the fifth person Eve must be."
+  },
+  {
+   "id": "PB122",
+   "category": "private-mcq",
+   "state": "pb122",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "D, A, B, C",
+    "B, C, A, D",
+    "C, B, A, D",
+    "C, A, B, D",
+    "A, B, C, D"
+   ],
+   "gold": "C, B, A, D",
+   "why": "C is below B, B below A, and A below D."
+  },
+  {
+   "id": "PB123",
+   "category": "private-mcq",
+   "state": "pb123",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "child",
+    "foot",
+    "book",
+    "mouse",
+    "tooth"
+   ],
+   "gold": "book",
+   "why": "Books is formed by adding s; the others become children, feet, mice and teeth."
+  },
+  {
+   "id": "PB124",
+   "category": "private-mcq",
+   "state": "pb124",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "B, D, A, C, E",
+    "D, B, A, C, E",
+    "B, A, C, D, E",
+    "A, C, B, D, E",
+    "B, D, C, A, E"
+   ],
+   "gold": "B, D, A, C, E",
+   "why": "D must precede the A-C pair and B must precede D, leaving B, D, A, C, E as the only order."
+  },
+  {
+   "id": "PB125",
+   "category": "private-mcq",
+   "state": "pb125",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "noon",
+    "deed",
+    "refer",
+    "civic",
+    "river"
+   ],
+   "gold": "river",
+   "why": "River reversed is revir; the other four are palindromes."
+  },
+  {
+   "id": "PB126",
+   "category": "private-mcq",
+   "state": "pb126",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "a 25 clearance lamp",
+    "a 15 mug from the shelf",
+    "a 20 clearance scarf",
+    "a 15 clearance mug",
+    "a 5 gift card"
+   ],
+   "gold": "a 15 clearance mug",
+   "why": "Only the 15 clearance mug satisfies both conditions; 20 is not under 20, and the others are not from the bin."
+  },
+  {
+   "id": "PB127",
+   "category": "private-mcq",
+   "state": "pb127",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "tree",
+    "plant",
+    "stone",
+    "idea",
+    "apple"
+   ],
+   "gold": "tree",
+   "why": "Tree has two vowels and two consonants; the others are unbalanced."
+  },
+  {
+   "id": "PB128",
+   "category": "private-mcq",
+   "state": "pb128",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "a race",
+    "a bath",
+    "a ladder",
+    "a company",
+    "a fever"
+   ],
+   "gold": "a ladder",
+   "why": "You run a race, a bath, a company or a fever, but you climb a ladder."
+  },
+  {
+   "id": "PB129",
+   "category": "private-mcq",
+   "state": "pb129",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "a leashed dog, dining room",
+    "a loose cat, lobby",
+    "a caged bird, dining room",
+    "a loose dog, patio",
+    "a caged bird, lobby"
+   ],
+   "gold": "a caged bird, lobby",
+   "why": "Only the caged bird outside the dining room meets both the restraint rule and the room rule."
+  },
+  {
+   "id": "PB130",
+   "category": "private-mcq",
+   "state": "pb130",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "eagle",
+    "spoon",
+    "window",
+    "plane",
+    "glass"
+   ],
+   "gold": "eagle",
+   "why": "Eagle is five letters, e to e; window matches the letters but has six."
+  },
+  {
+   "id": "PB131",
+   "category": "private-mcq",
+   "state": "pb131",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "7",
+    "13",
+    "9",
+    "21",
+    "16"
+   ],
+   "gold": "13",
+   "why": "13 is 1 more than a multiple of 12; each other number fails one of the two divisions."
+  },
+  {
+   "id": "PB132",
+   "category": "private-mcq",
+   "state": "pb132",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "shut all windows",
+    "open all windows",
+    "shut all except server room",
+    "shut only server room windows",
+    "leave everything as it is"
+   ],
+   "gold": "shut all except server room",
+   "why": "On a dry night the exception applies, so every window closes except those in the server room."
+  },
+  {
+   "id": "PB133",
+   "category": "private-mcq",
+   "state": "pb133",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "plate",
+    "house",
+    "apple",
+    "storm",
+    "trunk"
+   ],
+   "gold": "plate",
+   "why": "Plate minus p gives late; the others leave non-words."
+  },
+  {
+   "id": "PB134",
+   "category": "private-mcq",
+   "state": "pb134",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "thimble",
+    "category",
+    "doggerel",
+    "pigment",
+    "bowl"
+   ],
+   "gold": "thimble",
+   "why": "thimble hides no animal word; category has cat, doggerel has dog, pigment has pig, bowl has owl."
+  },
+  {
+   "id": "PB135",
+   "category": "private-mcq",
+   "state": "pb135",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "5 January",
+    "12 January",
+    "9 December",
+    "15 January",
+    "31 December"
+   ],
+   "gold": "31 December",
+   "why": "31 December is 21 days later and in the same year; the January dates change year and 9 December is before departure."
+  },
+  {
+   "id": "PB136",
+   "category": "private-mcq",
+   "state": "pb136",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "28",
+    "19",
+    "37",
+    "91",
+    "74"
+   ],
+   "gold": "28",
+   "why": "28 is even and 2 + 8 = 10; 74 is even but sums to 11, and the others are odd."
+  },
+  {
+   "id": "PB137",
+   "category": "private-mcq",
+   "state": "pb137",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "cat and cast",
+    "cat and act",
+    "cat and dog",
+    "cat and cats",
+    "cat and cot"
+   ],
+   "gold": "cat and cot",
+   "why": "Only cat and cot differ by a single substituted letter; the others add, move or change more letters."
+  },
+  {
+   "id": "PB138",
+   "category": "private-mcq",
+   "state": "pb138",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "both children",
+    "only the Sunday child",
+    "neither child",
+    "only the Saturday child",
+    "only if with adults"
+   ],
+   "gold": "only the Sunday child",
+   "why": "The Saturday exception excludes a 7-year-old, while Sunday falls under the general rule."
+  },
+  {
+   "id": "PB139",
+   "category": "private-mcq",
+   "state": "pb139",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "She left early",
+    "Two are left",
+    "Left-handed people",
+    "He left the light on",
+    "Turn left here"
+   ],
+   "gold": "Turn left here",
+   "why": "Only 'turn left' uses left as a direction to move; the others mean departed, remaining, or a hand preference."
+  },
+  {
+   "id": "PB140",
+   "category": "private-mcq",
+   "state": "pb140",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "almost",
+    "bread",
+    "table",
+    "mouse",
+    "plant"
+   ],
+   "gold": "almost",
+   "why": "a, l, m, o, s, t rise in order; each other word has a letter followed by an earlier one."
+  },
+  {
+   "id": "PB141",
+   "category": "private-mcq",
+   "state": "pb141",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "a shadow",
+    "a record",
+    "a promise",
+    "a habit",
+    "a silence"
+   ],
+   "gold": "a shadow",
+   "why": "Records, promises, habits and silences are all broken; a shadow is not."
+  },
+  {
+   "id": "PB142",
+   "category": "private-mcq",
+   "state": "pb142",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "sunny day 9",
+    "octo8pus",
+    "riverbank",
+    "cat42",
+    "blue sky42"
+   ],
+   "gold": "octo8pus",
+   "why": "octo8pus has eight characters, a digit and no space; the others contain a space, lack a digit, or are too short."
+  },
+  {
+   "id": "PB143",
+   "category": "private-mcq",
+   "state": "pb143",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "hush",
+    "still",
+    "mute",
+    "peace",
+    "calm"
+   ],
+   "gold": "calm",
+   "why": "Calm shares no letter with NOISE; hush and still contain s, mute and peace contain e."
+  },
+  {
+   "id": "PB144",
+   "category": "private-mcq",
+   "state": "pb144",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "Turn right",
+    "You have the right",
+    "Right now",
+    "That's right",
+    "Right-hand man"
+   ],
+   "gold": "That's right",
+   "why": "Only 'that's right' uses right as correct; the others mean a direction, an entitlement, immediacy, or a side."
+  },
+  {
+   "id": "PB145",
+   "category": "private-mcq",
+   "state": "pb145",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "apple, pear, carrot",
+    "rose, tulip, oak",
+    "spoon, fork, knife",
+    "hammer, saw, nail",
+    "river, lake, cloud"
+   ],
+   "gold": "spoon, fork, knife",
+   "why": "Spoon, fork and knife are all cutlery; each other list has one item of a different kind."
+  },
+  {
+   "id": "PB146",
+   "category": "private-mcq",
+   "state": "pb146",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "dry",
+    "arid",
+    "parched",
+    "damp",
+    "dusty"
+   ],
+   "gold": "damp",
+   "why": "The double negative asks for a word describing something wet; only damp does."
+  },
+  {
+   "id": "PB147",
+   "category": "private-mcq",
+   "state": "pb147",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "sun and moon",
+    "cat and dog",
+    "tree and bush",
+    "apple and pear",
+    "lion and tiger"
+   ],
+   "gold": "tree and bush",
+   "why": "Tree and bush have four letters each; each other pair contains at least one odd-length word."
+  },
+  {
+   "id": "PB148",
+   "category": "private-mcq",
+   "state": "pb148",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "orange",
+    "purple",
+    "often",
+    "silver",
+    "yellow"
+   ],
+   "gold": "often",
+   "why": "Often contains ten; none of the colour words contains a number word."
+  },
+  {
+   "id": "PB149",
+   "category": "private-mcq",
+   "state": "pb149",
+   "type": "choice",
+   "instructions": "Which answer best fits the question?",
+   "options": [
+    "a resident's car overnight",
+    "a visitor's car at lunch",
+    "a visitor's car overnight",
+    "a resident's van at noon",
+    "a delivery truck, 10 minutes"
+   ],
+   "gold": "a visitor's car overnight",
+   "why": "Only the visitor's overnight car is parked overnight without a resident sticker."
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+# secrets
+.env
+*/.env
+**/.env
+# model cache and virtual environments (19 GB)
+hf/
+.venv/
+.venv-local/
+node_modules/
+__pycache__/
+*.pyc
+# third-party clones referenced from the README, not vendored
+src-typed-decisions/
+demos/jev-2048/
+demos/jev-drone/
+# upstream git history of the two demo forks, kept locally only
+**/.upstream-git/
+# raw browser recordings (tens of MB); the composed videos live with the deck
+**/runs/video-*/

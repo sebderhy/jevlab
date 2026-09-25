@@ -1,0 +1,8 @@
+{"pilot":"jev","seed":7,"outcome":"landed_on_pad","landingSpeed":0.75,"distanceToPad":0.5,"wallSeconds":62.9,"simSeconds":56.8,"simSpeed":0.9,"decisions":222,"stale":0,"errors":1,"avgLatencyMs":250,"inputTokens":378823,"outputTokens":56402,"costUsd":0.01591}
+null
+{"pilot":"jev","seed":123,"outcome":"landed_on_pad","landingSpeed":0.69,"distanceToPad":0.2,"wallSeconds":67.1,"simSeconds":61.6,"simSpeed":0.92,"decisions":232,"stale":0,"errors":1,"avgLatencyMs":255,"inputTokens":396300,"outputTokens":58942,"costUsd":0.01664}
+{"pilot":"deepseek","seed":123,"outcome":"landed_on_pad","landingSpeed":3.28,"distanceToPad":0.9,"wallSeconds":526.7,"simSeconds":521.9,"simSpeed":0.99,"decisions":371,"stale":36,"errors":0,"avgLatencyMs":1067,"inputTokens":1012449,"outputTokens":2226,"costUsd":0.30641}
+{"pilot":"jev","seed":2026,"outcome":"landed_on_pad","landingSpeed":0.61,"distanceToPad":1.1,"wallSeconds":57.1,"simSeconds":52.6,"simSpeed":0.92,"decisions":200,"stale":0,"errors":0,"avgLatencyMs":252,"inputTokens":341004,"outputTokens":50846,"costUsd":0.01432}
+{"pilot":"deepseek","seed":2026,"outcome":"landed_on_pad","landingSpeed":3.48,"distanceToPad":0.6,"wallSeconds":352.5,"simSeconds":348.9,"simSpeed":0.99,"decisions":229,"stale":29,"errors":0,"avgLatencyMs":1060,"inputTokens":620805,"outputTokens":1374,"costUsd":0.18789}
+null
+BATCH_DONE

@@ -1,0 +1,817 @@
+diff --git a/.env.example b/.env.example
+index f76dddf..fcc7e6e 100644
+--- a/.env.example
++++ b/.env.example
+@@ -1,17 +1,15 @@
+-# Get a key at https://console.typesafe.ai/settings/keys
++# Jev (TypeSafe): https://console.typesafe.ai/settings/keys
+ TYPESAFE_API_KEY=
+-# Optional overrides
+-# TYPESAFE_DEFAULT_MODEL=jev-latest
+-# JEV_TIMEOUT_MS=4000
+-# PORT=3000
++PORT=3001
+ 
+-# Optional: enables the "Jev vs LLM" side-by-side comparison (https://openrouter.ai/keys)
+-OPENROUTER_API_KEY=
+-OPENROUTER_MODEL=deepseek/deepseek-v4.1-flash
+-# LLM_TIMEOUT_MS=15000
+-# OPENROUTER_REASONING=low   # let the LLM think first (slower, more tokens); off by default
+-# Pricing overrides in USD per million tokens (LLM pricing is fetched from OpenRouter when unset)
+-# JEV_PRICE_INPUT_PER_M=0.042
+-# JEV_PRICE_OUTPUT_PER_M=0
+-# LLM_PRICE_INPUT_PER_M=
+-# LLM_PRICE_OUTPUT_PER_M=
++# Second brain: any OpenAI-compatible chat endpoint. The deck used DeepSeek V4.1 Flash on Fireworks.
++LLM_BASE_URL=https://api.fireworks.ai/inference/v1
++LLM_API_KEY=
++LLM_MODEL=accounts/fireworks/models/deepseek-v4p1-flash
++LLM_PRICE_INPUT_PER_M=0.30
++LLM_PRICE_OUTPUT_PER_M=1.20
++
++# Local open models served by ../../local_server.py (and app.py for Laya), routed as /api/<name>-decide
++LOCAL_BRAINS={"laya":"http://127.0.0.1:3210","decider":"http://127.0.0.1:3211","kev":"http://127.0.0.1:3212"}
++# Which local model the browser's third track uses
++LAYA_ENGINE=laya
+diff --git a/package-lock.json b/package-lock.json
+index 5621e6e..7ca8081 100644
+--- a/package-lock.json
++++ b/package-lock.json
+@@ -10,10 +10,274 @@
+       "dependencies": {
+         "@typesafe-ai/sdk": "^0.6.0"
+       },
++      "devDependencies": {
++        "@napi-rs/canvas": "^1.0.9"
++      },
+       "engines": {
+         "node": ">=20"
+       }
+     },
++    "node_modules/@napi-rs/canvas": {
++      "version": "1.0.9",
++      "resolved": "https://registry.npmjs.org/@napi-rs/canvas/-/canvas-1.0.9.tgz",
++      "integrity": "sha512-QviPdJImDi/jMAvBfqaw+19BndMd/sizXVW3NnpMd3VJGz++QXkOHcP9kWR/smHG0hNjHeyuHFyrx/5lD0oNcQ==",
++      "dev": true,
++      "license": "MIT",
++      "workspaces": [
++        "e2e/*"
++      ],
++      "engines": {
++        "node": ">= 10"
++      },
++      "funding": {
++        "type": "github",
++        "url": "https://github.com/sponsors/Brooooooklyn"
++      },
++      "optionalDependencies": {
++        "@napi-rs/canvas-android-arm64": "1.0.9",
++        "@napi-rs/canvas-darwin-arm64": "1.0.9",
++        "@napi-rs/canvas-darwin-x64": "1.0.9",
++        "@napi-rs/canvas-linux-arm-gnueabihf": "1.0.9",
++        "@napi-rs/canvas-linux-arm64-gnu": "1.0.9",
++        "@napi-rs/canvas-linux-arm64-musl": "1.0.9",
++        "@napi-rs/canvas-linux-riscv64-gnu": "1.0.9",
++        "@napi-rs/canvas-linux-x64-gnu": "1.0.9",
++        "@napi-rs/canvas-linux-x64-musl": "1.0.9",
++        "@napi-rs/canvas-win32-arm64-msvc": "1.0.9",
++        "@napi-rs/canvas-win32-x64-msvc": "1.0.9"
++      }
++    },
++    "node_modules/@napi-rs/canvas-android-arm64": {
++      "version": "1.0.9",
++      "resolved": "https://registry.npmjs.org/@napi-rs/canvas-android-arm64/-/canvas-android-arm64-1.0.9.tgz",
++      "integrity": "sha512-4LGXk2/0HVzE29K8SzML5WubgCp++B1FH3qgl35XmSZE+lLdr6P9VRQEnZ0MCLZMTSuJP41yyhtoiVNEuvrTIA==",
++      "cpu": [
++        "arm64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "android"
++      ],
++      "engines": {
++        "node": ">= 10"
++      },
++      "funding": {
++        "type": "github",
++        "url": "https://github.com/sponsors/Brooooooklyn"
++      }
++    },
++    "node_modules/@napi-rs/canvas-darwin-arm64": {
++      "version": "1.0.9",
++      "resolved": "https://registry.npmjs.org/@napi-rs/canvas-darwin-arm64/-/canvas-darwin-arm64-1.0.9.tgz",
++      "integrity": "sha512-YNdfLBzY0W/Pep9fo2L6RmoNlNksnn05LRnX66W63R3ij58S25QOTcjdtEt2v8+PnCESzqZsYzUo+QPeIR44NA==",
++      "cpu": [
++        "arm64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "darwin"
++      ],
++      "engines": {
++        "node": ">= 10"
++      },
++      "funding": {
++        "type": "github",
++        "url": "https://github.com/sponsors/Brooooooklyn"
++      }
++    },
++    "node_modules/@napi-rs/canvas-darwin-x64": {
++      "version": "1.0.9",
++      "resolved": "https://registry.npmjs.org/@napi-rs/canvas-darwin-x64/-/canvas-darwin-x64-1.0.9.tgz",
++      "integrity": "sha512-ceZQSknTEcy3dOXoekv59LTCkXjvnLsq+VW5PeNNDHEPQbRS5Ervkm1EaDa7WLAjiYWMLuSQTRTHao1dEX4prg==",
++      "cpu": [
++        "x64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "darwin"
++      ],
++      "engines": {
++        "node": ">= 10"
++      },
++      "funding": {
++        "type": "github",
++        "url": "https://github.com/sponsors/Brooooooklyn"
++      }
++    },
++    "node_modules/@napi-rs/canvas-linux-arm-gnueabihf": {
++      "version": "1.0.9",
++      "resolved": "https://registry.npmjs.org/@napi-rs/canvas-linux-arm-gnueabihf/-/canvas-linux-arm-gnueabihf-1.0.9.tgz",
++      "integrity": "sha512-XhfI0Wwv4llhd6nnWDtY3kQKjq0r+y1i91PlJlJI24ag2U9WrnwbG1qS3+fDLEyouwEVFchiKkTEHozK+5iUNA==",
++      "cpu": [
++        "arm"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">= 10"
++      },
++      "funding": {
++        "type": "github",
++        "url": "https://github.com/sponsors/Brooooooklyn"
++      }
++    },
++    "node_modules/@napi-rs/canvas-linux-arm64-gnu": {
++      "version": "1.0.9",
++      "resolved": "https://registry.npmjs.org/@napi-rs/canvas-linux-arm64-gnu/-/canvas-linux-arm64-gnu-1.0.9.tgz",
++      "integrity": "sha512-012oiYtKaE7i9oxc8q7nraT7kDOpLcaCmFLzVe9Ty34RHDdoDzbWLrVh827CNxYh/EADX1eSikA3ymLjo/nNuw==",
++      "cpu": [
++        "arm64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">= 10"
++      },
++      "funding": {
++        "type": "github",
++        "url": "https://github.com/sponsors/Brooooooklyn"
++      }
++    },
++    "node_modules/@napi-rs/canvas-linux-arm64-musl": {
++      "version": "1.0.9",
++      "resolved": "https://registry.npmjs.org/@napi-rs/canvas-linux-arm64-musl/-/canvas-linux-arm64-musl-1.0.9.tgz",
++      "integrity": "sha512-Ls5UWYFFn63casTZEczbeyEg3vRDRkv9lscuGwfchtY5yLLQhgOB8SN4YGxmfJ5vTaBwZ2YUxBS3NtmjJmFXdA==",
++      "cpu": [
++        "arm64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">= 10"
++      },
++      "funding": {
++        "type": "github",
++        "url": "https://github.com/sponsors/Brooooooklyn"
++      }
++    },
++    "node_modules/@napi-rs/canvas-linux-riscv64-gnu": {
++      "version": "1.0.9",
++      "resolved": "https://registry.npmjs.org/@napi-rs/canvas-linux-riscv64-gnu/-/canvas-linux-riscv64-gnu-1.0.9.tgz",
++      "integrity": "sha512-hLKEGxV7ZiRHqndePTokgDMdBlo/rDfzg7P4p4QIv9pUhuYobnu3R2NIFLCRghG0nwfo+s2sw+c1xZFeCmEAsw==",
++      "cpu": [
++        "riscv64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">= 10"
++      },
++      "funding": {
++        "type": "github",
++        "url": "https://github.com/sponsors/Brooooooklyn"
++      }
++    },
++    "node_modules/@napi-rs/canvas-linux-x64-gnu": {
++      "version": "1.0.9",
++      "resolved": "https://registry.npmjs.org/@napi-rs/canvas-linux-x64-gnu/-/canvas-linux-x64-gnu-1.0.9.tgz",
++      "integrity": "sha512-6kaz3w0QMy77PDWk6rJ1ksIihdad3qzEyX2o2oGT8GwCaypfT5mhjr8buOO5hstyLxcWXDScuz56RsINLtBPIQ==",
++      "cpu": [
++        "x64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">= 10"
++      },
++      "funding": {
++        "type": "github",
++        "url": "https://github.com/sponsors/Brooooooklyn"
++      }
++    },
++    "node_modules/@napi-rs/canvas-linux-x64-musl": {
++      "version": "1.0.9",
++      "resolved": "https://registry.npmjs.org/@napi-rs/canvas-linux-x64-musl/-/canvas-linux-x64-musl-1.0.9.tgz",
++      "integrity": "sha512-xrGvmS3v55hmZ86ls/kBLVNMUTYio3f6Ik0DireemG994VfPAwiA3ZXA0Uf1bByctkB3NQ1Sfb+H5bkdUnnzfQ==",
++      "cpu": [
++        "x64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "linux"
++      ],
++      "engines": {
++        "node": ">= 10"
++      },
++      "funding": {
++        "type": "github",
++        "url": "https://github.com/sponsors/Brooooooklyn"
++      }
++    },
++    "node_modules/@napi-rs/canvas-win32-arm64-msvc": {
++      "version": "1.0.9",
++      "resolved": "https://registry.npmjs.org/@napi-rs/canvas-win32-arm64-msvc/-/canvas-win32-arm64-msvc-1.0.9.tgz",
++      "integrity": "sha512-yjmVS3ArZeRVCP7jqbPq4rpZa/BhTeI7ELE2XqJg3snICQBDevLZyArxswHkiTnT34KRic33/4fLirrHI+SY8A==",
++      "cpu": [
++        "arm64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "win32"
++      ],
++      "engines": {
++        "node": ">= 10"
++      },
++      "funding": {
++        "type": "github",
++        "url": "https://github.com/sponsors/Brooooooklyn"
++      }
++    },
++    "node_modules/@napi-rs/canvas-win32-x64-msvc": {
++      "version": "1.0.9",
++      "resolved": "https://registry.npmjs.org/@napi-rs/canvas-win32-x64-msvc/-/canvas-win32-x64-msvc-1.0.9.tgz",
++      "integrity": "sha512-QlSYQdMQslB81nlABo9wNfQ6npFhE7/O+saCZdqVGueGanyRk4jCogD5EwQenfP3kIq9e+mm6GreQBjX5MrA8g==",
++      "cpu": [
++        "x64"
++      ],
++      "dev": true,
++      "license": "MIT",
++      "optional": true,
++      "os": [
++        "win32"
++      ],
++      "engines": {
++        "node": ">= 10"
++      },
++      "funding": {
++        "type": "github",
++        "url": "https://github.com/sponsors/Brooooooklyn"
++      }
++    },
+     "node_modules/@typesafe-ai/sdk": {
+       "version": "0.6.0",
+       "resolved": "https://registry.npmjs.org/@typesafe-ai/sdk/-/sdk-0.6.0.tgz",
+diff --git a/package.json b/package.json
+index f4d2a3e..8e90494 100644
+--- a/package.json
++++ b/package.json
+@@ -8,8 +8,13 @@
+     "start": "node server.js",
+     "sim:headless": "node scripts/headless.js"
+   },
+-  "engines": { "node": ">=20" },
++  "engines": {
++    "node": ">=20"
++  },
+   "dependencies": {
+     "@typesafe-ai/sdk": "^0.6.0"
++  },
++  "devDependencies": {
++    "@napi-rs/canvas": "^1.0.9"
+   }
+ }
+diff --git a/public/index.html b/public/index.html
+index 30fd9d6..d3c1d53 100644
+--- a/public/index.html
++++ b/public/index.html
+@@ -19,6 +19,10 @@
+           <div class="caption llm" id="captionLlm">LLM</div>
+           <canvas id="simLlm" width="600" height="840" aria-label="Track driven by an LLM"></canvas>
+         </div>
++        <div class="track" id="trackLaya" hidden>
++          <div class="caption laya" id="captionLaya">Laya</div>
++          <canvas id="simLaya" width="600" height="840" aria-label="Track driven by Laya"></canvas>
++        </div>
+       </div>
+       <div class="toolbar">
+         <div class="tools">
+@@ -43,7 +47,8 @@
+ 
+       <div class="modes">
+         <label><input type="radio" name="mode" id="modeSingle" checked> Jev only</label>
+-        <label><input type="radio" name="mode" id="modeCompare"> Compare Jev vs LLM (DeepSeek via OpenRouter)</label>
++        <label><input type="radio" name="mode" id="modeCompare"> Compare Jev vs LLM</label>
++        <label><input type="radio" name="mode" id="modeCompare3"> Compare Jev vs LLM vs Laya</label>
+         <span id="modeHint" class="muted small"></span>
+       </div>
+ 
+diff --git a/public/js/brain.js b/public/js/brain.js
+index 6550856..a4d6878 100644
+--- a/public/js/brain.js
++++ b/public/js/brain.js
+@@ -63,7 +63,8 @@ export const QUESTIONS = {
+ /** Ask the server for a decision from `kind` ("jev" or "llm"). Throws on any failure. */
+ export async function askBrain(kind, state, signal) {
+   const t0 = performance.now();
+-  const res = await fetch(kind === "llm" ? "/api/llm-decide" : "/api/decide", {
++  const route = kind === "laya" ? (globalThis.__thirdEngine || "laya") : kind; // the third track drives with the server's configured local model
++  const res = await fetch(kind === "jev" ? "/api/decide" : `/api/${route}-decide`, {
+     method: "POST",
+     headers: { "Content-Type": "application/json" },
+     body: JSON.stringify({ state, questions: QUESTIONS }),
+diff --git a/public/js/main.js b/public/js/main.js
+index 12f41ad..93b0a7c 100644
+--- a/public/js/main.js
++++ b/public/js/main.js
+@@ -10,16 +10,19 @@ const $ = (id) => document.getElementById(id);
+ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+ const fmtUsd = (v) => (v >= 0.01 ? `$${v.toFixed(3)}` : `$${v.toFixed(5)}`);
+ 
++// URL parameters, for scripted or recorded runs: ?mode=single|compare|compare3&seed=42&course=traffic&stop=120
++const params = new URLSearchParams(location.search);
+ const app = {
+-  health: { jev: false, model: null, llm: false, llmModel: null, pricing: null },
+-  mode: "single",          // "single" (Jev) | "compare" (Jev vs LLM)
++  health: { jev: false, model: null, llm: false, llmModel: null, laya: false, pricing: null },
++  mode: params.get("mode") || "single", // "single" (Jev) | "compare" (Jev vs LLM) | "compare3" (Jev vs LLM vs Laya)
++  stopAt: Number(params.get("stop")) || 0, // pause every track once the first one reaches this sim time
+   drivers: [],
+   selected: 0,             // which driver's answers are shown in detail
+   running: true,
+   tool: "cone",
+-  seed: Date.now() >>> 0,
++  seed: Number(params.get("seed")) || (Date.now() >>> 0),
+   course: null,            // one Course shared by every track: identical objects in identical places
+-  settings: { autoTraffic: true, density: 1, maxSpeedKmh: 45, reflex: true, rays: true, answers: true, course: "traffic", decisionMs: CONFIG.DECISION_MIN_INTERVAL_MS },
++  settings: { autoTraffic: true, density: 1, maxSpeedKmh: 45, reflex: true, rays: true, answers: true, course: params.get("course") || "traffic", decisionMs: CONFIG.DECISION_MIN_INTERVAL_MS },
+ };
+ 
+ // ---------- a Driver = one world + one canvas + one brain
+@@ -32,6 +35,7 @@ class Driver {
+   }
+   get modelName() {
+     if (this.kind === "llm") return app.health.llm ? app.health.llmModel : "LLM (no key)";
++    if (this.kind === "laya") return app.health.laya ? app.health.layaLabel : "local model (off)";
+     return app.health.jev ? app.health.model : "local fallback";
+   }
+   reset(seed) {
+@@ -57,7 +61,7 @@ class Driver {
+       if (world.crashed) { this.stats.crashedAt = world.ego.y; log(`[${this.label}] CRASH into ${world.crashed.type} at ${Math.round(world.ego.y)} m`); }
+     }
+     this.renderer.draw(world, this.perception, {
+-      mode: this.kind === "llm" ? (app.health.llm ? "llm" : "local") : (app.health.jev ? "jev" : "local"),
++      mode: app.health[this.kind] ? this.kind : "local",
+       model: this.modelName, label: this.label, latency: this.last.latency, paused: !app.running,
+       hazard: this.last.answers ? this.last.answers.hazard.score : 0,
+       last: this.last, questions: QUESTIONS,
+@@ -74,7 +78,7 @@ class Driver {
+     for (;;) {
+       const world = this.world;
+       if (!app.running || world.crashed || !this.perception || app.health.checking || !this.active) { await sleep(80); continue; }
+-      const remote = this.kind === "llm" ? app.health.llm : app.health.jev;
++      const remote = Boolean(app.health[this.kind]);
+       const state = this.perception.state;
+       const t0 = performance.now();
+       let answers, source = "local", error = null, usage = null, cost = 0, reasoning = "";
+@@ -108,16 +112,20 @@ class Driver {
+ 
+ // ---------- setup / mode switching
+ function buildDrivers() {
+-  const wrapJev = $("trackJev"), wrapLlm = $("trackLlm");
++  const wrapLlm = $("trackLlm"), wrapLaya = $("trackLaya");
+   app.drivers = [new Driver("jev", $("simJev"), "Jev")];
+-  if (app.mode === "compare") app.drivers.push(new Driver("llm", $("simLlm"), "LLM"));
+-  wrapLlm.hidden = app.mode !== "compare";
++  if (app.mode !== "single") app.drivers.push(new Driver("llm", $("simLlm"), "LLM"));
++  if (app.mode === "compare3") app.drivers.push(new Driver("laya", $("simLaya"), "Laya"));
++  wrapLlm.hidden = app.mode === "single";
++  wrapLaya.hidden = app.mode !== "compare3";
+   document.querySelector(".layout").classList.toggle("compare", app.mode === "compare");
++  document.querySelector(".layout").classList.toggle("compare3", app.mode === "compare3");
+   app.drivers.forEach((d) => { d.active = true; d.loop(); });
+   app.selected = 0;
+   renderTabs();
+   $("captionJev").textContent = `Jev · ${app.drivers[0].modelName}`;
+   if (app.drivers[1]) $("captionLlm").textContent = `LLM · ${app.drivers[1].modelName}`;
++  if (app.drivers[2]) $("captionLaya").textContent = `${app.health.layaEngine === "decider" ? "Decider-2B" : "Laya"} · ${app.drivers[2].modelName}`;
+ }
+ function teardownDrivers() { app.drivers.forEach((d) => (d.active = false)); }
+ 
+@@ -130,6 +138,11 @@ async function checkHealth() {
+     log(h.llm ? `LLM comparison available (${h.llmModel})` : "No OPENROUTER_API_KEY: comparison mode disabled");
+   } catch (e) { app.health.checking = false; log(`health check failed: ${e.message}`); }
+   $("modeCompare").disabled = !app.health.llm;
++  globalThis.__thirdEngine = app.health.layaEngine || "laya";
++  $("modeCompare3").disabled = !(app.health.llm && app.health.laya);
++  if (app.mode === "compare3" && !(app.health.llm && app.health.laya)) app.mode = app.health.llm ? "compare" : "single";
++  if (app.mode === "compare" && !app.health.llm) app.mode = "single";
++  $({ single: "modeSingle", compare: "modeCompare", compare3: "modeCompare3" }[app.mode]).checked = true;
+   $("modeHint").textContent = app.health.llm ? "" : "set OPENROUTER_API_KEY to enable";
+   updateModeBadge();
+   buildDrivers();
+@@ -140,6 +153,7 @@ let lastTs = performance.now();
+ function frame(ts) {
+   const dt = Math.min(0.05, (ts - lastTs) / 1000); lastTs = ts;
+   for (const d of app.drivers) d.frame(dt);
++  if (app.stopAt && app.running && app.drivers.some((d) => d.world.time >= app.stopAt)) { app.running = false; $("pause").textContent = "Resume"; log(`stopped at ${app.stopAt} s (?stop=)`); }
+   updateStats();
+   requestAnimationFrame(frame);
+ }
+@@ -169,7 +183,7 @@ function updateStats() {
+   const avgLat = (d) => d.stats.latencies.length ? Math.round(d.stats.latencies.reduce((a, b) => a + b, 0) / d.stats.latencies.length) : 0;
+   const perDecision = (d) => (d.stats.calls ? d.stats.cost / d.stats.calls : 0);
+   const perHour = (d) => (d.world.time > 5 ? d.stats.cost / d.world.time * 3600 : 0);
+-  const price = (d) => { const p = app.health.pricing?.[d.kind]; return p ? `$${p.input}/M in · $${p.output}/M out` : "price unknown"; };
++  const price = (d) => { if (d.kind === "laya") return "open weights, this box's CPU"; const p = app.health.pricing?.[d.kind]; return p ? `$${p.input}/M in · $${p.output}/M out` : "price unknown"; };
+   rows.push(`<tr><th></th>${app.drivers.map((d) => `<th class="${d.kind}">${d.label}<small>${d.modelName}</small><small>${price(d)}</small></th>`).join("")}</tr>`);
+   rows.push(`<tr><td>status</td>${cell((d) => d.world.crashed ? `<span class="bad">crashed (${d.world.crashed.type})</span>` : `<span class="good">driving</span>`)}</tr>`);
+   rows.push(`<tr><td>distance</td>${cell((d) => `${Math.round(d.world.ego.y)} m`)}</tr>`);
+@@ -246,6 +260,7 @@ function wireUi() {
+   sel.onchange = () => { app.settings.course = sel.value; showCourseInfo(); restart(); };
+   $("modeSingle").onchange = () => setMode("single");
+   $("modeCompare").onchange = () => setMode("compare");
++  $("modeCompare3").onchange = () => setMode("compare3");
+   const applyAll = () => app.drivers.forEach((d) => d.applySettings());
+   $("autoTraffic").onchange = (e) => { app.settings.autoTraffic = e.target.checked; applyAll(); };
+   $("density").oninput = (e) => { app.settings.density = Number(e.target.value); $("densityVal").textContent = `${e.target.value}×`; applyAll(); };
+@@ -259,7 +274,7 @@ function wireUi() {
+   });
+ 
+   // Clicks on either track place the object in every world (same world coordinates), so the comparison stays fair.
+-  for (const canvas of [$("simJev"), $("simLlm")]) {
++  for (const canvas of [$("simJev"), $("simLlm"), $("simLaya")]) {
+     const toWorld = (ev, d) => {
+       const r = canvas.getBoundingClientRect();
+       const sx = (ev.clientX - r.left) * (canvas.width / r.width), sy = (ev.clientY - r.top) * (canvas.height / r.height);
+@@ -295,5 +310,14 @@ function wireUi() {
+ }
+ 
+ wireUi();
++$("seed").value = params.get("seed") || "";
+ checkHealth();
+ requestAnimationFrame(frame);
++// Snapshot for scripted runs (scripts/drive.mjs): per driver, where it is and what it spent.
++window.__snapshot = () => app.drivers.map((d) => ({
++  kind: d.kind, model: d.modelName, time: Number(d.world.time.toFixed(1)), crashed: d.world.crashed ? { type: d.world.crashed.type, time: Number(d.world.crashed.time.toFixed(1)) } : null,
++  distance_m: Math.round(d.world.ego.y), avg_kmh: d.world.time > 1 ? Math.round(d.world.ego.y / d.world.time * 3.6) : 0,
++  decisions: d.stats.calls, errors: d.stats.errors, avgLatencyMs: d.stats.latencies.length ? Math.round(d.stats.latencies.reduce((a, b) => a + b, 0) / d.stats.latencies.length) : null,
++  tokensIn: d.stats.tokensIn, tokensOut: d.stats.tokensOut, costUsd: Number(d.stats.cost.toFixed(5)),
++}));
++window.__running = () => app.running;
+diff --git a/public/js/render.js b/public/js/render.js
+index 86c116a..b1810c6 100644
+--- a/public/js/render.js
++++ b/public/js/render.js
+@@ -210,8 +210,8 @@ export class Renderer {
+       ctx.textAlign = "left";
+     }
+     if (ui?.mode) {
+-      ctx.textAlign = "right"; ctx.fillStyle = ui.mode === "jev" ? "#7ee787" : ui.mode === "llm" ? "#79b8ff" : "#ffb020"; ctx.font = "bold 12px system-ui, sans-serif";
+-      const title = ui.mode === "jev" ? `JEV · ${ui.model || ""}` : ui.mode === "llm" ? `LLM · ${(ui.model || "").split("/").pop()}` : `${ui.label ? ui.label + " · " : ""}LOCAL FALLBACK`;
++      ctx.textAlign = "right"; ctx.fillStyle = ui.mode === "jev" ? "#7ee787" : ui.mode === "llm" ? "#79b8ff" : ["laya", "decider", "kev"].includes(ui.mode) ? "#5fd35f" : "#ffb020"; ctx.font = "bold 12px system-ui, sans-serif";
++      const title = ui.mode === "jev" ? `JEV · ${ui.model || ""}` : ui.mode === "llm" ? `LLM · ${(ui.model || "").split("/").pop()}` : ["laya", "decider", "kev"].includes(ui.mode) ? `OPEN MODEL · ${ui.model || ui.mode}` : `${ui.label ? ui.label + " · " : ""}LOCAL FALLBACK`;  // LOCAL FALLBACK = the author's rule brain only
+       ctx.fillText(title, W - 14, 28);
+       ctx.fillStyle = "#b7c0cc"; ctx.font = "12px system-ui, sans-serif";
+       if (ui.latency != null) ctx.fillText(`${ui.latency} ms`, W - 14, 46);
+diff --git a/public/style.css b/public/style.css
+index 578d348..1e71337 100644
+--- a/public/style.css
++++ b/public/style.css
+@@ -13,15 +13,17 @@ a { color: #79b8ff; }
+ .caption { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; padding: 4px 10px; border-radius: 6px; display: inline-block; }
+ .caption.jev { background: rgba(63,185,80,.15); color: var(--ok); }
+ .caption.llm { background: rgba(121,184,255,.15); color: #79b8ff; }
++.caption.laya { background: rgba(235,104,52,.15); color: #eb6834; }
+ canvas { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); cursor: crosshair; background: #1f2a1f; }
+ .layout.compare { grid-template-columns: minmax(0, 2fr) minmax(360px, 1fr); max-width: 1800px; }
++.layout.compare3 { grid-template-columns: minmax(0, 3fr) minmax(340px, 1fr); max-width: 2300px; }
+ .modes { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; font-size: 13px; background: #0f1216; border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; }
+ .modes label { display: flex; align-items: center; gap: 6px; }
+ .statsTable { width: 100%; border-collapse: collapse; font-size: 12px; }
+ .statsTable td, .statsTable th { padding: 4px 6px; border-bottom: 1px solid var(--line); text-align: right; font-variant-numeric: tabular-nums; }
+ .statsTable td:first-child, .statsTable th:first-child { text-align: left; color: var(--muted); }
+ .statsTable th { font-weight: 700; } .statsTable th small { display: block; font-weight: 400; color: var(--muted); font-size: 10px; }
+-.statsTable th.jev { color: var(--ok); } .statsTable th.llm { color: #79b8ff; }
++.statsTable th.jev { color: var(--ok); } .statsTable th.llm { color: #79b8ff; } .statsTable th.laya { color: #eb6834; }
+ .totals { background: #0f1216; border: 1px dashed var(--line); border-radius: 8px; padding: 6px 8px; margin-top: 4px; line-height: 1.5; }
+ .good { color: var(--ok); } .bad { color: var(--err); }
+ .tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+diff --git a/scripts/headless.js b/scripts/headless.js
+index 227dd2e..32dcb56 100644
+--- a/scripts/headless.js
++++ b/scripts/headless.js
+@@ -3,28 +3,56 @@
+ import { World } from "../public/js/world.js";
+ import { Course } from "../public/js/course.js";
+ import { perceive } from "../public/js/sensors.js";
++import fs from "node:fs";
+ import { localDecide, gate, QUESTIONS } from "../public/js/brain.js";
+ 
+-// BRAIN=jev or BRAIN=llm uses the running server (http://localhost:3000) for real decisions.
++// BRAIN=jev|llm|laya uses the running server (http://localhost:3000) for real decisions.
++// BRAIN=llm-vision sends the LLM a screenshot plus ego-only telemetry (no JSON perception);
++// BRAIN=llm-vision-state sends the screenshot AND the full JSON state.
++// LATENCY_SCALE (default 1) multiplies each answer's real round trip before it is charged to sim time:
++// 0 = "slowed game", every brain gets the 0.2 s tempo. LATENCY_FLOOR (s, default 0.2) sets the minimum
++// decision interval, e.g. 1.35 to handicap Jev to DeepSeek's tempo.
+ const brainKind = process.env.BRAIN || "local";
+-const useJev = brainKind === "jev" || brainKind === "llm";
++const vision = brainKind.startsWith("llm-vision");
++const useJev = ["jev", "llm", "laya", "decider", "kev"].includes(brainKind) || vision;
+ const serverUrl = process.env.SERVER || "http://localhost:3000";
++const latencyScale = Number(process.env.LATENCY_SCALE ?? 1);
++const latencyFloor = Number(process.env.LATENCY_FLOOR ?? 0.2);
++const endpoint = brainKind === "jev" ? "decide" : `${brainKind.split("-")[0]}-decide`;
++// FRAMES=dir writes a 30 fps JPEG sequence of the run (the browser's view, with the answer panel) for videos.
++const framesDir = process.env.FRAMES || "";
++const visionMod = vision || framesDir ? await import("./vision.js") : null;
++const screenshot = vision ? visionMod.makeScreenshotter() : null;
++const videoShot = framesDir ? visionMod.makeScreenshotter({ overlays: true }) : null;
++if (framesDir) fs.mkdirSync(framesDir, { recursive: true });
++let frameNo = 0, lastMs = null, lastModel = "", lastAnswers = null, lastIntent = null;
+ let jevErrors = 0, tokIn = 0, tokOut = 0, cost = 0;
+-async function decide(state) {
++async function decide(state, image) {
+   if (!useJev) return { answers: localDecide(state), ms: 0 };
+   const t0 = Date.now();
+   try {
+-    const r = await fetch(`${serverUrl}/api/${brainKind === "llm" ? "llm-decide" : "decide"}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ state, questions: QUESTIONS }) });
++    const sent = !vision ? { state, questions: QUESTIONS }
++      : brainKind === "llm-vision-state" ? { state: { ...visionMod.egoTelemetry(state), ...state }, questions: QUESTIONS, image }
++      : { state: visionMod.egoTelemetry(state), questions: visionMod.VISION_QUESTIONS, image };
++    const r = await fetch(`${serverUrl}/api/${endpoint}`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(sent) });
+     const j = await r.json();
+     if (!r.ok) throw new Error(j.error || r.status);
+     tokIn += j.usage?.input_tokens || 0; tokOut += j.usage?.output_tokens || 0; cost += j.cost || 0;
+-    return { answers: j.answers, ms: Date.now() - t0 };
++    lastModel = j.model || lastModel;
++    return { answers: j.answers, ms: Date.now() - t0, reasoning: j.reasoning || "" };
+   } catch (e) { // same policy as the browser: one failed call falls back to the local brain for that tick
+     jevErrors++;
+     return { answers: localDecide(state), ms: Date.now() - t0, error: e.message };
+   }
+ }
+ 
++function videoUi() {
++  const mode = brainKind.startsWith("llm") ? "llm" : useJev ? brainKind : "local";
++  const y = world.ego.y;
++  return { mode, model: lastModel, label: brainKind, latency: lastMs, hazard: lastAnswers ? lastAnswers.hazard.score : 0,
++    last: lastAnswers ? { answers: lastAnswers, intent: lastIntent, latency: lastMs, source: brainKind } : {}, questions: QUESTIONS,
++    cost: { soFar: cost, perKm: y > 20 ? cost / (y / 1000) : null, perM: y > 20 ? cost / y : null, perDecision: decisions ? cost / decisions : null } };
++}
+ const seconds = Number(process.argv[2] || 120);
+ const seed = Number(process.argv[3] || 42);
+ const interval = Number(process.argv[4] || 400) / 1000; // emulate Jev latency
+@@ -37,16 +65,19 @@ const speeds = []; const trace = []; const counts = {};
+ while (world.time < seconds && !world.crashed) {
+   const p = perceive(world);
+   if (world.time >= nextDecision) {
+-    const { answers, ms } = await decide(p.state);
++    const image = screenshot ? visionMod.toDataUrl(screenshot(world, p, { mode: "llm", label: "ego", last: {}, hazard: 0, cost: {} })) : null;
++    const { answers, ms, reasoning } = await decide(p.state, image);
+     jevMs += ms;
+     const intent = gate(answers, p.state);
++    lastMs = ms; lastAnswers = answers; lastIntent = intent;
+     counts[intent.speedAction] = (counts[intent.speedAction] || 0) + 1;
+     if (intent.laneAction !== "keep_lane" && !world.ego.laneChanging) laneChanges++;
+     world.ego.applyIntent(intent, world.time);
+-    if (useJev && process.env.TRACE) trace.push(`  ${brainKind}@${world.time.toFixed(1)}s ${ms}ms v=${Math.round(world.ego.speed * 3.6)} speed=${intent.speedAction}(jev:${answers.speed_action.choice}) lane=${intent.laneAction} hazard=${answers.hazard.score.toFixed(2)} ped=${answers.pedestrian_yield.noul.toFixed(2)} notes=${intent.notes.join("|")} cur=${JSON.stringify(p.state.lanes.current)} pedInPath=${JSON.stringify(p.state.pedestrian_in_path)}`);
++    if (useJev && process.env.TRACE) trace.push(`  ${brainKind}@${world.time.toFixed(1)}s ${ms}ms v=${Math.round(world.ego.speed * 3.6)} speed=${intent.speedAction}(jev:${answers.speed_action.choice}) lane=${intent.laneAction} hazard=${answers.hazard.score.toFixed(2)} ped=${answers.pedestrian_yield.noul.toFixed(2)} notes=${intent.notes.join("|")} why=${JSON.stringify(reasoning || "")} cur=${JSON.stringify(p.state.lanes.current)} pedInPath=${JSON.stringify(p.state.pedestrian_in_path)}`);
+     // emulate latency: the decision applies now, next one after `interval` (or the real round trip)
+-    decisions++; nextDecision = world.time + (useJev ? Math.max(0.2, ms / 1000) : interval);
++    decisions++; nextDecision = world.time + (useJev ? Math.max(latencyFloor, (ms / 1000) * latencyScale) : interval);
+   }
++  if (videoShot && frameNo++ % 2 === 0) fs.writeFileSync(`${framesDir}/f${String(frameNo >> 1).padStart(6, "0")}.jpg`, videoShot(world, p, videoUi()));
+   if (world.ego.reflexActive) reflexTicks++;
+   if (Math.round(world.time * 60) % 20 === 0) trace.push(`${world.time.toFixed(1)}s x=${world.ego.x.toFixed(2)} v=${(world.ego.speed*3.6).toFixed(0)} lane=${world.ego.lane}->${world.ego.targetLane} chg=${world.ego.laneChanging} intent=${JSON.stringify(world.ego.lastIntent)} reflex=${world.ego.reflexActive} rev=${world.ego.reversing} front=${p.state.ego.front_clearance_m} swept=${p.reflex.sweptClearance.toFixed(1)} cur=${JSON.stringify(p.state.lanes.current)} ped=${JSON.stringify(p.state.pedestrian_in_path)}`);
+   if (p.state.time_to_collision_s !== null) minTtc = Math.min(minTtc, p.state.time_to_collision_s);
+@@ -54,10 +85,15 @@ while (world.time < seconds && !world.crashed) {
+   world.update(dt);
+   speeds.push(world.ego.speed);
+ }
++if (videoShot) { // hold the final frame (crash overlay) until the nominal end of the run
++  const last = `${framesDir}/f${String((frameNo - 1) >> 1).padStart(6, "0")}.jpg`;
++  fs.writeFileSync(last, videoShot(world, perceive(world), videoUi()));
++  for (let n = ((frameNo - 1) >> 1) + 1; n <= Math.ceil(seconds * 30); n++) fs.linkSync(last, `${framesDir}/f${String(n).padStart(6, "0")}.jpg`);
++}
+ if (process.env.TRACE) for (const t of (useJev ? trace.filter((t) => t.includes(`speed=${process.env.TRACE_ACTION || "stop"}`)).slice(0, Number(process.env.TRACE_N || 14)) : trace.slice(-6))) console.log(t);
+ const avg = speeds.reduce((a, b) => a + b, 0) / speeds.length;
+ console.log(JSON.stringify({
+-  seed, course: world.course.presetId, simSeconds: Math.round(world.time), crashed: world.crashed, distance_m: Math.round(world.ego.y),
++  seed, course: world.course.presetId, brainKind, latencyScale, latencyFloor, simSeconds: Math.round(world.time), crashed: world.crashed, distance_m: Math.round(world.ego.y),
+   avg_kmh: Math.round(avg * 3.6), decisions, laneChanges, reflexTicks, minTtc, objects: world.objects.length,
+   speedActions: counts, brain: useJev ? `${brainKind} avg ${Math.round(jevMs / Math.max(1, decisions))}ms, ${jevErrors} errors, tokens ${tokIn}/${tokOut}, cost $${cost.toFixed(5)}` : "local",
+ }));
+diff --git a/server.js b/server.js
+index aeff625..2a43dca 100644
+--- a/server.js
++++ b/server.js
+@@ -22,7 +22,7 @@ const PRICING = {
+ const costOf = (kind, inTok, outTok) => (inTok * PRICING[kind].input + outTok * PRICING[kind].output) / 1e6;
+ 
+ // Running totals since the server started, to reconcile with the providers' consoles.
+-const TOTALS = { since: new Date().toISOString(), jev: { calls: 0, input_tokens: 0, output_tokens: 0, cost: 0 }, llm: { calls: 0, input_tokens: 0, output_tokens: 0, cost: 0 } };
++const TOTALS = { since: new Date().toISOString(), jev: { calls: 0, input_tokens: 0, output_tokens: 0, cost: 0 }, llm: { calls: 0, input_tokens: 0, output_tokens: 0, cost: 0 }, laya: { calls: 0, input_tokens: 0, output_tokens: 0, cost: 0 } };
+ function tally(kind, usage, cost) {
+   const t = TOTALS[kind]; t.calls++; t.input_tokens += usage?.input_tokens || 0; t.output_tokens += usage?.output_tokens || 0; t.cost += cost || 0;
+ }
+@@ -37,14 +37,27 @@ if (process.env.TYPESAFE_API_KEY) {
+ }
+ 
+ // ---- Optional LLM brain through OpenRouter (for side-by-side comparison with Jev).
+-const OPENROUTER_KEY = process.env.OPENROUTER_API_KEY || "";
+-const LLM_MODEL = process.env.OPENROUTER_MODEL || "deepseek/deepseek-v4.1-flash";
++// LLM provider: OpenRouter by default; set LLM_BASE_URL to any OpenAI-compatible endpoint (e.g. Fireworks) and LLM_API_KEY.
++const LLM_BASE_URL = (process.env.LLM_BASE_URL || "https://openrouter.ai/api/v1").replace(/\/$/, "");
++const LLM_IS_OPENROUTER = LLM_BASE_URL.includes("openrouter.ai");
++const OPENROUTER_KEY = process.env.LLM_API_KEY || process.env.OPENROUTER_API_KEY || "";
++const LLM_MODEL = process.env.LLM_MODEL || process.env.OPENROUTER_MODEL || "deepseek/deepseek-v4.1-flash";
++// Laya (open zero-shot typed-decision model) served by the jevlab app on this box; unset LAYA_URL to disable.
++// Open local typed-decision models, each behind a /decide that speaks Jev's question shape (jevlab app or jevlab local_server).
++// LOCAL_BRAINS='{"laya":"http://127.0.0.1:3210","decider":"http://127.0.0.1:3211","kev":"http://127.0.0.1:3212"}'
++// Each is reachable at /api/<name>-decide; LAYA_ENGINE picks the one the browser's third track ("compare3") drives with.
++const LOCAL_BRAINS = JSON.parse(process.env.LOCAL_BRAINS || "{}");
++const LOCAL_LABELS = { laya: "convaiinnovations/laya 421M (CPU)", decider: "Mapika/decider-2b (CPU)", kev: "jaredpalmer/kev-4b (CPU)" };
++const LAYA_ENGINE = process.env.LAYA_ENGINE || "laya";
++const LAYA_LABEL = LOCAL_LABELS[LAYA_ENGINE] || LAYA_ENGINE;
++const layaEnabled = Boolean(LOCAL_BRAINS[LAYA_ENGINE]);
+ const LLM_TIMEOUT_MS = Number(process.env.LLM_TIMEOUT_MS || 15000);
++const LAYA_TIMEOUT_MS = Number(process.env.LAYA_TIMEOUT_MS || 90000); // local CPU models are slow on long states
+ const LLM_REASONING = process.env.OPENROUTER_REASONING || ""; // e.g. "low" to let the LLM think before answering
+ const llmEnabled = Boolean(OPENROUTER_KEY);
+ 
+ async function loadLlmPricing() {
+-  if (!llmEnabled || PRICING.llm.input > 0) return;
++  if (!llmEnabled || PRICING.llm.input > 0 || !LLM_IS_OPENROUTER) return;
+   try {
+     const res = await fetch("https://openrouter.ai/api/v1/models", { signal: AbortSignal.timeout(8000) });
+     const { data } = await res.json();
+@@ -68,11 +81,11 @@ Respond with ONLY one JSON object, no markdown. Example of the exact shape (valu
+ },"reasoning":"one short sentence explaining the decision"}`;
+ 
+ /** Ask the LLM the same questions Jev gets and normalise its answer into Jev's shape. */
+-async function llmDecide(state, questions) {
++async function llmDecide(state, questions, image = null) {
+   const ctrl = new AbortController();
+   const timer = setTimeout(() => ctrl.abort(), LLM_TIMEOUT_MS);
+   try {
+-    const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
++    const res = await fetch(`${LLM_BASE_URL}/chat/completions`, {
+       method: "POST",
+       signal: ctrl.signal,
+       headers: { Authorization: `Bearer ${OPENROUTER_KEY}`, "Content-Type": "application/json", "HTTP-Referer": "http://localhost", "X-Title": "live-jev sim" },
+@@ -81,12 +94,16 @@ async function llmDecide(state, questions) {
+         temperature: 0,
+         max_tokens: 900,
+         // Thinking mode would spend seconds (and tokens) before the JSON; keep it off unless asked.
+-        reasoning: LLM_REASONING ? { effort: LLM_REASONING } : { enabled: false },
++        ...(LLM_IS_OPENROUTER
++          ? { reasoning: LLM_REASONING ? { effort: LLM_REASONING } : { enabled: false }, usage: { include: true } }
++          : { reasoning_effort: LLM_REASONING || "none" }),
+         response_format: { type: "json_object" },
+-        usage: { include: true },
+         messages: [
+           { role: "system", content: LLM_SYSTEM },
+-          { role: "user", content: `questions:\n${JSON.stringify(questions)}\n\nstate:\n${JSON.stringify(state)}` },
++          // Optional vision variant: the caller may attach a screenshot (data URL) of the rendered sim.
++          { role: "user", content: image
++            ? [{ type: "text", text: `questions:\n${JSON.stringify(questions)}\n\nstate:\n${JSON.stringify(state)}\n\nThe attached image is the current screen.` }, { type: "image_url", image_url: { url: image } }]
++            : `questions:\n${JSON.stringify(questions)}\n\nstate:\n${JSON.stringify(state)}` },
+         ],
+       }),
+     });
+@@ -109,6 +126,32 @@ async function llmDecide(state, questions) {
+   } finally { clearTimeout(timer); }
+ }
+ 
++/** Ask Laya (via the jevlab app's /decide, which speaks Jev's question shape) and normalise into Jev's answer shape. */
++async function layaDecide(state, questions, engine = LAYA_ENGINE) {
++  const qs = {};
++  for (const [id, q] of Object.entries(questions)) {
++    if (q.type === "choice") qs[id] = { type: "choice", instructions: q.instructions, options: q.criteria };
++    else if (q.type === "score") qs[id] = { type: "score", instructions: q.instructions, levels: q.criteria };
++    else qs[id] = { type: "noul", instructions: q.instructions, ...(q.criteria ? { criteria: q.criteria } : {}) };  // keep the true/false criteria Jev and the LLM also see
++  }
++  const res = await fetch(`${LOCAL_BRAINS[engine]}/decide`, {
++    method: "POST", signal: AbortSignal.timeout(LAYA_TIMEOUT_MS),
++    headers: { "Content-Type": "application/json" },
++    body: JSON.stringify({ state, questions: qs, engines: [engine] }),
++  });
++  const body = await res.json();
++  if (!res.ok) throw new Error(body.detail || body.error || `HTTP ${res.status}`);
++  const raw = body.results[engine].answers;
++  const shaped = {};
++  for (const [id, q] of Object.entries(questions)) {
++    const a = raw[id];
++    if (q.type === "choice") shaped[id] = { choice: a.answer, probabilities: a.probabilities, confidence: a.confidence };
++    else if (q.type === "score") shaped[id] = { score: a.expected_level, probabilities: Object.fromEntries(q.criteria.map((c, i) => [i, a.probabilities[c]])), confidence: a.confidence };
++    else shaped[id] = { noul: a.probabilities.yes };
++  }
++  return normalizeAnswers(shaped, questions);
++}
++
+ const clamp01 = (v) => Math.max(0, Math.min(1, Number(v) || 0));
+ function normalizeAnswers(raw, questions) {
+   const out = {};
+@@ -181,18 +224,39 @@ async function handleApi(req, res, url) {
+       timeoutMs: TIMEOUT_MS,
+       llm: llmEnabled,
+       llmModel: llmEnabled ? LLM_MODEL : null,
++      laya: layaEnabled,
++      layaEngine: LAYA_ENGINE,
++      layaLabel: LAYA_LABEL,
++      localBrains: Object.keys(LOCAL_BRAINS),
+       pricing: PRICING,
+       totals: TOTALS,
+     });
+   }
++  const localMatch = req.method === "POST" && url.pathname.match(/^\/api\/([a-z0-9]+)-decide$/);
++  const localEngine = localMatch && localMatch[1];
++  if (localMatch && LOCAL_BRAINS[localEngine]) {
++    let body;
++    try { body = await readJson(req); } catch (e) { return sendJson(res, 400, { error: e.message }); }
++    if (!body || typeof body !== "object" || !body.questions) return sendJson(res, 400, { error: "Expected {state, questions}" });
++    const t0 = performance.now();
++    try {
++      const answers = await layaDecide(body.state ?? null, body.questions, localEngine);
++      const usage = { input_tokens: 0, output_tokens: 0 };
++      tally("laya", usage, 0);
++      return sendJson(res, 200, { answers, usage, cost: 0, model: LOCAL_LABELS[localEngine] || localEngine, latencyMs: Math.round(performance.now() - t0) });
++    } catch (err) {
++      console.error(`[${localEngine}] ${err.name}: ${err.message}`);
++      return sendJson(res, 502, { error: err.message, latencyMs: Math.round(performance.now() - t0) });
++    }
++  }
+   if (req.method === "POST" && url.pathname === "/api/llm-decide") {
+     if (!llmEnabled) return sendJson(res, 503, { error: "OPENROUTER_API_KEY is not configured on the server" });
+     let body;
+-    try { body = await readJson(req); } catch (e) { return sendJson(res, 400, { error: e.message }); }
++    try { body = await readJson(req, 2 * 1024 * 1024); } catch (e) { return sendJson(res, 400, { error: e.message }); }
+     if (!body || typeof body !== "object" || !body.questions) return sendJson(res, 400, { error: "Expected {state, questions}" });
+     const t0 = performance.now();
+     try {
+-      const r = await llmDecide(body.state ?? null, body.questions);
++      const r = await llmDecide(body.state ?? null, body.questions, typeof body.image === "string" && body.image.startsWith("data:image/") ? body.image : null);
+       tally("llm", r.usage, r.cost);
+       return sendJson(res, 200, { ...r, latencyMs: Math.round(performance.now() - t0) });
+     } catch (err) {
+@@ -255,7 +319,7 @@ server.listen(PORT, () => {
+     ? `Jev enabled (model: ${client.defaultModel}, timeout ${TIMEOUT_MS}ms, $${PRICING.jev.input}/M in)`
+     : "TYPESAFE_API_KEY not set: the browser will run the local fallback brain. Copy .env.example to .env to enable Jev.");
+   console.log(llmEnabled
+-    ? `LLM comparison enabled via OpenRouter (model: ${LLM_MODEL}, timeout ${LLM_TIMEOUT_MS}ms)`
++    ? `LLM comparison enabled via ${LLM_BASE_URL} (model: ${LLM_MODEL}, timeout ${LLM_TIMEOUT_MS}ms)`
+     : "OPENROUTER_API_KEY not set: the Jev vs LLM comparison mode is disabled.");
+   loadLlmPricing();
+ });

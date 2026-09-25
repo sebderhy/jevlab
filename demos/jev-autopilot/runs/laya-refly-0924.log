@@ -1,0 +1,3 @@
+== laya seed 42 timescale 0.1 (24 Sept re-fly)
+timeout, last status: {"phase":"grounded","altitude":0,"distanceToPad":192.1,"simSeconds":134.3,"decisions":243,"stale":0,"errors":0,"landingCommitted":true}
+null

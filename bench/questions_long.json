@@ -1,0 +1,1274 @@
+{
+ "description": "Benchmark 2, long-document typed decisions: 100 hand-labelled questions over 10 generic long states (900 to 1,800 words each, 10 questions per state) so that a model can read each document once and answer all its questions in one pass. Types: noul (true/false statement), choice (one option) and score (ordered levels); options/levels are an inline list, an inline label->description dict or the name of an option set, and each item carries a 'why' field citing the evidence for its gold label.",
+ "states": {
+  "support_thread": "Ticket #48213 — Larkspur Home Goods customer support\nSubject: Order LH-77241 — only two of three boxes delivered\nStatus history: Opened 9 March 2026 · Priority raised from Normal to High on 18 March 2026 · Closed 23 March 2026\nParticipants: Priya Raman (customer); Tomas Vellek (support agent); Ingrid Solano (support agent)\n\n[1] Priya Raman (customer) — Monday 9 March 2026, 08:14\nHello, I placed order LH-77241 on 2 March for the Aldermoor three-piece patio set (two chairs and a side table). I paid $489.00 in total, which included $60.00 for expedited shipping because I wanted the set before my sister's visit. The tracking page says the order was \"delivered\" on Friday 6 March, but only two boxes were left on my porch, labelled \"1 of 3\" and \"2 of 3\". Those two boxes contain the chairs. The third box, which should contain the table, never arrived. I have checked with my neighbours at number 14 and number 18 Rowan Street and nobody has it. Can you tell me where the third box is and when I can expect it? I also think the expedited shipping charge should be refunded, since the delivery was neither complete nor on time.\n\n[2] Tomas Vellek (Larkspur support) — Monday 9 March 2026, 10:52\nHi Priya, I'm sorry about this. I have looked up the carrier's scans for LH-77241. Boxes 1 and 2 were scanned \"delivered\" at 15:41 on 6 March. Box 3 of 3 was last scanned at the carrier's Fairhaven depot at 06:20 on 5 March and there is no delivery scan for it at all, so it has most likely been separated from the other two at the depot. I have opened a trace request with the carrier; they usually respond within two business days. In the meantime I have refunded the $60.00 expedited shipping fee to your original payment card. It can take three to five business days to appear on your statement. I will update this ticket as soon as the carrier replies.\n\n[3] Priya Raman (customer) — Wednesday 11 March 2026, 17:40\nThanks Tomas, I can see the $60.00 refund as pending on my card. I have a second problem, unfortunately. I assembled the two chairs last night and the left armrest on one of them has a hairline crack about 4 cm long, running from the screw hole toward the edge. It doesn't look like transport damage because the box was intact; I think it left the factory that way. I've attached three photos. I don't want to return the whole set, I would just like that one chair replaced. Also, is there any news on the table?\n\n[4] Ingrid Solano (Larkspur support) — Thursday 12 March 2026, 09:05\nHello Priya, Tomas is off today so I am taking over your ticket. Two updates. First, the carrier has replied to the trace: box 3 was found at the Fairhaven depot with a torn label, it has been relabelled and redispatched this morning, and the new estimated delivery date is Monday 16 March. Second, thank you for the photos of the armrest; the crack is visible and clearly not something you caused, so we will send a replacement chair from our warehouse at no cost. I will email you a prepaid return label for the damaged chair. You do not need to send the damaged chair back before the new one arrives; you can keep using it until then and return it within 14 days of receiving the replacement.\n\n[5] Priya Raman (customer) — Thursday 12 March 2026, 12:30\nThat's great, thank you Ingrid. Two questions: do I need to be home to sign for the table delivery on the 16th? And I will be away from the evening of Wednesday 18 March until Friday 20 March, so if the replacement chair arrives during those days there will be nobody home.\n\n[6] Ingrid Solano (Larkspur support) — Thursday 12 March 2026, 14:11\nNo signature is required for either delivery; the driver will leave the parcel at your door, or with a neighbour if you have registered one with the carrier. The replacement chair ships separately from our warehouse in Pellston. I have asked them to prioritise it, and the current estimate is Tuesday 17 March, so it should arrive before you leave.\n\n[7] Priya Raman (customer) — Tuesday 17 March 2026, 19:02\nThe table box arrived yesterday, Monday 16 March, as promised, and the table is fine. However the replacement chair has not arrived, and the tracking number Ingrid sent me still says \"label created\" with no scans. I leave tomorrow evening. I am honestly frustrated at this point: this is the third time I have had to write about the same order, and I have spent more time on this than on assembling the furniture. Can someone please check what is happening with the chair?\n\n[8] Tomas Vellek (Larkspur support) — Wednesday 18 March 2026, 08:47\nPriya, I'm back from leave and I have read the whole thread. I apologise. I checked with the Pellston warehouse: the replacement chair was never picked because the item carried a stock-hold flag left over from an inventory count, so the label was created but nothing shipped. I have had the hold released and the chair ships today; the new estimated delivery is Friday 20 March. I have also raised the priority on this ticket from Normal to High so that it is watched daily until it closes. As a goodwill gesture I have applied a 15% credit on the item value of your order. The item value is $429.00 (the $489.00 total minus the $60.00 shipping already refunded), so the credit is $64.35, issued as Larkspur store credit on your account rather than to your card. Again, I'm sorry for the run-around.\n\n[9] Priya Raman (customer) — Monday 23 March 2026, 10:20\nHi both. The replacement chair arrived on Saturday 21 March; I was still away but my neighbour at number 14 took it in for me. It is in perfect condition. I dropped the damaged chair at the carrier's counter this morning using the prepaid label, receipt number RC-55019. Can you confirm you have everything you need to close the ticket? And does the $64.35 store credit have an expiry date?\n\n[10] Ingrid Solano (Larkspur support) — Monday 23 March 2026, 11:35\nHi Priya, I can see the return scan for RC-55019 already, so the damaged chair is on its way back and nothing further is needed from you. The store credit does not expire and can be used on any future order. I am closing the ticket now; you will receive a short satisfaction survey by email, and if anything else comes up you can reply to this thread to reopen it. Thank you for your patience with us.\n",
+  "postmortem": "Incident Postmortem INC-2041 — Halvard Systems, ledger-api\nService: ledger-api (invoice rendering and retrieval for the Pelican Ledger product)\nDate of incident: Tuesday 14 July 2026\nAuthor: Dana Okafor (on-call engineer). Reviewers: Marcus Lindqvist (database lead), Ravi Thandeka (platform), Lena Baxter (support lead). Review meeting held Tuesday 21 July 2026.\nFinal severity: SEV1. Customer impact band: Medium. Data loss: none.\n\nSeverity table (reproduced from the Halvard incident policy)\n- SEV3: partial degradation of any endpoint lasting under 15 minutes, or a complete outage lasting under 5 minutes.\n- SEV2: partial degradation lasting between 15 and 60 minutes.\n- SEV1: any complete outage lasting 5 minutes or more, or partial degradation lasting more than 60 minutes.\nCustomer impact bands: Low = fewer than 5% of active accounts affected; Medium = 5% to 25% of active accounts; High = more than 25% of active accounts.\n\nSummary\nBetween 09:26 and 10:37 UTC on 14 July 2026, requests to the /invoices/render endpoint of ledger-api failed or timed out at an elevated rate, peaking at 38% of requests to that endpoint. All other endpoints, including invoice creation, invoice listing and payment webhooks, were unaffected throughout. The degradation was introduced by the deployment of ledger-api build 4.18.0, which shipped database migration 0472. The migration added an index on invoice_lines(invoice_id, position). Because the planner statistics for the table were stale, the query planner began choosing a sequential scan over the 41-million-row invoice_lines table for the render query. Service was restored by rolling back to build 4.17.3. No data was lost or corrupted.\n\nTimeline (all times UTC)\n- 08:50 A CDN configuration change (cache key normalisation) is applied by the platform team. This change turned out to be unrelated; see the note at the end.\n- 09:12 Deployment of ledger-api 4.18.0 starts. The canary stage routes 5% of traffic to the new build. Migration 0472 runs at 09:13 and completes in 40 seconds.\n- 09:20 The deployment automation promotes the canary to 100% of traffic after the standard 8-minute bake. The canary health check, which only calls /health, reported green throughout.\n- 09:26 First automated alert: p99 latency on /invoices/render above 2 seconds for 3 consecutive minutes.\n- 09:31 On-call engineer Dana Okafor acknowledges the alert.\n- 09:33 First customer-reported ticket reaches support (Lena Baxter's team): \"invoice PDFs not loading\".\n- 09:44 Error rate on /invoices/render reaches 38%, its peak. Dana initially suspects the 08:50 CDN change, because render responses are cached at the edge.\n- 09:50 The CDN change is ruled out: bypassing the CDN reproduces the failures directly against the origin.\n- 09:58 Dana notices that the slow queries correlate with the 4.18.0 deployment and escalates to Marcus Lindqvist, the database lead.\n- 10:15 Marcus identifies the root cause: after migration 0472 the planner chooses a sequential scan on invoice_lines for the render query, because table statistics had not been refreshed since the March bulk import. Explain plans confirm it.\n- 10:22 Decision: roll back to 4.17.3 rather than run ANALYZE on the live table under load, since the effect of ANALYZE on the running workload was uncertain and no runbook existed.\n- 10:29 Rollback starts.\n- 10:37 Rollback completes. Error rate on /invoices/render falls below 0.5% within one minute.\n- 10:41 Incident declared resolved. Impact window: 09:26 to 10:37, 71 minutes.\n- 14:05 ANALYZE is run on invoice_lines during a low-traffic window. Build 4.18.0 is redeployed at 15:20 without recurrence.\n\nImpact\n- 14,600 requests to /invoices/render failed or timed out during the impact window, out of roughly 38,400 requests to that endpoint in the same period.\n- 212 of 1,940 active customer accounts made at least one failing request. That is 10.9% of active accounts, hence the Medium impact band.\n- Three customers on enterprise SLAs qualified for service credits, totalling $4,150.\n- No other endpoint exceeded its error budget. No data was lost or corrupted; every invoice that failed to render was rendered successfully after the rollback.\n- Support received 27 tickets attributable to the incident, all closed by 15 July.\n\nRoot cause\nMigration 0472 added the index invoice_lines_invoice_id_position_idx. Planner statistics on invoice_lines had not been refreshed since a bulk import of 9 million rows in March, so the planner's row estimates were wrong by a factor of roughly 20. With the new index present, the planner switched the render query from an index scan to a sequential scan of the full 41-million-row table. Each render query went from about 12 milliseconds to between 2 and 9 seconds, which exhausted the connection pool and caused the timeouts seen by customers.\n\nContributing factors\n1. The canary health check only exercises /health, so the canary looked healthy while /invoices/render was already slow at 5% of traffic.\n2. The 8-minute canary bake is shorter than the time the connection pool took to saturate at 5% of traffic.\n3. There is no automatic ANALYZE after migrations that add or drop indexes.\n4. There was no runbook describing how to diagnose and mitigate planner regressions, which delayed the rollback decision by several minutes.\n5. The stale statistics had been a latent condition since March and were not detected by any monitoring.\n\nWhat went well\n- The alert fired 6 minutes after full promotion and 7 minutes before the first customer ticket.\n- The rollback was clean and took 8 minutes from start to finish.\n- Customer communications went out at 10:05 using the existing status page.\n\nAction items\n- AI-1: Extend the canary health check to include a synthetic request to /invoices/render. Owner: Dana Okafor. Due: 31 July 2026. Status: Done (merged 24 July).\n- AI-2: Run ANALYZE automatically after any migration that creates or drops an index. Owner: Marcus Lindqvist. Due: 15 August 2026. Status: Open.\n- AI-3: Increase the canary bake time from 8 to 30 minutes for ledger-api. Owner: Ravi Thandeka. Due: 31 July 2026. Status: Open (blocked on a deployment tooling change).\n- AI-4: Write a runbook for diagnosing query planner regressions, including when it is safe to run ANALYZE under load. Owner: Marcus Lindqvist. Due: 29 August 2026. Status: Open.\n- AI-5: Add a customer communication template for partial-degradation incidents. Owner: Lena Baxter. Due: 24 July 2026. Status: Done.\n\nNote on the CDN change\nThe 08:50 CDN cache key change was initially suspected because it was the most recent change visible on the platform dashboard. It was ruled out at 09:50 and did not contribute to the incident in any way. It remains in place and needs no follow-up.\n",
+  "meeting_transcript": "Brightwater Labs — Quill product meeting (transcript)\nDate: Tuesday 8 September 2026, 10:00 to 10:45. Room: Kestrel. Auto-transcribed, lightly cleaned for readability.\nAttendees: Amara Osei (product manager, chair); Ben Kristiansen (engineering lead); Chloe Marchetti (design lead); Dev Ramaswamy (data analyst); Elena Voss (marketing lead); Farid Haddad (support lead).\nAgenda: (1) launch date for Shared Notebooks; (2) pricing tier for Shared Notebooks; (3) onboarding redesign; (4) support backlog and staffing.\n\nAMARA: Morning everyone. Four items today and I want us out by quarter to eleven. Item one, the launch date for Shared Notebooks. Ben, where is engineering?\nBEN: The feature is code complete as of last Thursday. What's left is the permission edge cases, mostly around removing someone from a notebook they created, and the load test. My proposal is Tuesday 13 October. That gives us two full weeks of load testing. I'd say high confidence on 6 October if we cut the load test short, but I don't love that. On 29 September I'd say low confidence, honestly.\nCHLOE: I'd push for 29 September. The design work is done, the beta feedback is good, and every week we wait, the momentum from the Templates launch fades. Templates shipped on 11 August and the sign-up bump from it is already flattening.\nDEV: For what it's worth, the beta numbers are solid. We have 1,840 beta users on Shared Notebooks, and 62% of them are weekly active. Sharing is the top feature by usage among beta users, ahead of Templates.\nELENA: Marketing needs at least three weeks from a fixed date to prepare the announcement, the email sequence and the partner posts. 29 September is impossible for us. 6 October works if the date is locked today. 13 October is fine too but I'd rather not slide into the conference week.\nAMARA: Ben, if we lock 6 October today, can you still do the full load test?\nBEN: If we start the load test this Thursday instead of next Monday, yes. Fine, 6 October works. High confidence on that.\nCHLOE: I can live with 6 October.\nFARID: Support is fine with any of them as long as the help articles are ready a week before.\nAMARA: Any objections to Tuesday 6 October? None. Decision: Shared Notebooks launches on Tuesday 6 October. Ben, I need the rollout plan, including the feature flag ramp, by Friday.\nBEN: Friday 11 September, done.\n\nAMARA: Item two, pricing. Two options on the table: include Shared Notebooks in the Pro tier at no extra cost, or sell it as a four-dollar-a-month add-on on top of Pro.\nELENA: Add-on. It's our best chance to lift revenue per user this year. My model says about $180,000 in the first twelve months from the add-on alone.\nDEV: I looked at the survey from the beta. The people who said they would pay for it were almost all already on Pro. My estimate is that an add-on would be bought by roughly 9% of Pro users, so I get closer to $110,000, and that's before churn from people who feel nickel-and-dimed.\nFARID: From the support side an add-on creates a whole class of \"why can't I share this notebook\" tickets. We saw exactly that with the storage add-on last year; it was about a fifth of our volume for two months.\nBEN: No engineering opinion. Both options are the same amount of work, the entitlement check is one line either way.\nCHLOE: Design prefers included. The empty state for a locked feature is always ugly.\nAMARA: I'm going to decide. Include it in Pro. The retention argument wins over the revenue argument this year; we need Pro to feel complete before the price review in January.\nELENA: I want it on record that I think this is a mistake. We're leaving money on the table and we'll regret it at the January review.\nAMARA: Noted, and it will be in the minutes. Decision: Shared Notebooks is included in Pro, no add-on. Elena, I still need the launch announcement draft by 25 September.\nELENA: You'll have it by the 25th.\n\nAMARA: Item three, the onboarding redesign. Chloe?\nCHLOE: I'm not ready to present. The user interviews finished on Friday, twelve of them, but I've only synthesised about half. I don't want to show a half picture and have us make decisions on it.\nAMARA: Fair. Then we postpone this item to next week's meeting, Tuesday 15 September. Chloe, can you have the research synthesis finished by Monday the 14th so people can read it beforehand?\nCHLOE: Yes, by the 14th. I'll circulate it Monday morning.\nDEV: If it helps, I can pull the onboarding funnel numbers for the last quarter to go with it.\nCHLOE: Please, thanks.\n\nAMARA: Item four, support backlog. Farid.\nFARID: The backlog is bad. We have 312 open tickets, median first response time is 31 hours, and the target is 8 hours. I need a contractor for at least three months, ideally starting before the launch.\nAMARA: 312? That's almost double last month.\nFARID: Sorry, let me correct that. I transposed the digits. It's 213, not 312. Still up from 160 last month, so the trend is the same, but 213 is the right number.\nAMARA: OK, 213. Agreed on the contractor anyway; a launch on top of that backlog is not survivable. Can you post the role by Thursday?\nFARID: Thursday 10 September, yes.\nELENA: Are launch-day tickets going to be counted in the backlog target? The Templates launch added about 90 tickets in its first week.\nFARID: Yes, and that's exactly why I want the contractor in place before 6 October.\nAMARA: Dev, can we get a dashboard for shared-notebook adoption before launch?\nDEV: It's already live; I built it during the beta. I'll send the link after the meeting. No action needed on my side.\n\nAMARA: Wrap-up. Action items as I have them. Ben: rollout plan by Friday 11 September. Chloe: onboarding research synthesis by Monday 14 September. Elena: launch announcement draft by 25 September. Farid: contractor posting by Thursday 10 September. Me: book the 15 September meeting and circulate these notes today. Dev has no actions.\nDEV: Correct, nothing for me.\nAMARA: Decisions: launch 6 October; Shared Notebooks included in Pro; onboarding redesign postponed to 15 September; contractor approved for support. Thanks all, that's 10:44.\n",
+  "lease_agreement": "RESIDENTIAL LEASE AGREEMENT (excerpt)\nPremises: Apartment 3B, 42 Harrow Lane, Westmere. Landlord: Meadowbrook Holdings LLC (\"Landlord\"). Tenant: Jonah Whitfield (\"Tenant\"). Date of signing: 12 September 2026.\n\n1. Term. This lease is for a fixed term of twelve (12) months, beginning 1 October 2026 and ending 30 September 2027. If neither party gives notice of non-renewal under clause 9, the tenancy continues after the fixed term on a month-to-month basis on the same terms, and may then be ended by either party with thirty (30) days' written notice.\n\n2. Rent. Rent is $1,650.00 per month, payable in advance on or before the first day of each month by bank transfer to the account listed in Schedule B. Rent received on or before the fifth day of the month is not treated as late.\n\n3. Late charges. If rent is not received by the end of the fifth day of the month, a late fee of $75.00 applies, plus $10.00 for each calendar day from the sixth day of the month through the day on which payment is received, inclusive. Total late charges for any single month are capped at $200.00. A payment returned by the bank incurs a separate $35.00 returned-payment fee, which does not count toward the cap.\n\n4. Security deposit. The Tenant has paid a security deposit of $2,475.00, equal to one and one-half (1.5) months' rent, on signing. The deposit is held in an escrow account. It will be returned within twenty-one (21) days after the Tenant vacates, less itemised deductions for unpaid rent, damage beyond normal wear and tear, and cleaning. The Tenant may not apply the deposit toward the last month's rent.\n\n5. Utilities. The Tenant pays for electricity, gas and internet directly to the providers. The Landlord pays for water, sewer and trash collection.\n\n6. Pets. No animals are permitted on the Premises except one (1) cat or one (1) dog weighing under twenty-five (25) pounds at full size, and only with the Landlord's prior written consent. An approved pet requires a refundable pet deposit of $300.00 and pet rent of $35.00 per month. Reptiles, rodents, and more than one animal are not permitted under any circumstances. Assistance animals are not pets and are handled under clause 17.\n\n7. Subletting and assignment. The Tenant may not sublet or assign any part of the Premises without the Landlord's prior written consent. For proposed sublets of thirty (30) days or longer, consent will not be unreasonably withheld. Short-term or holiday rentals of any part of the Premises for periods under thirty (30) days, including through online booking platforms, are prohibited absolutely, and consent will not be given for them.\n\n8. Repairs and maintenance. The Landlord maintains the structure, plumbing, heating, electrical systems and the appliances listed in Schedule C. The Tenant is responsible for the cost of repairs under $100.00 that result from the Tenant's own use or negligence, and for replacing light bulbs and smoke-detector batteries. The Landlord will respond to non-emergency repair requests within seven (7) days of receiving them. Emergencies, defined as loss of heat between 1 October and 30 April, loss of running water, active leaks, or loss of electricity not caused by the utility company, will be responded to within twenty-four (24) hours.\n\n9. Notice of non-renewal. Either party wishing to end the tenancy at the end of the fixed term must give the other at least sixty (60) days' written notice before 30 September 2027. The last day to give such notice is 1 August 2027, as shown in Schedule A. Notice given after that date does not end the tenancy on 30 September 2027; instead the month-to-month provisions of clause 1 apply.\n\n10. Rent increase on renewal. The Landlord may increase the rent for any renewal term by no more than four percent (4%) of the rent then in force, and must give at least ninety (90) days' written notice of any increase.\n\n11. Early termination. The Tenant may end the fixed term early by giving sixty (60) days' written notice and paying an early termination fee equal to two (2) months' rent, in addition to rent through the termination date. The security deposit is handled separately and is not applied to the fee.\n\n12. Parking. One assigned parking space, number 14, is included in the rent. Additional vehicles may not be parked on the property.\n\n13. Smoking. Smoking, including vaping, is prohibited inside the building and within ten (10) feet of any entrance.\n\n14. Quiet hours. Quiet hours are 10:00 pm to 8:00 am daily.\n\n15. Entry. The Landlord will give at least twenty-four (24) hours' notice before entering, except in an emergency.\n\n16. Insurance. The Tenant must hold renter's insurance with at least $100,000 of liability coverage for the whole term and provide proof on request.\n\n17. Assistance animals. Requests for assistance animals are considered under applicable law and are not subject to the pet deposit or pet rent in clause 6.\n\n18. Alterations. No painting, wallpaper, or fixtures attached to walls without written consent. Picture hooks are permitted.\n\nSchedule A — Key dates\n- 1 October 2026: Fixed term begins. Keys are released on receipt of the first month's rent and the security deposit.\n- 15 October 2026: Move-in inspection report to be countersigned by both parties; the report is the baseline for deposit deductions.\n- 1 April 2027: Annual smoke-detector and heating inspection (Landlord will give notice under clause 15).\n- 1 August 2027: Last day to give notice of non-renewal (sixty days before the end of the fixed term).\n- 30 September 2027: Fixed term ends.\n- 21 October 2027: Latest date for return of the security deposit if the Tenant vacates on 30 September 2027.\n\nSchedule B — Payment details\nRent is paid to Meadowbrook Holdings LLC, reference \"3B-Whitfield\". Payments by cheque or cash are not accepted.\n\nSchedule C — Appliances supplied\nRefrigerator, electric range, dishwasher, and a washer-dryer in the hall closet. The Tenant's own microwave is not covered by clause 8.\n",
+  "reviews_batch": "Customer reviews — Kestrel Kitchen Brisa 900 countertop blender (product page, sorted oldest first)\nAverage shown on the page is computed by the site from all reviews posted here, including any posted in error. Star ratings are out of 5. Fourteen reviews are shown.\n\nReview 1 — Hannah T. — 5 stars — 3 May 2026 — Verified purchase\nCrushes a full jar of ice in about eight seconds, which is exactly what I bought it for. It is loud, but every blender with a 900-watt motor is loud, so I don't hold that against it. The pulse button is a nice touch and the jar locks onto the base with a satisfying click. My only tiny gripe is that the cord is short, about 70 cm. Recommended.\n\nReview 2 — Marco D. — 2 stars — 7 May 2026 — Verified purchase\nThe lid leaks when blending hot soup. The first time I tried it I had tomato soup running down the outside of the jar. I contacted Kestrel support and they sent a replacement lid within two weeks, which was fine, but the second lid also leaks slightly when the jar is more than half full of anything hot. Cold smoothies are no problem. Two stars because the support was decent, but the product doesn't do what the manual says it does.\n\nReview 3 — Ayesha K. — 4 stars — 12 May 2026 — Verified purchase\nGreat smoothies every morning for three weeks now. The jar is glass, so it's heavy, but it feels sturdy and doesn't pick up smells the way my old plastic one did. Four stars instead of five because the lowest speed is still quite fast, so soft fruit gets over-blended if you're not quick.\n\nReview 4 — Colin B. — 1 star — 15 May 2026 — Verified purchase\nDied after three weeks. I was blending a normal banana and oat smoothie, there was a burning smell from the base, and it never turned on again. Returned it to the store for a full refund. Not buying this brand again.\n\nReview 5 — Sofia L. — 5 stars — 20 May 2026 — Verified purchase\nReplaced my ten-year-old blender with this one and it's noticeably quieter than my previous one, which surprised me. It comes with a two-year warranty, which is a year longer than the model I was looking at from another brand. Blends nut butter without stalling. Very happy.\n\nReview 6 — Greg N. — 3 stars — 22 May 2026 — Verified purchase\nWorks fine for the price. It blends well and the buttons are simple. But the jar is plastic and it already has visible scratches after a month of daily use, and it has started to look cloudy. If the jar were glass this would be four stars.\n\nReview 7 — Ling W. — 5 stars — 24 May 2026 — Verified purchase\nThe SteamPro cooks perfect rice every single time, and the keep-warm mode held the rice for six hours without drying it out. The inner pot is easy to clean. I don't know why this appeared under the blender, I bought the rice cooker, but five stars for the SteamPro anyway.\n\nReview 8 — Priyanka S. — 4 stars — 1 June 2026 — Verified purchase\nGood power, good build. I wish it came with a smaller personal travel cup as well as the big jar; you have to buy that separately for $24. Shipping took nine days, which is longer than the three to five days quoted at checkout, but that's the courier, not the blender. Four stars.\n\nReview 9 — Tom R. — 2 stars — 4 June 2026 — Verified purchase\nToo loud. I mean it: I used it at 6:30 in the morning and it woke the baby two rooms away. It blends well, I'll give it that, and the jar is easy to clean, but I can only use it when the house is empty, which defeats the purpose of a quick breakfast smoothie. Two stars.\n\nReview 10 — Elise V. — 5 stars — 9 June 2026 — Verified purchase\nBought two, one for me and one for my mother. Both have been perfect: ice, nuts, frozen fruit, hummus, no problem. My mother has arthritis and finds the jar handle comfortable. The self-clean button is genuinely useful. Would buy again.\n\nReview 11 — Omar F. — 2 stars — 11 June 2026 — Verified purchase\nThe SteamPro's inner pot coating started to peel after about a month, and flakes ended up in the rice. Not what I expected from Kestrel; my old rice cooker from another brand lasted eight years. Posting here because the rice cooker page won't accept my review for some reason. Two stars for the rice cooker.\n\nReview 12 — Nadia P. — 3 stars — 14 June 2026 — Verified purchase\nAverage. It does the job but nothing special. The \"self-clean\" button just runs the motor for thirty seconds with warm water in the jar, which is what I would have done anyway. The base gets warm after a couple of minutes of use. It's fine. Three stars.\n\nReview 13 — Jake M. — 1 star — 18 June 2026 — Verified purchase\nArrived with a cracked jar. The box was undamaged so it must have been packed that way. I requested a replacement jar through the website on 6 June and have now been waiting twelve days with no shipping confirmation. The base looks nice but I can't use it. One star until someone actually sends me a jar.\n\nReview 14 — Beatriz A. — 4 stars — 22 June 2026 — Verified purchase\nBuen producto, muy potente. Tritura hielo sin problema y las cuchillas son fáciles de limpiar. Es un poco ruidoso, pero eso ya lo esperaba. Le doy cuatro estrellas porque el cable es demasiado corto.\n\nSite note: reviews are displayed in the order they were posted. Reviewers who received a replacement part or a refund are not removed from the list. If a review appears to be about a different product, use the \"report\" link and the moderation team will move it.\n",
+  "hiring_packet": "HIRING PACKET — Senior Data Engineer, Corvid Analytics (Bristol, hybrid)\nContents: (A) job description; (B) candidate CV; (C) candidate cover letter; (D) recruiter's cover note.\n\n(A) JOB DESCRIPTION\nTitle: Senior Data Engineer. Location: Bristol office, hybrid, two days a week on site (Tuesdays and Thursdays). Salary: £72,000 to £85,000 depending on experience, plus 6% pension contribution and 27 days' holiday. Reports to: Olu Adebayo, Head of Data Platform (hiring manager). Applications to: Ines Ferreira, recruitment coordinator, via the careers portal. Closing date for applications: 30 September 2026. Expected start: January 2027.\n\nAbout the role: You will own the batch and streaming pipelines that feed the analytics warehouse used by 40 analysts across the business, and you will mentor two mid-level engineers.\n\nMust-have requirements (all four are required):\n1. At least five years' experience building and operating data pipelines in production.\n2. Expert-level Python and SQL.\n3. Hands-on experience running or migrating to a cloud data warehouse.\n4. The right to work in the United Kingdom without sponsorship; we cannot sponsor visas for this role.\n\nNice-to-have (not required):\na. Experience with streaming or event-driven systems in production.\nb. Experience mentoring junior engineers or analysts.\nc. A degree in computer science, mathematics, statistics or a closely related field.\n\nHow we work: The data platform team is eight people, split between Bristol and a small group in Leeds. We run a two-week cadence, review every change in pairs, and keep an on-call rota for the nightly loads that pays a separate allowance. The warehouse is refreshed hourly during business hours and nightly for the heavy models; the pipelines move roughly 1.2 billion rows a day.\n\nOther conditions: Candidates must be willing to be on site in Bristol two days a week from the start date. Interview process: a 30-minute screening call, a two-hour technical interview, and a final panel. We will reply to every application within ten working days of the closing date.\n\n(B) CANDIDATE CV — Renata Kowalczyk\nLocation: Manchester. Right to work: UK settled status; no sponsorship required. Phone and email on file with the portal.\n\nProfile: Data engineer with a background in analytics, comfortable owning pipelines end to end, from ingestion to warehouse modelling. Strong Python and SQL.\n\nExperience\n- Data Engineer, Halden Freight, Manchester — March 2023 to present. Own the nightly and hourly batch pipelines (Python, SQL, container-based orchestration) that load shipment, telematics and billing data into the analytics warehouse. In 2024 led the migration of the warehouse from an on-premises database to a cloud data warehouse, cutting the nightly load window from 6 hours to 55 minutes. Wrote and maintain data quality checks for 140 tables. This is my first role with pipeline ownership; earlier roles were on the analytics side.\n- Analytics Engineer, Bluefinch Retail, Leeds — June 2021 to February 2023. Built SQL models and dashboards for the merchandising team on top of pipelines owned and operated by the platform team. Mentored two junior analysts who joined in 2022. Reduced dashboard load times by consolidating 30 overlapping models into 9.\n- Junior Analyst, Bluefinch Retail, Leeds — September 2019 to May 2021. Weekly sales reporting in spreadsheets and SQL; ad hoc analysis for store managers.\n\nSelected projects\n- Telematics ingestion (2025): replaced a vendor batch export with an hourly pull of 30 million events a day, with late-arriving data handled by a 48-hour reprocessing window.\n- Cost review (2025): cut warehouse compute spend by 22% by moving three of the heaviest models to incremental builds.\n\nEducation\n- BSc Mathematics, Northgate University, graduated June 2019 (upper second class). No postgraduate degree.\n\nSkills\n- Python: expert (used daily since 2021). SQL: expert. Scala: basic. Shell: intermediate.\n- Cloud data warehouse: 2 years, including one full migration.\n- Orchestration: 3 years. Streaming or event-driven systems: no production experience; completed an online course in 2025.\n- Languages: English (fluent), Polish (native).\n\n(C) COVER LETTER\nDear Ms Ferreira,\n\nI am writing to apply for the Senior Data Engineer position at Corvid Analytics, which I saw on the careers portal on 20 September. I am currently a Data Engineer at Halden Freight in Manchester, where I own the batch pipelines behind our analytics warehouse and where, in 2024, I led our migration to a cloud data warehouse, cutting the nightly load window from six hours to under one.\n\nI completed my master's degree in computer science in 2019 and have worked with data every day since, first on the analytics side at Bluefinch Retail and then as an engineer at Halden. At Bluefinch I mentored two junior analysts, both of whom have since been promoted, and I would welcome the chance to mentor the two mid-level engineers mentioned in the description.\n\nI am aware that the role is based in Bristol. I am happy to relocate to Bristol before the January start date and to be on site two days a week; I have family in the area and have been planning a move for some time. I hold UK settled status and do not need sponsorship. My salary expectation is £80,000.\n\nI would be glad to discuss the role further. Thank you for considering my application.\n\nYours sincerely,\nRenata Kowalczyk\n28 September 2026\n\n(D) RECRUITER'S COVER NOTE (Ines Ferreira, for the hiring manager)\nApplication received through the portal on 29 September 2026 at 16:12, one day before the closing date. CV and cover letter attached as submitted, unedited. I have not yet checked references. Please note for the screening call that the education section of the CV and the cover letter do not say the same thing about the candidate's degree; worth a clarifying question. Screening calls are being scheduled for the week of 12 October.\n",
+  "vendor_negotiation": "Email thread — Lumen Desk helpdesk subscription for Greyfern Logistics\nParticipants: Kwame Osei (Account Executive, Lumen Desk); Tessa Marlowe (Head of Operations, Greyfern Logistics); Dario Benedetti (Finance Manager, Greyfern Logistics, added later).\n\nFrom: Kwame Osei — To: Tessa Marlowe — Monday 1 June 2026, 09:40\nSubject: Lumen Desk proposal for Greyfern\nHi Tessa, thanks for the demo call last week. As discussed, here is our proposal. 120 agent seats on the Business plan at $18.00 per seat per month, billed annually, which comes to $25,920 per year. A one-time onboarding and data migration fee of $2,500 covers importing your existing ticket history and two training sessions. This quote is valid until 15 June. Let me know if you have any questions.\n\nFrom: Tessa Marlowe — To: Kwame Osei — Tuesday 2 June 2026, 14:05\nSubject: RE: Lumen Desk proposal for Greyfern\nHi Kwame, thanks for the quick turnaround. Honestly the seat price is higher than I expected. We have a comparable quote from another vendor at $14.00 per seat, and their onboarding is included. I'd like you to come down to $14.00 and waive the onboarding fee. We do prefer your product, especially the routing rules, so I hope we can find a way.\n\nFrom: Kwame Osei — To: Tessa Marlowe — Wednesday 3 June 2026, 11:22\nSubject: RE: Lumen Desk proposal for Greyfern\nHi Tessa, I appreciate the candour. I can't get to $14.00 on a one-year term. What I can do is $16.00 per seat per month if you commit to a two-year term, and I can reduce the onboarding fee from $2,500 to $1,000. On top of that, if the agreement is signed by 15 June I can apply an additional 5% discount to the seat price, which would take it to $15.20. The 5% is a quarter-end incentive and I genuinely can't extend it beyond the 15th.\n\nFrom: Tessa Marlowe — To: Kwame Osei — Monday 8 June 2026, 10:48\nSubject: RE: Lumen Desk proposal for Greyfern\nHi Kwame, a two-year term is possible, but only if we have a termination-for-convenience clause with 90 days' notice, because we are being acquired-curious this year and I can't lock in a tool without an exit. Two more things. First, our head count has changed since the demo: we need 135 seats, not 120. Second, does the 5% discount still apply at 135 seats, or was it tied to the 120-seat quote?\n\nFrom: Kwame Osei — To: Tessa Marlowe — Tuesday 9 June 2026, 16:30\nSubject: RE: Lumen Desk proposal for Greyfern\nHi Tessa, answers in order. Termination for convenience: I can offer it, but only after month 12 of the term and with 60 days' written notice, not 90 days and not from day one; that's the most our legal team will accept on a discounted two-year deal. 135 seats at $16.00 is fine, and the 5% discount stands at 135 seats if we sign by 15 June. We can't waive the onboarding fee entirely because the migration is done by a partner, but $1,000 is our floor. One more thing you didn't ask about: our single sign-on add-on is $2.00 per seat per month extra if you want it; several logistics customers take it.\n\nFrom: Tessa Marlowe — To: Kwame Osei — Cc: Dario Benedetti — Thursday 11 June 2026, 09:15\nSubject: RE: Lumen Desk proposal for Greyfern\nHi Kwame, I'm adding Dario Benedetti from our finance team, who has to approve anything over $20,000 a year. Our legal review of the master agreement is going to take until at least the 20th, so we cannot sign by 15 June. Can you extend the signing deadline, and the 5%, to 30 June? Dario will need the total annual cost written out for the approval form.\n\nFrom: Kwame Osei — To: Tessa Marlowe — Cc: Dario Benedetti — Friday 12 June 2026, 08:52\nSubject: RE: Lumen Desk proposal for Greyfern\nHi Tessa, hi Dario. I've spoken to my manager. We can extend the deadline to 26 June, not 30 June, because the discount has to be booked before our quarter closes. If the agreement is signed by 26 June the 5% applies. For Dario, the numbers with the discount: 135 seats at $15.20 per seat per month, times 12 months, is $24,624 per year, for each of the two years. Plus the one-time onboarding fee of $1,000 in year one only. Termination for convenience after month 12 with 60 days' notice, as in my previous email. SSO is not included in these numbers.\n\nFrom: Dario Benedetti — To: Kwame Osei — Cc: Tessa Marlowe — Monday 15 June 2026, 13:40\nSubject: RE: Lumen Desk proposal for Greyfern\nHello Kwame, thank you for the breakdown. One question from finance before I sign off: is the $15.20 price locked for the second year as well, or is there an annual uplift clause? Our approval assumes a flat price across both years. Regards, Dario.\n\nFrom: Kwame Osei — To: Dario Benedetti — Cc: Tessa Marlowe — Monday 15 June 2026, 15:05\nSubject: RE: Lumen Desk proposal for Greyfern\nHi Dario, the $15.20 seat price is locked for both years of the term; there is no uplift clause in the two-year agreement. Any seats added mid-term are also billed at $15.20 pro rata. SSO, if ever added, would be priced separately. Kwame.\n\nFrom: Tessa Marlowe — To: Kwame Osei — Cc: Dario Benedetti — Wednesday 24 June 2026, 17:20\nSubject: RE: Lumen Desk proposal for Greyfern — signed\nHi Kwame, legal is done and Dario has approved. I have signed the agreement in the portal this afternoon. To confirm what we have agreed: 135 seats on the Business plan at $15.20 per seat per month, two-year term, $24,624 per year, onboarding fee of $1,000 one time, price locked for both years, termination for convenience after month 12 with 60 days' written notice. We are not taking the SSO add-on for now; we may revisit it in year two. Please send the countersigned copy and the onboarding kick-off invite. Thanks for working with us on this. Tessa.\n",
+  "news_report": "Millbrook Hollow council adopts $148.6 million budget for 2027 after split vote\nBy the Millbrook Hollow Ledger staff — published Wednesday 16 September 2026\n\nThe Millbrook Hollow town council voted 7 to 2 on Tuesday evening to adopt a $148.6 million operating budget for fiscal year 2027, ending a six-week process that drew larger public turnout than any budget hearing in the past decade. The budget takes effect on 1 January 2027.\n\nThe 2027 total is 4.2% higher than the $142.6 million budget adopted for 2026, which in turn had grown from $138.0 million in 2025. Officials said the increase is driven mainly by road maintenance, a new police contract, and higher health insurance costs for town employees.\n\nThe council has nine members. The two votes against came from Councillor Ruben Castellanos of Ward 4 and Councillor Anita Reyes of Ward 6. Both said their objection was to a single line item: a 6% cut to the library system, which drops from $5.4 million to $5.1 million.\n\n\"I could not vote for a budget that asks the library to do more with less in the same year we add to almost every other department,\" Councillor Castellanos said after the vote. \"The library is the one building in this town that is open to everyone for free. Cutting it by six percent to fund roads is the wrong trade, and I said so at the hearing and I'm saying it again tonight.\"\n\nMayor Delphine Aurelio, who presented the budget in August, defended the overall package. \"This budget keeps our reserves healthy, funds the road programme residents have been demanding for years, and honours the police contract we negotiated in the spring,\" she said. \"On the library, we are talking about a reduction that comes almost entirely from deferring the branch renovation, not from hours or staff. Nobody is losing a job and no branch is closing.\"\n\nHow the budget was built\nThe mayor's office released its draft on 4 August, and the council held three work sessions in late August before the public hearing. The draft was $149.1 million; the council trimmed $0.5 million from administration and consulting before Tuesday's vote. Health insurance premiums for the town's 610 employees rose 9% for 2027, adding about $1.9 million across all departments, an increase the council had no power to negotiate this year.\n\nWhere the money goes\nThe largest single allocation is the police department at $41.2 million, or 27.7% of the total, up from $39.0 million in 2026. The increase reflects the three-year contract ratified in April, which raises officer pay by 3.5% a year.\n\nRoads and public works receive $18.9 million, up from $16.9 million, the largest percentage increase of any department. The money funds the resurfacing of 22 miles of town roads, about twice the usual annual programme, and the replacement of the Ferris Creek culvert.\n\nParks and recreation are flat at $7.4 million. The fire department receives $24.6 million, up 2.1%. Administration, planning and all other departments account for the remaining $51.4 million.\n\nProperty taxes\nTo fund the budget, the property tax rate rises 1.8%. For the owner of a home at the town's median assessed value of $312,000, the increase amounts to about $96 a year, or $8 a month. Sewer and water fees are set separately by the utility board and are not part of Tuesday's vote.\n\nReserves\nThe budget leaves the town's general reserve fund at $22.0 million, which is 14.8% of the operating budget. The council's own financial policy, adopted in 2019, requires the reserve to be kept at a minimum of 12% of the operating budget.\n\n\"We are comfortably above the policy floor,\" said Finance Director Margit Halloran, who has held the post since 2021. \"Fourteen point eight percent gives us roughly seven weeks of operating expenses in the bank. Two years ago we were at 11.5%, below the floor, and rebuilding that cushion was one of the reasons the 2026 budget was so tight. I would not recommend spending it down to fund the library restoration that some residents asked for; that would be a one-year fix to a recurring cost.\"\n\nPublic hearing\nThe hearing on 8 September drew about 140 residents to the council chamber, with overflow seating in the lobby. Twenty-three residents spoke. Fifteen of them opposed the library cut, five spoke in favour of the roads programme, and three raised unrelated matters, including a request for a crosswalk on Alder Street. The council did not amend the budget after the hearing.\n\nWater treatment plant\nSeparately, the council voted unanimously on Tuesday to place a $30 million bond measure for a new water treatment plant on the ballot for the May 2027 election. If approved by voters, the plant would be financed over 25 years and its debt service would appear in the 2028 budget at the earliest. The bond is not part of the $148.6 million operating budget adopted on Tuesday, and the two votes were taken separately.\n\nWhat happens next\nDepartment heads will submit spending plans by 15 November. The council's finance committee, chaired by Councillor Reyes, will review the library allocation again in the mid-year budget review in June 2027. Councillor Castellanos has said he will propose restoring the library funding at that review if revenue comes in above forecast.\n\nCorrection, 17 September 2026: An earlier version of this article stated that the roads and public works allocation increased by 12% from 2026. The correct figure is 11.8%. The earlier version also misspelled the Finance Director's surname as \"Halloway\"; her name is Margit Halloran. We regret the errors.\n",
+  "group_chat": "Group chat: \"Cedar Hollow weekend\" — five members: Maya, Theo, Zara, Leon, Ines\n\nMon 1 June\nMaya (09:02): OK people, cabin weekend. I'm thinking 19–21 June at Cedar Hollow, the place Zara found. Who's in?\nZara (09:10): In! Either weekend works for me in June actually.\nTheo (09:15): I can't do 19–21, that's my cousin's wedding in Bath. Could do the weekend after, 26–28?\nLeon (09:31): 26–28 works for me. 19–21 I'd have to leave early Sunday anyway.\nInes (09:40): 26–28 works for me too. 19–21 I have a work thing on the Saturday morning.\nMaya (09:44): OK 26–28 it is then. Three nights or two?\nTheo (09:46): Two. Friday and Saturday night. I have to be back Sunday afternoon.\nMaya (09:47): Two nights. Fri 26 to Sun 28 June. Locking it.\n\nTue 2 June\nMaya (18:20): Cabin booked! \"Pine Lodge\" at Cedar Hollow, sleeps 6, $720 for the two nights. Check-in is from 4pm Friday, checkout by 11am Sunday. I paid the $200 deposit on my card just now, the rest is due at check-in.\nZara (18:25): Amazing. Quick thing: I'm vegetarian, so please no all-meat BBQ plan like last time. I'll bring stuff too.\nLeon (18:30): Noted. I'm on BBQ duty and I'll do veggie skewers and halloumi as well as the meat. Anyone else with food things?\nInes (18:33): Not me, I eat anything.\nTheo (18:41): Same. Although I'll bring my own coffee because the cabin coffee is always awful.\nMaya (18:45): Deposit's paid, so $720 total, that's $144 each if all five of us go. Don't send anything yet, let's wait until we know about cars.\n\nThu 4 June\nTheo (12:05): Cars. I can drive and I have four seats plus me, so five total with luggage if we pack light. Leaving from the Old Mill car park at 17:30 on the Friday. It's about 2 hours 15 to Cedar Hollow so we'd be there by 8ish.\nInes (12:20): I finish work at 3 that Friday and I'm not in town, I'm at the client site in Harlow. I'll take the train and meet you there. There's a 15:10 from Harlow that gets to Cedar Hollow station at 17:40, then a taxi.\nMaya (12:22): Great, so four in Theo's car and Ines by train.\nZara (12:30): I can be at Old Mill by quarter past five, no problem.\nLeon (12:35): Same, 5:15 pm at Old Mill.\nTheo (12:36): Cool. Don't be late, I want to miss the motorway traffic.\n\nMon 8 June\nLeon (08:50): Bad news. I have to drop out. Work has put me on a trip to Oslo that whole week and I'm not back until the Sunday night. I'm really sorry, I know I was on BBQ duty.\nMaya (08:55): Oh no! That's rubbish. No worries though, the deposit is already paid and the cabin is the same price regardless, so we'll split it four ways.\nZara (09:01): So that's $720 / 4 = $180 each?\nMaya (09:04): Yes, $180 each. And since I already put $200 down, just send me $180 each and I'll pay the remaining $520 at check-in. That way it comes out even.\nTheo (09:10): Sending now.\nInes (09:12): Sent.\nZara (09:20): Done. Leon, sorry you can't make it. Who's doing the BBQ now?\nTheo (09:25): I'll do it. I've watched Leon do it enough times. Veggie skewers included, Zara, don't worry.\nLeon (09:30): I'll send you my marinade recipe, Theo. Least I can do.\n\nTue 9 June\nTheo (19:00): Groceries. I'll do a big shop on the Friday before we leave. I estimate about $120 for the two days, so split four ways that's $30 each. Send it to me, not Maya, so we don't mix up the cabin money and the food money.\nInes (19:08): Could we make it $40 each instead so we have a margin for drinks and snacks? Last time we ran out of everything by Saturday lunch.\nZara (19:10): Agree, $40 is fine by me.\nMaya (19:12): Fine with me.\nTheo (19:15): OK, $40 each to me for groceries. If there's money left over I'll give it back or it goes on the Sunday breakfast.\nMaya (19:18): So to be clear: $180 each to Maya for the cabin, $40 each to Theo for food.\n\nWed 10 June\nInes (13:30): Small problem. The 15:10 train has been cancelled that day, engineering works. The next one is 16:20 and gets in at 18:45. Is that too late for check-in?\nMaya (13:41): Check-in opens at 4pm but the cabin says we can arrive any time before 9pm, so 18:45 plus a taxi is fine. We'll be there first and I'll text you the door code.\nInes (13:45): Perfect, thanks. I'll get the 16:20.\nTheo (13:50): We might actually arrive around the same time then, we won't be there before 7:45pm anyway.\n\nThu 11 June\nZara (10:15): Leon, since you're not coming, could we still borrow your big cooler? The one from last summer.\nLeon (10:22): Of course. I'll drop it at Theo's place on Thursday the 25th before I fly.\nTheo (10:25): Great, I'll be home after 6 that day.\nZara (10:30): Thank you! And the marinade recipe.\nLeon (10:31): Already sent to Theo. Enjoy it, all of you, and send photos.\n\nFri 12 June\nMaya (17:55): FINAL PLAN, please read. Trip is Fri 26 June to Sun 28 June, two nights at Pine Lodge, Cedar Hollow. Theo drives from the Old Mill car park at 5:30 pm on the Friday; in the car: Theo, Zara and me. Ines takes the 16:20 train from Harlow, arrives 18:45, taxi to the cabin, I'll text the door code. Leon is not coming (Oslo) but is lending the cooler. Money: $180 each to me for the cabin (already received from Theo, Ines and Zara, thank you), $40 each to Theo for groceries. Checkout is 11am Sunday. Zara is vegetarian and Theo is on BBQ duty with veggie skewers. Any questions, ask now.\nZara (18:02): All good. I'll be at Old Mill at 5:15.\nTheo (18:05): Good. And bring a jumper, it's cold up there at night.\nInes (18:10): All good, see you Friday week!\nLeon (18:15): Have fun. Photos or it didn't happen.\n",
+  "release_notes": "Tidewatch backup client — release notes, versions 3.1 to 3.4, followed by the current bug report queue\nSeverity tags used in these notes: [critical] = crash or data loss; [major] = a feature does not work as documented; [minor] = cosmetic or workaround available.\n\nVersion 3.1 — released 12 February 2026\nNew\n- Scheduled backups: choose hourly, daily or weekly schedules per backup set.\n- Incremental snapshots: after the first full backup, only changed blocks are uploaded.\n- New target types: local folder, network share, and FTP server.\nKnown issues\n- KI-1 (tracked as TW-1099) [major]: files larger than 4 GB fail to back up when the source is on a legacy filesystem such as FAT32; the client reports error E-417. Workaround: move the files to a modern filesystem before backing up.\n\nVersion 3.2 — released 9 April 2026\nFixed\n- TW-1187 [critical]: the client crashed when a network drive used as a backup source was disconnected during a backup. The backup now pauses and resumes when the drive returns.\n- TW-1203 [minor]: log timestamps were written in UTC but labelled as local time.\nNew\n- Bandwidth throttle: limit upload speed per backup set, in MB/s.\n- Restore preview: see which files a restore would overwrite before confirming.\nKnown issues\n- KI-1 (TW-1099) [major]: still present; files over 4 GB on legacy filesystems fail with E-417.\n- KI-2 (tracked as TW-1240) [major]: the bandwidth throttle setting is not saved across a restart of the client; after a restart the throttle silently reverts to unlimited. Workaround: re-enter the throttle value after each restart.\n\nVersion 3.3 — released 2 June 2026\nFixed\n- TW-1240 [major]: the bandwidth throttle value is now persisted and survives restarts. This closes KI-2.\n- TW-1251 [minor]: the progress bar could stay at 99% for several minutes after the backup had actually completed.\nNew\n- Encryption at rest: an option to encrypt backup sets with a user-held passphrase before upload. Off by default; enabling it on an existing backup set forces a new full backup.\nChanged\n- Minimum supported operating system version raised; see the compatibility page.\nKnown issues\n- KI-1 (TW-1099) [major]: still present in 3.3; files over 4 GB on legacy filesystems fail with E-417.\n\nVersion 3.4 — released 21 August 2026\nFixed\n- TW-1099 [major]: files larger than 4 GB on legacy filesystems (FAT32 and similar) are now backed up correctly by splitting them into 2 GB chunks. This closes KI-1, which had been open since 3.1.\n- TW-1302 [minor]: restoring a backup set that contained empty folders did not recreate the empty folders.\nDeprecated\n- The FTP target type is deprecated as of 3.4. It still works in 3.4 and shows a deprecation warning when selected. It will be removed in version 4.0. Users are advised to migrate FTP targets to a network share.\nKnown issues\n- TW-1310 [minor]: when encryption at rest is enabled, the first full backup of a set takes up to 30% longer than an unencrypted full backup. Subsequent incremental backups are not affected. No fix is scheduled yet.\n\nUpgrade notes\n- Upgrading from any 3.x version keeps existing backup sets, schedules and targets. The client will ask to re-enter the passphrase for encrypted sets after upgrading to 3.4.\n- Downgrading from 3.4 to 3.3 is supported, but any file that was backed up in 2 GB chunks by 3.4 cannot be restored by 3.3.\n- Each release is offered through the in-app updater roughly one week after the dates above; the direct download is available on the release date.\n\nSupport notes\n- Users on 3.1 or 3.2 are advised to upgrade directly to 3.4; there is no need to install 3.3 first.\n- Version 3.0 and earlier are out of support since 30 June 2026.\n\nBUG REPORT QUEUE (as of 10 September 2026)\n\nBR-1 — submitted 15 May 2026 — reporter running version 3.2\n\"I set the upload throttle to 2 MB/s on my main backup set. Every time I reboot my computer the throttle goes back to unlimited and my video calls stutter during the morning backup. I have to set it again every day.\"\nTriage note: matches KI-2 / TW-1240. Fixed in 3.3. Reporter advised to upgrade. Status: closed as fixed.\n\nBR-2 — submitted 3 July 2026 — reporter running version 3.3\n\"Backups of my 6 GB video project file fail with error E-417 every time. The file is on an old external drive formatted FAT32. Smaller files on the same drive back up fine.\"\nTriage note: matches KI-1 / TW-1099, which was still open when this report was submitted. Fixed in 3.4 (released 21 August). Reporter notified on 22 August. Status: closed as fixed.\n\nBR-3 — submitted 30 August 2026 — reporter running version 3.4\n\"Since I turned on encryption at rest, the first backup took about 30% longer than my previous full backup of the same folder. Later incremental backups seem normal. Is this expected?\"\nTriage note: matches known issue TW-1310, which is documented in the 3.4 notes and has no scheduled fix. Status: open, linked to TW-1310.\n\nBR-4 — submitted 20 May 2026 — reporter running version 3.2\n\"The bandwidth limit doesn't stick. I put in 5 MB/s, close the app, open it again, and it's gone.\"\nTriage note: duplicate of BR-1 (same underlying issue, KI-2 / TW-1240). Fixed in 3.3. Status: closed as duplicate of BR-1.\n\nQueue summary: four reports; two closed as fixed, one closed as duplicate, one open.\n"
+ },
+ "option_sets": {
+  "sentiment": [
+   "negative",
+   "neutral",
+   "positive"
+  ],
+  "language": [
+   "english",
+   "french",
+   "spanish",
+   "german"
+  ]
+ },
+ "items": [
+  {
+   "id": "S1Q1",
+   "category": "numbers",
+   "state": "support_thread",
+   "type": "choice",
+   "instructions": "How much money was refunded to the customer's original payment card over the whole thread?",
+   "options": [
+    "$0.00",
+    "$60.00",
+    "$64.35",
+    "$124.35",
+    "$489.00"
+   ],
+   "gold": "$60.00",
+   "why": "Message 2 refunds the $60.00 expedited shipping fee to the card; the $64.35 in message 8 is store credit on the account, explicitly not to the card."
+  },
+  {
+   "id": "S1Q2",
+   "category": "timeline",
+   "state": "support_thread",
+   "type": "choice",
+   "instructions": "Which item reached the customer's address first?",
+   "options": [
+    "the missing table box",
+    "the replacement chair",
+    "both arrived on the same day"
+   ],
+   "gold": "the missing table box",
+   "why": "Message 7: the table box arrived Monday 16 March; message 9: the replacement chair arrived Saturday 21 March."
+  },
+  {
+   "id": "S1Q3",
+   "category": "attribution",
+   "state": "support_thread",
+   "type": "choice",
+   "instructions": "Which agent first told the customer that the missing box had been located at the depot?",
+   "options": [
+    "Tomas Vellek",
+    "Ingrid Solano",
+    "the carrier contacted the customer directly",
+    "nobody; the customer found it herself"
+   ],
+   "gold": "Ingrid Solano",
+   "why": "Message 4 (Ingrid Solano) reports the carrier found box 3 at the Fairhaven depot with a torn label; Tomas in message 2 only said it was last scanned there."
+  },
+  {
+   "id": "S1Q4",
+   "category": "counting",
+   "state": "support_thread",
+   "type": "choice",
+   "instructions": "How many of the ten messages in the thread were written by the customer?",
+   "options": [
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "gold": "5",
+   "why": "Messages 1, 3, 5, 7 and 9 are from Priya Raman (customer)."
+  },
+  {
+   "id": "S1Q5",
+   "category": "reading",
+   "state": "support_thread",
+   "type": "score",
+   "instructions": "What priority level was the ticket set to on 18 March?",
+   "levels": [
+    "low",
+    "normal",
+    "high",
+    "critical"
+   ],
+   "gold": "high",
+   "why": "Status history and message 8: priority raised from Normal to High on 18 March."
+  },
+  {
+   "id": "S1Q6",
+   "category": "multi-hop",
+   "state": "support_thread",
+   "type": "score",
+   "instructions": "By the end of the thread, how many of the customer's two problems (the missing table box and the cracked chair) had been resolved?",
+   "levels": [
+    "none",
+    "one",
+    "both"
+   ],
+   "gold": "both",
+   "why": "Table arrived 16 March (message 7); replacement chair arrived 21 March in perfect condition and the damaged one was returned (message 9); ticket closed (message 10)."
+  },
+  {
+   "id": "S1Q7",
+   "category": "multi-hop",
+   "state": "support_thread",
+   "type": "noul",
+   "instructions": "The replacement chair arrived on the delivery date that Tomas gave in his 18 March message.",
+   "gold": false,
+   "why": "Tomas estimated Friday 20 March (message 8); the chair arrived Saturday 21 March (message 9)."
+  },
+  {
+   "id": "S1Q8",
+   "category": "negation",
+   "state": "support_thread",
+   "type": "noul",
+   "instructions": "The customer never had to send the damaged chair back.",
+   "gold": false,
+   "why": "Message 9: she dropped the damaged chair at the carrier's counter using the prepaid label (receipt RC-55019)."
+  },
+  {
+   "id": "S1Q9",
+   "category": "numbers",
+   "state": "support_thread",
+   "type": "noul",
+   "instructions": "The 15% goodwill credit was calculated on the full $489.00 order total.",
+   "gold": false,
+   "why": "Message 8: the credit is 15% of the item value of $429.00 (total minus refunded shipping), giving $64.35."
+  },
+  {
+   "id": "S1Q10",
+   "category": "routing",
+   "state": "support_thread",
+   "type": "noul",
+   "instructions": "In her final message the customer asks whether the store credit has an expiry date.",
+   "gold": true,
+   "why": "Message 9: 'And does the $64.35 store credit have an expiry date?' (she does not ask for any further refund)."
+  },
+  {
+   "id": "S2Q1",
+   "category": "numbers",
+   "state": "postmortem",
+   "type": "choice",
+   "instructions": "How long was the impact window, from the first automated alert to the completion of the rollback?",
+   "options": [
+    "45 minutes",
+    "61 minutes",
+    "71 minutes",
+    "89 minutes"
+   ],
+   "gold": "71 minutes",
+   "why": "Timeline: first alert 09:26, rollback complete 10:37; the 10:41 entry states the impact window as 71 minutes."
+  },
+  {
+   "id": "S2Q2",
+   "category": "timeline",
+   "state": "postmortem",
+   "type": "choice",
+   "instructions": "Which of these happened first?",
+   "options": [
+    "the first customer-reported ticket",
+    "the first automated alert",
+    "the escalation to Marcus Lindqvist",
+    "the rollback decision"
+   ],
+   "gold": "the first automated alert",
+   "why": "Alert at 09:26, first customer ticket at 09:33, escalation at 09:58, rollback decision at 10:22."
+  },
+  {
+   "id": "S2Q3",
+   "category": "attribution",
+   "state": "postmortem",
+   "type": "choice",
+   "instructions": "Who identified the root cause?",
+   "options": [
+    "Dana Okafor",
+    "Marcus Lindqvist",
+    "Ravi Thandeka",
+    "Lena Baxter"
+   ],
+   "gold": "Marcus Lindqvist",
+   "why": "Timeline 10:15: Marcus identifies the root cause (planner choosing a sequential scan due to stale statistics)."
+  },
+  {
+   "id": "S2Q4",
+   "category": "counting",
+   "state": "postmortem",
+   "type": "choice",
+   "instructions": "How many action items are owned by Marcus Lindqvist?",
+   "options": [
+    "0",
+    "1",
+    "2",
+    "3"
+   ],
+   "gold": "2",
+   "why": "AI-2 and AI-4 list Marcus Lindqvist as owner; AI-1, AI-3, AI-5 have other owners."
+  },
+  {
+   "id": "S2Q5",
+   "category": "urgency",
+   "state": "postmortem",
+   "type": "score",
+   "instructions": "According to the severity table in the document and the incident's duration and scope, what is the severity of this incident?",
+   "levels": [
+    "SEV3",
+    "SEV2",
+    "SEV1"
+   ],
+   "gold": "SEV1",
+   "why": "Partial degradation of one endpoint for 71 minutes, which exceeds the 60-minute SEV1 threshold; the header also states Final severity: SEV1."
+  },
+  {
+   "id": "S2Q6",
+   "category": "numbers",
+   "state": "postmortem",
+   "type": "score",
+   "instructions": "Under the customer impact bands defined in the document, which band does the share of affected active accounts fall in?",
+   "levels": [
+    "low",
+    "medium",
+    "high"
+   ],
+   "gold": "medium",
+   "why": "212 of 1,940 active accounts = 10.9%, inside the Medium band of 5% to 25%."
+  },
+  {
+   "id": "S2Q7",
+   "category": "negation",
+   "state": "postmortem",
+   "type": "noul",
+   "instructions": "The CDN configuration change applied at 08:50 contributed to the outage.",
+   "gold": false,
+   "why": "Timeline 09:50 and the closing note: the CDN change was ruled out and did not contribute in any way."
+  },
+  {
+   "id": "S2Q8",
+   "category": "multi-hop",
+   "state": "postmortem",
+   "type": "noul",
+   "instructions": "Every action item with a due date in July 2026 is marked Done.",
+   "gold": false,
+   "why": "AI-1 (31 July) and AI-5 (24 July) are Done, but AI-3 (due 31 July) is Open."
+  },
+  {
+   "id": "S2Q9",
+   "category": "entailment",
+   "state": "postmortem",
+   "type": "noul",
+   "instructions": "The postmortem states that no data was lost during the incident.",
+   "gold": true,
+   "why": "Header 'Data loss: none', and the Summary and Impact sections both say no data was lost or corrupted."
+  },
+  {
+   "id": "S2Q10",
+   "category": "numbers",
+   "state": "postmortem",
+   "type": "noul",
+   "instructions": "Fewer than 15,000 requests failed during the impact window.",
+   "gold": true,
+   "why": "Impact section: 14,600 requests failed or timed out."
+  },
+  {
+   "id": "S3Q1",
+   "category": "numbers",
+   "state": "meeting_transcript",
+   "type": "choice",
+   "instructions": "How many open support tickets did Farid report after correcting himself?",
+   "options": [
+    "160",
+    "213",
+    "231",
+    "312"
+   ],
+   "gold": "213",
+   "why": "Farid first says 312, then corrects: 'I transposed the digits. It's 213, not 312.'"
+  },
+  {
+   "id": "S3Q2",
+   "category": "attribution",
+   "state": "meeting_transcript",
+   "type": "choice",
+   "instructions": "Who proposed launching Shared Notebooks on 29 September?",
+   "options": [
+    "Amara Osei",
+    "Ben Kristiansen",
+    "Chloe Marchetti",
+    "Dev Ramaswamy",
+    "Elena Voss",
+    "Farid Haddad"
+   ],
+   "gold": "Chloe Marchetti",
+   "why": "Chloe: 'I'd push for 29 September.' Ben proposed 13 October; Elena said 29 September was impossible."
+  },
+  {
+   "id": "S3Q3",
+   "category": "routing",
+   "state": "meeting_transcript",
+   "type": "choice",
+   "instructions": "Which agenda item was postponed to the next meeting?",
+   "options": [
+    "launch date",
+    "pricing tier",
+    "onboarding redesign",
+    "support backlog"
+   ],
+   "gold": "onboarding redesign",
+   "why": "Item three: Amara postpones the onboarding redesign to the 15 September meeting because Chloe's synthesis is not finished."
+  },
+  {
+   "id": "S3Q4",
+   "category": "counting",
+   "state": "meeting_transcript",
+   "type": "choice",
+   "instructions": "How many of the six attendees were assigned at least one action item in the wrap-up?",
+   "options": [
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "gold": "5",
+   "why": "Wrap-up lists actions for Ben, Chloe, Elena, Farid and Amara ('Me: book the 15 September meeting'); 'Dev has no actions.'"
+  },
+  {
+   "id": "S3Q5",
+   "category": "reading",
+   "state": "meeting_transcript",
+   "type": "score",
+   "instructions": "What confidence did Ben state for hitting the 6 October launch date once it was locked?",
+   "levels": [
+    "low",
+    "medium",
+    "high"
+   ],
+   "gold": "high",
+   "why": "Ben: 'Fine, 6 October works. High confidence on that.'"
+  },
+  {
+   "id": "S3Q6",
+   "category": "sentiment",
+   "state": "meeting_transcript",
+   "type": "score",
+   "instructions": "What is Elena's sentiment toward the decision to include Shared Notebooks in Pro at no extra cost?",
+   "levels": [
+    "negative",
+    "neutral",
+    "positive"
+   ],
+   "gold": "negative",
+   "why": "Elena: 'I want it on record that I think this is a mistake. We're leaving money on the table.'"
+  },
+  {
+   "id": "S3Q7",
+   "category": "multi-hop",
+   "state": "meeting_transcript",
+   "type": "noul",
+   "instructions": "The launch date finally decided on is the one Ben originally proposed.",
+   "gold": false,
+   "why": "Ben's proposal was Tuesday 13 October; the decision was Tuesday 6 October."
+  },
+  {
+   "id": "S3Q8",
+   "category": "numbers",
+   "state": "meeting_transcript",
+   "type": "noul",
+   "instructions": "Farid's corrected ticket count is lower than the number he first stated.",
+   "gold": true,
+   "why": "First stated 312, corrected to 213."
+  },
+  {
+   "id": "S3Q9",
+   "category": "numbers",
+   "state": "meeting_transcript",
+   "type": "noul",
+   "instructions": "According to Dev's figures, more than 1,000 beta users are weekly active.",
+   "gold": true,
+   "why": "Dev: 1,840 beta users, 62% weekly active; 0.62 x 1,840 = 1,141."
+  },
+  {
+   "id": "S3Q10",
+   "category": "timeline",
+   "state": "meeting_transcript",
+   "type": "noul",
+   "instructions": "Chloe's deadline for the onboarding research synthesis falls after the date of the next meeting.",
+   "gold": false,
+   "why": "Deadline is Monday 14 September; the next meeting is Tuesday 15 September."
+  },
+  {
+   "id": "S4Q1",
+   "category": "numbers",
+   "state": "lease_agreement",
+   "type": "choice",
+   "instructions": "Rent for a month is received on the 9th of that month. Under clause 3, what is the total late charge for that month?",
+   "options": [
+    "$75.00",
+    "$105.00",
+    "$115.00",
+    "$125.00",
+    "$200.00"
+   ],
+   "gold": "$115.00",
+   "why": "Clause 3: $75.00 plus $10.00 per day from the 6th through the 9th inclusive (4 days = $40.00), total $115.00, under the $200.00 cap."
+  },
+  {
+   "id": "S4Q2",
+   "category": "compliance",
+   "state": "lease_agreement",
+   "type": "choice",
+   "instructions": "The Tenant wants to rent the apartment to travellers through an online booking platform for ten days. Under the lease this is:",
+   "options": [
+    "allowed without consent",
+    "allowed only with the Landlord's written consent",
+    "prohibited absolutely",
+    "allowed on payment of a fee"
+   ],
+   "gold": "prohibited absolutely",
+   "why": "Clause 7: short-term rentals under thirty days, including through online platforms, are prohibited absolutely and consent will not be given."
+  },
+  {
+   "id": "S4Q3",
+   "category": "compliance",
+   "state": "lease_agreement",
+   "type": "choice",
+   "instructions": "The Tenant asks to keep a 40-pound dog. Under clause 6 the request is:",
+   "options": [
+    "allowed with the pet deposit and pet rent",
+    "allowed with written consent only",
+    "not allowed because the dog exceeds the weight limit",
+    "allowed because dogs are exempt from the limit"
+   ],
+   "gold": "not allowed because the dog exceeds the weight limit",
+   "why": "Clause 6 permits one dog only if it weighs under 25 pounds at full size; 40 pounds exceeds that."
+  },
+  {
+   "id": "S4Q4",
+   "category": "timeline",
+   "state": "lease_agreement",
+   "type": "choice",
+   "instructions": "What is the last day on which the Tenant can give notice of non-renewal so that the tenancy ends on 30 September 2027?",
+   "options": [
+    "1 July 2027",
+    "1 August 2027",
+    "31 August 2027",
+    "30 September 2027"
+   ],
+   "gold": "1 August 2027",
+   "why": "Clause 9 and Schedule A: the last day for notice is 1 August 2027 (sixty days before the end of the fixed term)."
+  },
+  {
+   "id": "S4Q5",
+   "category": "numbers",
+   "state": "lease_agreement",
+   "type": "score",
+   "instructions": "The security deposit equals how many months' rent?",
+   "levels": [
+    "1 month",
+    "1.5 months",
+    "2 months"
+   ],
+   "gold": "1.5 months",
+   "why": "Clause 4: $2,475.00, equal to one and one-half months' rent ($1,650.00 x 1.5 = $2,475.00)."
+  },
+  {
+   "id": "S4Q6",
+   "category": "compliance",
+   "state": "lease_agreement",
+   "type": "score",
+   "instructions": "The Tenant reports a total loss of heating on 15 January 2027. Within what period must the Landlord respond under clause 8?",
+   "levels": [
+    "within 24 hours",
+    "within 7 days",
+    "within 30 days"
+   ],
+   "gold": "within 24 hours",
+   "why": "Clause 8 defines loss of heat between 1 October and 30 April as an emergency, to be responded to within twenty-four hours."
+  },
+  {
+   "id": "S4Q7",
+   "category": "negation",
+   "state": "lease_agreement",
+   "type": "noul",
+   "instructions": "The Tenant is responsible for paying the water bill.",
+   "gold": false,
+   "why": "Clause 5: the Landlord pays for water, sewer and trash; the Tenant pays electricity, gas and internet."
+  },
+  {
+   "id": "S4Q8",
+   "category": "multi-hop",
+   "state": "lease_agreement",
+   "type": "noul",
+   "instructions": "If the Landlord raises the rent by the maximum allowed at renewal, the new rent would exceed $1,720.00 per month.",
+   "gold": false,
+   "why": "Clause 10 caps the increase at 4%; 4% of $1,650.00 is $66.00, giving $1,716.00, which is below $1,720.00."
+  },
+  {
+   "id": "S4Q9",
+   "category": "reading",
+   "state": "lease_agreement",
+   "type": "noul",
+   "instructions": "Under clause 6, a cat weighing under 25 pounds may be kept with the Landlord's prior written consent and a $300.00 pet deposit.",
+   "gold": true,
+   "why": "Clause 6 permits one cat or one dog under 25 pounds with prior written consent, a refundable $300.00 pet deposit and $35.00 monthly pet rent."
+  },
+  {
+   "id": "S4Q10",
+   "category": "multi-hop",
+   "state": "lease_agreement",
+   "type": "noul",
+   "instructions": "The early termination fee is larger than the security deposit.",
+   "gold": true,
+   "why": "Clause 11: fee is two months' rent = $3,300.00; clause 4: deposit is $2,475.00."
+  },
+  {
+   "id": "S5Q1",
+   "category": "counting",
+   "state": "reviews_batch",
+   "type": "choice",
+   "instructions": "How many of the fourteen reviews are about a product other than the blender?",
+   "options": [
+    "0",
+    "1",
+    "2",
+    "3"
+   ],
+   "gold": "2",
+   "why": "Reviews 7 (Ling W.) and 11 (Omar F.) are about the SteamPro rice cooker."
+  },
+  {
+   "id": "S5Q2",
+   "category": "counting",
+   "state": "reviews_batch",
+   "type": "choice",
+   "instructions": "Counting only the twelve reviews that are about the blender, how many give 5 stars?",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "gold": "3",
+   "why": "Reviews 1 (Hannah T.), 5 (Sofia L.) and 10 (Elise V.); review 7 is 5 stars but is about the rice cooker."
+  },
+  {
+   "id": "S5Q3",
+   "category": "timeline",
+   "state": "reviews_batch",
+   "type": "choice",
+   "instructions": "Which is the most recent one-star review?",
+   "options": [
+    "Colin B.",
+    "Jake M.",
+    "Omar F.",
+    "Tom R."
+   ],
+   "gold": "Jake M.",
+   "why": "One-star reviews are Colin B. (15 May) and Jake M. (18 June); Omar F. and Tom R. gave 2 stars."
+  },
+  {
+   "id": "S5Q4",
+   "category": "language",
+   "state": "reviews_batch",
+   "type": "choice",
+   "instructions": "In what language is Beatriz A.'s review written?",
+   "options": "language",
+   "gold": "spanish",
+   "why": "Review 14 is in Spanish ('Buen producto, muy potente...')."
+  },
+  {
+   "id": "S5Q5",
+   "category": "sentiment",
+   "state": "reviews_batch",
+   "type": "score",
+   "instructions": "What is the overall sentiment of Colin B.'s review?",
+   "levels": [
+    "negative",
+    "neutral",
+    "positive"
+   ],
+   "gold": "negative",
+   "why": "Review 4: 1 star, the unit died after three weeks, 'Not buying this brand again.'"
+  },
+  {
+   "id": "S5Q6",
+   "category": "numbers",
+   "state": "reviews_batch",
+   "type": "score",
+   "instructions": "In which band does the average star rating of the twelve blender reviews (excluding the two misposted ones) fall?",
+   "levels": [
+    "below 3.0",
+    "3.0 to 3.9",
+    "4.0 or above"
+   ],
+   "gold": "3.0 to 3.9",
+   "why": "Blender ratings 5,2,4,1,5,3,4,2,5,3,1,4 sum to 39; 39/12 = 3.25 (including the two misposted reviews gives 46/14 = 3.29, same band)."
+  },
+  {
+   "id": "S5Q7",
+   "category": "multi-hop",
+   "state": "reviews_batch",
+   "type": "noul",
+   "instructions": "Two reviewers make contradictory claims about the material of the blender's jar.",
+   "gold": true,
+   "why": "Ayesha K. (review 3) says the jar is glass; Greg N. (review 6) says the jar is plastic."
+  },
+  {
+   "id": "S5Q8",
+   "category": "negation",
+   "state": "reviews_batch",
+   "type": "noul",
+   "instructions": "None of the reviewers mention contacting Kestrel support or requesting a replacement part.",
+   "gold": false,
+   "why": "Marco D. contacted support and received a replacement lid; Jake M. requested a replacement jar through the website."
+  },
+  {
+   "id": "S5Q9",
+   "category": "reading",
+   "state": "reviews_batch",
+   "type": "noul",
+   "instructions": "Elise V. bought more than one blender.",
+   "gold": true,
+   "why": "Review 10: 'Bought two, one for me and one for my mother.'"
+  },
+  {
+   "id": "S5Q10",
+   "category": "multi-hop",
+   "state": "reviews_batch",
+   "type": "noul",
+   "instructions": "Every review dated in May 2026 is about the blender.",
+   "gold": false,
+   "why": "Review 7 (Ling W., 24 May 2026) is about the SteamPro rice cooker."
+  },
+  {
+   "id": "S6Q1",
+   "category": "compliance",
+   "state": "hiring_packet",
+   "type": "choice",
+   "instructions": "Which of the four must-have requirements is NOT met according to the CV?",
+   "options": [
+    "at least five years building production data pipelines",
+    "expert-level Python and SQL",
+    "hands-on cloud data warehouse experience",
+    "right to work in the UK without sponsorship",
+    "all four are met"
+   ],
+   "gold": "at least five years building production data pipelines",
+   "why": "The CV shows pipeline ownership only from March 2023 (about 3.5 years) and says the earlier Bluefinch roles were on the analytics side with pipelines owned by the platform team; Python/SQL expert, warehouse migration and settled status are all stated."
+  },
+  {
+   "id": "S6Q2",
+   "category": "multi-hop",
+   "state": "hiring_packet",
+   "type": "choice",
+   "instructions": "Which claim in the cover letter contradicts the CV?",
+   "options": [
+    "the claim about a master's degree in computer science",
+    "the claim about relocating to Bristol",
+    "the claim about leading the warehouse migration",
+    "the claim about mentoring two junior analysts"
+   ],
+   "gold": "the claim about a master's degree in computer science",
+   "why": "The cover letter says 'I completed my master's degree in computer science in 2019'; the CV lists only a BSc Mathematics (2019) and states 'No postgraduate degree'; the recruiter's note flags the same discrepancy."
+  },
+  {
+   "id": "S6Q3",
+   "category": "numbers",
+   "state": "hiring_packet",
+   "type": "choice",
+   "instructions": "Roughly how long did Renata work at Bluefinch Retail across both of her roles there?",
+   "options": [
+    "about 1.5 years",
+    "about 3.5 years",
+    "about 5 years",
+    "about 7 years"
+   ],
+   "gold": "about 3.5 years",
+   "why": "Junior Analyst September 2019 to May 2021 and Analytics Engineer June 2021 to February 2023: September 2019 to February 2023 is about 3.5 years."
+  },
+  {
+   "id": "S6Q4",
+   "category": "counting",
+   "state": "hiring_packet",
+   "type": "choice",
+   "instructions": "How many of the three nice-to-have items does the CV provide evidence for?",
+   "options": [
+    "0",
+    "1",
+    "2",
+    "3"
+   ],
+   "gold": "2",
+   "why": "(b) mentored two junior analysts and (c) BSc Mathematics are evidenced; (a) streaming: 'no production experience'."
+  },
+  {
+   "id": "S6Q5",
+   "category": "timeline",
+   "state": "hiring_packet",
+   "type": "score",
+   "instructions": "Relative to the closing date for applications, when was the application received?",
+   "levels": [
+    "before the closing date",
+    "on the closing date",
+    "after the closing date"
+   ],
+   "gold": "before the closing date",
+   "why": "Recruiter's note: received 29 September 2026; the closing date in the job description is 30 September 2026."
+  },
+  {
+   "id": "S6Q6",
+   "category": "numbers",
+   "state": "hiring_packet",
+   "type": "score",
+   "instructions": "Where does the candidate's stated salary expectation fall relative to the advertised salary range?",
+   "levels": [
+    "below the range",
+    "within the range",
+    "above the range"
+   ],
+   "gold": "within the range",
+   "why": "Cover letter: expectation £80,000; advertised range £72,000 to £85,000."
+  },
+  {
+   "id": "S6Q7",
+   "category": "negation",
+   "state": "hiring_packet",
+   "type": "noul",
+   "instructions": "The candidate requires visa sponsorship.",
+   "gold": false,
+   "why": "CV: 'UK settled status; no sponsorship required'; cover letter repeats it."
+  },
+  {
+   "id": "S6Q8",
+   "category": "reading",
+   "state": "hiring_packet",
+   "type": "noul",
+   "instructions": "The role requires being on site in Bristol two days a week.",
+   "gold": true,
+   "why": "Job description: hybrid, two days a week on site (Tuesdays and Thursdays), and 'must be willing to be on site in Bristol two days a week'."
+  },
+  {
+   "id": "S6Q9",
+   "category": "multi-hop",
+   "state": "hiring_packet",
+   "type": "noul",
+   "instructions": "The candidate currently lives in a different city from the one where the role is based.",
+   "gold": true,
+   "why": "CV location: Manchester; the role is in Bristol, and the cover letter says she would relocate."
+  },
+  {
+   "id": "S6Q10",
+   "category": "attribution",
+   "state": "hiring_packet",
+   "type": "noul",
+   "instructions": "The cover letter is addressed to the hiring manager named in the job description.",
+   "gold": false,
+   "why": "The letter opens 'Dear Ms Ferreira' (recruitment coordinator); the hiring manager is Olu Adebayo."
+  },
+  {
+   "id": "S7Q1",
+   "category": "numbers",
+   "state": "vendor_negotiation",
+   "type": "choice",
+   "instructions": "What per-seat monthly price was finally agreed?",
+   "options": [
+    "$14.00",
+    "$15.20",
+    "$16.00",
+    "$18.00"
+   ],
+   "gold": "$15.20",
+   "why": "Tessa's 24 June email confirms 135 seats at $15.20 per seat per month."
+  },
+  {
+   "id": "S7Q2",
+   "category": "timeline",
+   "state": "vendor_negotiation",
+   "type": "choice",
+   "instructions": "The signing deadline was moved during the thread. What was the final deadline?",
+   "options": [
+    "15 June",
+    "20 June",
+    "26 June",
+    "30 June"
+   ],
+   "gold": "26 June",
+   "why": "Kwame's 12 June email: extended to 26 June, not the 30 June Tessa asked for."
+  },
+  {
+   "id": "S7Q3",
+   "category": "attribution",
+   "state": "vendor_negotiation",
+   "type": "choice",
+   "instructions": "Who first asked whether the seat price would be locked for the second year?",
+   "options": [
+    "Tessa Marlowe",
+    "Kwame Osei",
+    "Dario Benedetti",
+    "nobody asked"
+   ],
+   "gold": "Dario Benedetti",
+   "why": "Dario's 15 June email asks whether $15.20 is locked for year two or subject to an uplift."
+  },
+  {
+   "id": "S7Q4",
+   "category": "multi-hop",
+   "state": "vendor_negotiation",
+   "type": "choice",
+   "instructions": "On which date was Dario Benedetti first copied on the thread?",
+   "options": [
+    "1 June",
+    "9 June",
+    "11 June",
+    "15 June"
+   ],
+   "gold": "11 June",
+   "why": "Tessa's Thursday 11 June email is the first with 'Cc: Dario Benedetti' and introduces him."
+  },
+  {
+   "id": "S7Q5",
+   "category": "numbers",
+   "state": "vendor_negotiation",
+   "type": "score",
+   "instructions": "How large is the reduction from the original per-seat price to the final per-seat price, as a percentage of the original price?",
+   "levels": [
+    "under 10%",
+    "10% to 20%",
+    "over 20%"
+   ],
+   "gold": "10% to 20%",
+   "why": "From $18.00 to $15.20 is $2.80, and 2.80/18.00 = 15.6%."
+  },
+  {
+   "id": "S7Q6",
+   "category": "compliance",
+   "state": "vendor_negotiation",
+   "type": "score",
+   "instructions": "Under the agreed terms, when may Greyfern first terminate the agreement for convenience?",
+   "levels": [
+    "at any time",
+    "only after month 12",
+    "not at all during the two-year term"
+   ],
+   "gold": "only after month 12",
+   "why": "Kwame's 9 and 12 June emails and Tessa's 24 June confirmation: termination for convenience after month 12 with 60 days' notice."
+  },
+  {
+   "id": "S7Q7",
+   "category": "negation",
+   "state": "vendor_negotiation",
+   "type": "noul",
+   "instructions": "The onboarding fee was waived entirely.",
+   "gold": false,
+   "why": "The fee was reduced from $2,500 to $1,000; Kwame says $1,000 is the floor and the final deal includes it."
+  },
+  {
+   "id": "S7Q8",
+   "category": "multi-hop",
+   "state": "vendor_negotiation",
+   "type": "noul",
+   "instructions": "The 5% discount was conditional on signing by a deadline, and the agreement was signed before the final deadline.",
+   "gold": true,
+   "why": "Discount conditional on signing by 26 June (12 June email); Tessa signed on Wednesday 24 June."
+  },
+  {
+   "id": "S7Q9",
+   "category": "numbers",
+   "state": "vendor_negotiation",
+   "type": "noul",
+   "instructions": "The agreed annual seat cost exceeds $25,000.",
+   "gold": false,
+   "why": "135 x $15.20 x 12 = $24,624 per year."
+  },
+  {
+   "id": "S7Q10",
+   "category": "timeline",
+   "state": "vendor_negotiation",
+   "type": "noul",
+   "instructions": "The number of seats increased during the negotiation.",
+   "gold": true,
+   "why": "The original proposal was 120 seats; Tessa raised it to 135 on 8 June and the final deal is 135."
+  },
+  {
+   "id": "S8Q1",
+   "category": "numbers",
+   "state": "news_report",
+   "type": "choice",
+   "instructions": "By how many dollars did the operating budget grow from 2026 to 2027?",
+   "options": [
+    "$4.2 million",
+    "$4.6 million",
+    "$6.0 million",
+    "$10.6 million"
+   ],
+   "gold": "$6.0 million",
+   "why": "$148.6 million for 2027 minus $142.6 million for 2026."
+  },
+  {
+   "id": "S8Q2",
+   "category": "attribution",
+   "state": "news_report",
+   "type": "choice",
+   "instructions": "Which of the quoted officials voted against the budget?",
+   "options": [
+    "Mayor Delphine Aurelio",
+    "Councillor Ruben Castellanos",
+    "Finance Director Margit Halloran",
+    "none of the quoted officials"
+   ],
+   "gold": "Councillor Ruben Castellanos",
+   "why": "The two no votes were Castellanos and Reyes; only Castellanos is quoted, and he says he could not vote for the budget."
+  },
+  {
+   "id": "S8Q3",
+   "category": "numbers",
+   "state": "news_report",
+   "type": "choice",
+   "instructions": "Taking the correction note into account, by what percentage did the roads and public works allocation increase?",
+   "options": [
+    "6%",
+    "11.8%",
+    "12%",
+    "18.9%"
+   ],
+   "gold": "11.8%",
+   "why": "Correction of 17 September: the correct figure is 11.8%, not 12%."
+  },
+  {
+   "id": "S8Q4",
+   "category": "counting",
+   "state": "news_report",
+   "type": "choice",
+   "instructions": "How many council members voted in favour of the budget?",
+   "options": [
+    "2",
+    "5",
+    "7",
+    "9"
+   ],
+   "gold": "7",
+   "why": "The council voted 7 to 2; it has nine members."
+  },
+  {
+   "id": "S8Q5",
+   "category": "compliance",
+   "state": "news_report",
+   "type": "score",
+   "instructions": "How does the 2027 reserve level compare with the council's own policy minimum?",
+   "levels": [
+    "below the minimum",
+    "at the minimum",
+    "above the minimum"
+   ],
+   "gold": "above the minimum",
+   "why": "Reserve is 14.8% of the operating budget; the 2019 policy minimum is 12%."
+  },
+  {
+   "id": "S8Q6",
+   "category": "sentiment",
+   "state": "news_report",
+   "type": "score",
+   "instructions": "What is Councillor Castellanos's stance toward the library cut?",
+   "levels": [
+    "opposed",
+    "neutral",
+    "supportive"
+   ],
+   "gold": "opposed",
+   "why": "He voted against because of the cut and calls it 'the wrong trade'."
+  },
+  {
+   "id": "S8Q7",
+   "category": "negation",
+   "state": "news_report",
+   "type": "noul",
+   "instructions": "The $30 million water treatment plant bond is part of the adopted 2027 operating budget.",
+   "gold": false,
+   "why": "The article states the bond is not part of the $148.6 million operating budget and the two votes were taken separately."
+  },
+  {
+   "id": "S8Q8",
+   "category": "multi-hop",
+   "state": "news_report",
+   "type": "noul",
+   "instructions": "The 2026 budget exceeded the 2025 budget by more than $5 million.",
+   "gold": false,
+   "why": "$142.6 million (2026) minus $138.0 million (2025) is $4.6 million."
+  },
+  {
+   "id": "S8Q9",
+   "category": "multi-hop",
+   "state": "news_report",
+   "type": "noul",
+   "instructions": "A majority of the residents who spoke at the public hearing opposed the library cut.",
+   "gold": true,
+   "why": "Twenty-three residents spoke; fifteen opposed the library cut."
+  },
+  {
+   "id": "S8Q10",
+   "category": "reading",
+   "state": "news_report",
+   "type": "noul",
+   "instructions": "The correction note corrects the spelling of the Finance Director's surname.",
+   "gold": true,
+   "why": "The correction fixes her surname (Halloway to Halloran); the first name Margit is unchanged."
+  },
+  {
+   "id": "S9Q1",
+   "category": "timeline",
+   "state": "group_chat",
+   "type": "choice",
+   "instructions": "On which dates does the trip finally take place?",
+   "options": [
+    "19-21 June",
+    "26-28 June",
+    "12-14 June",
+    "3-5 July"
+   ],
+   "gold": "26-28 June",
+   "why": "1 June: 19-21 dropped because of Theo's cousin's wedding; Maya locks Fri 26 to Sun 28 June, confirmed in the 12 June final plan."
+  },
+  {
+   "id": "S9Q2",
+   "category": "attribution",
+   "state": "group_chat",
+   "type": "choice",
+   "instructions": "Who dropped out of the trip?",
+   "options": [
+    "Maya",
+    "Theo",
+    "Zara",
+    "Leon",
+    "Ines"
+   ],
+   "gold": "Leon",
+   "why": "8 June: Leon drops out because of a work trip to Oslo."
+  },
+  {
+   "id": "S9Q3",
+   "category": "numbers",
+   "state": "group_chat",
+   "type": "choice",
+   "instructions": "How much does each person who is going pay in total for the cabin and groceries combined?",
+   "options": [
+    "$180",
+    "$184",
+    "$210",
+    "$220"
+   ],
+   "gold": "$220",
+   "why": "$180 each to Maya for the cabin plus $40 each to Theo for groceries (9 and 12 June)."
+  },
+  {
+   "id": "S9Q4",
+   "category": "counting",
+   "state": "group_chat",
+   "type": "choice",
+   "instructions": "How many people will be in Theo's car on the way there?",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "gold": "3",
+   "why": "Final plan: in the car are Theo, Zara and Maya; Ines takes the train and Leon is not coming."
+  },
+  {
+   "id": "S9Q5",
+   "category": "reading",
+   "state": "group_chat",
+   "type": "score",
+   "instructions": "For how many nights is the cabin booked?",
+   "levels": [
+    "1",
+    "2",
+    "3"
+   ],
+   "gold": "2",
+   "why": "1 June: 'Two nights. Fri 26 to Sun 28 June'; 2 June: '$720 for the two nights'."
+  },
+  {
+   "id": "S9Q6",
+   "category": "timeline",
+   "state": "group_chat",
+   "type": "score",
+   "instructions": "When does Ines's train arrive at Cedar Hollow station relative to the time the cabin's check-in opens?",
+   "levels": [
+    "before check-in opens",
+    "exactly when check-in opens",
+    "after check-in opens"
+   ],
+   "gold": "after check-in opens",
+   "why": "Check-in opens at 4pm; after the cancellation Ines's train arrives at 18:45 (10 June)."
+  },
+  {
+   "id": "S9Q7",
+   "category": "numbers",
+   "state": "group_chat",
+   "type": "noul",
+   "instructions": "Maya will pay $520 at check-in.",
+   "gold": true,
+   "why": "8 June: $720 total, $200 deposit already paid, Maya will pay the remaining $520 at check-in."
+  },
+  {
+   "id": "S9Q8",
+   "category": "negation",
+   "state": "group_chat",
+   "type": "noul",
+   "instructions": "Nobody in the group is vegetarian.",
+   "gold": false,
+   "why": "2 June: Zara says 'I'm vegetarian'; the final plan repeats it."
+  },
+  {
+   "id": "S9Q9",
+   "category": "timeline",
+   "state": "group_chat",
+   "type": "noul",
+   "instructions": "Theo's car leaves the Old Mill car park after Ines's train arrives at Cedar Hollow station.",
+   "gold": false,
+   "why": "The car leaves at 5:30 pm (17:30); Ines's train arrives at 18:45."
+  },
+  {
+   "id": "S9Q10",
+   "category": "numbers",
+   "state": "group_chat",
+   "type": "noul",
+   "instructions": "The per-person grocery contribution was increased from the amount Theo first proposed.",
+   "gold": true,
+   "why": "9 June: Theo proposed $30 each; after Ines's request it became $40 each."
+  },
+  {
+   "id": "S10Q1",
+   "category": "routing",
+   "state": "release_notes",
+   "type": "choice",
+   "instructions": "Which version first fixed the problem described in BR-2?",
+   "options": [
+    "3.1",
+    "3.2",
+    "3.3",
+    "3.4",
+    "not fixed in any listed version"
+   ],
+   "gold": "3.4",
+   "why": "BR-2 (6 GB file on FAT32, error E-417) matches KI-1 / TW-1099, fixed in 3.4 released 21 August 2026."
+  },
+  {
+   "id": "S10Q2",
+   "category": "multi-hop",
+   "state": "release_notes",
+   "type": "choice",
+   "instructions": "BR-4 is a duplicate of which report?",
+   "options": [
+    "BR-1",
+    "BR-2",
+    "BR-3",
+    "it is not a duplicate"
+   ],
+   "gold": "BR-1",
+   "why": "BR-4 triage note: duplicate of BR-1 (same underlying issue, KI-2 / TW-1240)."
+  },
+  {
+   "id": "S10Q3",
+   "category": "counting",
+   "state": "release_notes",
+   "type": "choice",
+   "instructions": "How many of the four bug reports are still open as of 10 September 2026?",
+   "options": [
+    "0",
+    "1",
+    "2",
+    "3"
+   ],
+   "gold": "1",
+   "why": "BR-1 and BR-2 closed as fixed, BR-4 closed as duplicate, BR-3 open; the queue summary says one open."
+  },
+  {
+   "id": "S10Q4",
+   "category": "timeline",
+   "state": "release_notes",
+   "type": "choice",
+   "instructions": "Which version was released between the submission date of BR-1 and the submission date of BR-2?",
+   "options": [
+    "3.1",
+    "3.2",
+    "3.3",
+    "3.4",
+    "none"
+   ],
+   "gold": "3.3",
+   "why": "BR-1 submitted 15 May 2026, BR-2 submitted 3 July 2026; version 3.3 was released 2 June 2026 (3.2 was 9 April, 3.4 was 21 August)."
+  },
+  {
+   "id": "S10Q5",
+   "category": "counting",
+   "state": "release_notes",
+   "type": "score",
+   "instructions": "In how many of the four releases (3.1 to 3.4) is the large-file issue KI-1 listed under Known issues?",
+   "levels": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "gold": "3",
+   "why": "KI-1 appears under Known issues in 3.1, 3.2 and 3.3; in 3.4 it appears under Fixed."
+  },
+  {
+   "id": "S10Q6",
+   "category": "urgency",
+   "state": "release_notes",
+   "type": "score",
+   "instructions": "What severity tag do the release notes give to TW-1187, the crash when a network drive is disconnected?",
+   "levels": [
+    "minor",
+    "major",
+    "critical"
+   ],
+   "gold": "critical",
+   "why": "Version 3.2 Fixed: 'TW-1187 [critical]'."
+  },
+  {
+   "id": "S10Q7",
+   "category": "negation",
+   "state": "release_notes",
+   "type": "noul",
+   "instructions": "The FTP target type was removed in version 3.4.",
+   "gold": false,
+   "why": "3.4 notes: FTP is deprecated, still works in 3.4, and will be removed in version 4.0."
+  },
+  {
+   "id": "S10Q8",
+   "category": "multi-hop",
+   "state": "release_notes",
+   "type": "noul",
+   "instructions": "A user on version 3.2 affected by the problem in BR-1 needs to upgrade to at least version 3.3 to get the fix.",
+   "gold": true,
+   "why": "BR-1 matches KI-2 / TW-1240, which is listed as fixed in 3.3."
+  },
+  {
+   "id": "S10Q9",
+   "category": "numbers",
+   "state": "release_notes",
+   "type": "noul",
+   "instructions": "Version 3.3 was released less than two months after version 3.2.",
+   "gold": true,
+   "why": "3.2 released 9 April 2026, 3.3 released 2 June 2026, which is 54 days later."
+  },
+  {
+   "id": "S10Q10",
+   "category": "entailment",
+   "state": "release_notes",
+   "type": "noul",
+   "instructions": "BR-3 was submitted before the release that introduced encryption at rest.",
+   "gold": false,
+   "why": "Encryption at rest was introduced in 3.3 (2 June 2026); BR-3 was submitted 30 August 2026."
+  }
+ ]
+}

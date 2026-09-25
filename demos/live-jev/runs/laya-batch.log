@@ -1,0 +1,5 @@
+AV_BATCH_DONE
+== video seed 42 traffic compare3
+video: /home/seb/jevlab/demos/live-jev/runs/video-av/page@4d4a303078f998db02b7446f351723e6.webm
+{"mode":"compare3","seed":42,"course":"traffic","stop":120,"drivers":[{"kind":"jev","model":"jev-latest","time":120,"crashed":null,"distance_m":640,"avg_kmh":19,"decisions":301,"errors":0,"avgLatencyMs":389,"tokensIn":571271,"tokensOut":37123,"costUsd":0.02399},{"kind":"llm","model":"accounts/fireworks/models/deepseek-v4p1-flash","time":120,"crashed":null,"distance_m":924,"avg_kmh":28,"decisions":74,"errors":0,"avgLatencyMs":1609,"tokensIn":133092,"tokensOut":13943,"costUsd":0.05666},{"kind":"laya","model":"convaiinnovations/laya 421M (CPU)","time":22.3,"crashed":{"type":"car","time":22.3},"distance_m":136,"avg_kmh":22,"decisions":5,"errors":0,"avgLatencyMs":5099,"tokensIn":0,"tokensOut":0,"costUsd":0}]}
+LAYA_AV_DONE

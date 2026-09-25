@@ -1,0 +1,1069 @@
+{
+ "description": "Generic typed-decision benchmark: 100 questions over 85 states, hand-labelled, no domain-specific data. Types: noul (true/false statement about the state), choice (one option), score (ordered levels). Options/levels are either an inline list or the name of an option set; option dicts map label -> description. The last 26 questions (multi-hop, negation, pragmatics, arithmetic, sarcasm, word-count and format compliance, distractor-heavy reading) were added as a harder tier.",
+ "states": {
+  "museum": "The museum is open Tuesday to Sunday from 10am to 6pm. It is closed on Mondays and on public holidays. Admission is free for children under 12.",
+  "order": "Order #4471 shipped on March 3 and was delivered on March 6. The customer requested a refund on March 10 because the box arrived damaged.",
+  "maria": "Maria has lived in Lisbon for five years. Before that she lived in Madrid, where she studied architecture. She now works as a software engineer.",
+  "recipe": "The recipe needs 200 g of flour, two eggs and a pinch of salt. Do not add sugar. Bake for 25 minutes at 180 degrees.",
+  "flight": "Flight BA117 departs London at 08:15 and lands in New York at 11:05 local time. Passengers must check in at least two hours before departure.",
+  "rev1": "This is the best headphone I have ever owned, the sound is incredible.",
+  "rev2": "The package arrived on Wednesday.",
+  "rev3": "Terrible experience, the app crashes every time I open it and support never answers.",
+  "rev4": "It works. Nothing special, nothing wrong.",
+  "rev5": "Honestly I expected more for the price, the battery barely lasts a day.",
+  "rev6": "The staff went out of their way to help us, we will definitely come back.",
+  "rev7": "The meeting has been moved to room 4B.",
+  "rev8": "I wanted to love it but the screen scratched within a week. Disappointing.",
+  "msg1": "Where is my package? It was supposed to arrive yesterday.",
+  "msg2": "Please cancel my subscription, I no longer need it.",
+  "msg3": "The blender arrived broken. I want my money back.",
+  "msg4": "Does this jacket run small or should I take my usual size?",
+  "msg5": "Can I use the vacuum on hardwood floors?",
+  "msg6": "I was charged twice for the same order, please return the extra payment.",
+  "msg7": "Stop my monthly box, this is the last one I want.",
+  "msg8": "The tracking number says delivered but I have nothing.",
+  "msg9": "Happy holidays to the whole team!",
+  "msg10": "Is the 2 TB model compatible with Mac?",
+  "post1": "Great write-up, thanks for sharing the benchmark numbers.",
+  "post2": "You are a worthless idiot and everyone here knows it.",
+  "post3": "MAKE $5000 A WEEK FROM HOME!!! click my profile for the link",
+  "post4": "I can't do this anymore, I don't want to be alive.",
+  "post5": "Has anyone tried the new firmware? My fan noise went down.",
+  "post6": "Buy cheap followers now, best prices, DM me",
+  "post7": "People like you should be beaten in the street.",
+  "post8": "I disagree with the article, the methodology section is weak.",
+  "nli1": {
+   "premise": "All of the students passed the exam.",
+   "hypothesis": "No student failed the exam."
+  },
+  "nli2": {
+   "premise": "A man is playing guitar on stage.",
+   "hypothesis": "A man is asleep in bed."
+  },
+  "nli3": {
+   "premise": "The shop sells only vegetarian food.",
+   "hypothesis": "The shop sells steak."
+  },
+  "nli4": {
+   "premise": "Tom is taller than Anna, and Anna is taller than Lee.",
+   "hypothesis": "Tom is taller than Lee."
+  },
+  "nli5": {
+   "premise": "The train was delayed by two hours because of snow.",
+   "hypothesis": "The train was late."
+  },
+  "nli6": {
+   "premise": "Some birds cannot fly.",
+   "hypothesis": "All birds can fly."
+  },
+  "nli7": {
+   "premise": "She bought three apples and ate one.",
+   "hypothesis": "She has two apples left."
+  },
+  "nli8": {
+   "premise": "The car is red.",
+   "hypothesis": "The car is blue."
+  },
+  "tick1": "Our whole site is returning 500 errors since 9am, customers cannot check out.",
+  "tick2": "Could you add dark mode to the mobile app someday?",
+  "tick3": "How do I export my data to CSV?",
+  "tick4": "My invoice for August shows the wrong company name.",
+  "tick5": "Payment page hangs for every customer right now, we are losing sales.",
+  "tick6": "It would be nice to have keyboard shortcuts for the editor.",
+  "tick7": "Where do I find the API key in settings?",
+  "tick8": "You charged my card twice this month.",
+  "inst1": {
+   "instruction": "Answer in one word.",
+   "response": "Yes."
+  },
+  "inst2": {
+   "instruction": "Answer in one word.",
+   "response": "Yes, I think that would work well for you."
+  },
+  "inst3": {
+   "instruction": "Reply only in French.",
+   "response": "Bonjour, je peux vous aider."
+  },
+  "inst4": {
+   "instruction": "Reply only in French.",
+   "response": "Hello, how can I help you?"
+  },
+  "inst5": {
+   "instruction": "List exactly three fruits.",
+   "response": "Apple, banana, cherry."
+  },
+  "inst6": {
+   "instruction": "List exactly three fruits.",
+   "response": "Apple, banana."
+  },
+  "inst7": {
+   "instruction": "Do not mention the price.",
+   "response": "The blue one is nicer and costs $40 less."
+  },
+  "inst8": {
+   "instruction": "Do not mention the price.",
+   "response": "The blue one has a better camera."
+  },
+  "num1": "Item A costs $45. Item B costs $38.",
+  "num2": "The meeting is at 3 pm. It is now 2 pm.",
+  "num3": "There are 3 apples and 5 oranges in the bowl.",
+  "lang1": "Je voudrais un café, s'il vous plaît.",
+  "lang2": "Wo ist der Bahnhof?",
+  "lang3": "¿Cuánto cuesta este libro?",
+  "lang4": "Could you pass the salt?",
+  "hop1": "Every employee who joined before 2020 gets five weeks of holiday. Priya joined in 2018. Daniel joined in 2021.",
+  "hop2": "The report is due on the last working day of the month. This month ends on a Sunday. Working days are Monday to Friday.",
+  "hop3": "Lena is Omar's sister. Omar's only child is Karim.",
+  "hop4": "Box A is heavier than box B. Box C is lighter than box B. Box D weighs the same as box A.",
+  "timeline": "The invoice was sent on the 2nd, paid on the 9th, and a reminder was mistakenly sent on the 11th.",
+  "neg1": "The venue is not unavailable on Friday.",
+  "neg2": "Nobody failed to submit the form on time.",
+  "neg3": "The warranty does not cover damage unless it was caused by a manufacturing defect.",
+  "num4": "The ticket costs $80. Students get 25% off.",
+  "num5": "The train leaves at 14:50 and the trip takes 1 hour and 25 minutes.",
+  "num6": "Sam was born in 1990. Her brother is four years younger.",
+  "rev9": "Oh great, another update that deletes my settings. Just what I needed.",
+  "rev11": "Five stars for the delivery guy, zero for the product that fell apart in two days.",
+  "prag1": {
+   "customer": "Do you have this in blue?",
+   "agent": "We have it in black and grey."
+  },
+  "prag2": {
+   "manager": "Can you have the slides ready by Monday?",
+   "employee": "I'll do my best, but Tuesday is more realistic."
+  },
+  "prag3": "Is it possible to get my money back? I ordered by mistake, it was meant for a different account.",
+  "prag4": "I don't want anything refunded, I just need to know whether the second charge on my card will drop off by itself.",
+  "inst9": {
+   "instruction": "Reply in no more than ten words.",
+   "response": "Sure, the store opens at nine and closes at six on weekdays."
+  },
+  "inst10": {
+   "instruction": "Reply in no more than ten words.",
+   "response": "The store opens at nine and closes at six."
+  },
+  "inst12": {
+   "instruction": "Answer with valid JSON only.",
+   "response": "Here is the JSON: {\"city\": \"Lyon\"}"
+  },
+  "inst13": {
+   "instruction": "Recommend exactly one option and give one reason.",
+   "response": "Go with the 13-inch model; it is lighter. The 15-inch is also fine if you want a bigger screen."
+  },
+  "policy": "Returns are accepted within 30 days of delivery for unused items in original packaging. Sale items are final and cannot be returned. Shipping costs are refunded only if the return is due to our error. Exchanges follow the same 30-day rule. Gift cards are not refundable. Customers in the EU have a 14-day right of withdrawal regardless of the above.",
+  "schedule": "The 9:00 session was cancelled and its speaker moved to the 14:00 slot. The 14:00 speaker will now present at 9:00. Lunch is unchanged at 12:30."
+ },
+ "option_sets": {
+  "sentiment": [
+   "negative",
+   "neutral",
+   "positive"
+  ],
+  "intent": {
+   "track_order": "asks where an order or package is",
+   "cancel_order": "wants to cancel an order or subscription",
+   "refund": "asks for money back",
+   "product_question": "asks how a product works or fits",
+   "other": "none of the above"
+  },
+  "moderation": {
+   "none": "nothing wrong with the post",
+   "spam": "unsolicited promotion or scam",
+   "harassment": "insults, threats or attacks on people",
+   "self_harm": "expresses intent to harm oneself"
+  },
+  "routing": {
+   "outage": "service is down or broken for users",
+   "billing": "invoices, charges, payment",
+   "feature_request": "asks for something new",
+   "how_to": "asks how to use an existing feature"
+  },
+  "language": [
+   "english",
+   "french",
+   "spanish",
+   "german"
+  ]
+ },
+ "items": [
+  {
+   "id": "A1",
+   "category": "reading",
+   "state": "museum",
+   "type": "noul",
+   "instructions": "The museum is open on Mondays.",
+   "gold": false
+  },
+  {
+   "id": "A2",
+   "category": "reading",
+   "state": "museum",
+   "type": "noul",
+   "instructions": "Children under 12 do not pay admission.",
+   "gold": true
+  },
+  {
+   "id": "A3",
+   "category": "reading",
+   "state": "museum",
+   "type": "noul",
+   "instructions": "The museum closes at 6pm.",
+   "gold": true
+  },
+  {
+   "id": "A4",
+   "category": "reading",
+   "state": "order",
+   "type": "noul",
+   "instructions": "The order was delivered before it shipped.",
+   "gold": false
+  },
+  {
+   "id": "A5",
+   "category": "reading",
+   "state": "order",
+   "type": "noul",
+   "instructions": "The customer asked for a refund.",
+   "gold": true
+  },
+  {
+   "id": "A6",
+   "category": "reading",
+   "state": "order",
+   "type": "noul",
+   "instructions": "The package arrived in good condition.",
+   "gold": false
+  },
+  {
+   "id": "A7",
+   "category": "reading",
+   "state": "maria",
+   "type": "noul",
+   "instructions": "Maria currently works as an architect.",
+   "gold": false
+  },
+  {
+   "id": "A8",
+   "category": "reading",
+   "state": "maria",
+   "type": "noul",
+   "instructions": "Maria studied in Madrid.",
+   "gold": true
+  },
+  {
+   "id": "A9",
+   "category": "reading",
+   "state": "recipe",
+   "type": "noul",
+   "instructions": "The recipe contains sugar.",
+   "gold": false
+  },
+  {
+   "id": "A10",
+   "category": "reading",
+   "state": "recipe",
+   "type": "noul",
+   "instructions": "The recipe uses eggs.",
+   "gold": true
+  },
+  {
+   "id": "A11",
+   "category": "reading",
+   "state": "flight",
+   "type": "noul",
+   "instructions": "The flight departs from New York.",
+   "gold": false
+  },
+  {
+   "id": "A12",
+   "category": "reading",
+   "state": "flight",
+   "type": "noul",
+   "instructions": "Passengers need to check in at least two hours before departure.",
+   "gold": true
+  },
+  {
+   "id": "B1",
+   "category": "sentiment",
+   "state": "rev1",
+   "type": "score",
+   "instructions": "What is the sentiment of the text?",
+   "levels": "sentiment",
+   "gold": "positive"
+  },
+  {
+   "id": "B2",
+   "category": "sentiment",
+   "state": "rev2",
+   "type": "score",
+   "instructions": "What is the sentiment of the text?",
+   "levels": "sentiment",
+   "gold": "neutral"
+  },
+  {
+   "id": "B3",
+   "category": "sentiment",
+   "state": "rev3",
+   "type": "score",
+   "instructions": "What is the sentiment of the text?",
+   "levels": "sentiment",
+   "gold": "negative"
+  },
+  {
+   "id": "B4",
+   "category": "sentiment",
+   "state": "rev4",
+   "type": "score",
+   "instructions": "What is the sentiment of the text?",
+   "levels": "sentiment",
+   "gold": "neutral"
+  },
+  {
+   "id": "B5",
+   "category": "sentiment",
+   "state": "rev5",
+   "type": "score",
+   "instructions": "What is the sentiment of the text?",
+   "levels": "sentiment",
+   "gold": "negative"
+  },
+  {
+   "id": "B6",
+   "category": "sentiment",
+   "state": "rev6",
+   "type": "score",
+   "instructions": "What is the sentiment of the text?",
+   "levels": "sentiment",
+   "gold": "positive"
+  },
+  {
+   "id": "B7",
+   "category": "sentiment",
+   "state": "rev7",
+   "type": "score",
+   "instructions": "What is the sentiment of the text?",
+   "levels": "sentiment",
+   "gold": "neutral"
+  },
+  {
+   "id": "B8",
+   "category": "sentiment",
+   "state": "rev8",
+   "type": "score",
+   "instructions": "What is the sentiment of the text?",
+   "levels": "sentiment",
+   "gold": "negative"
+  },
+  {
+   "id": "C1",
+   "category": "intent",
+   "state": "msg1",
+   "type": "choice",
+   "instructions": "What does the customer want?",
+   "options": "intent",
+   "gold": "track_order"
+  },
+  {
+   "id": "C2",
+   "category": "intent",
+   "state": "msg2",
+   "type": "choice",
+   "instructions": "What does the customer want?",
+   "options": "intent",
+   "gold": "cancel_order"
+  },
+  {
+   "id": "C3",
+   "category": "intent",
+   "state": "msg3",
+   "type": "choice",
+   "instructions": "What does the customer want?",
+   "options": "intent",
+   "gold": "refund"
+  },
+  {
+   "id": "C4",
+   "category": "intent",
+   "state": "msg4",
+   "type": "choice",
+   "instructions": "What does the customer want?",
+   "options": "intent",
+   "gold": "product_question"
+  },
+  {
+   "id": "C5",
+   "category": "intent",
+   "state": "msg5",
+   "type": "choice",
+   "instructions": "What does the customer want?",
+   "options": "intent",
+   "gold": "product_question"
+  },
+  {
+   "id": "C6",
+   "category": "intent",
+   "state": "msg6",
+   "type": "choice",
+   "instructions": "What does the customer want?",
+   "options": "intent",
+   "gold": "refund"
+  },
+  {
+   "id": "C7",
+   "category": "intent",
+   "state": "msg7",
+   "type": "choice",
+   "instructions": "What does the customer want?",
+   "options": "intent",
+   "gold": "cancel_order"
+  },
+  {
+   "id": "C8",
+   "category": "intent",
+   "state": "msg8",
+   "type": "choice",
+   "instructions": "What does the customer want?",
+   "options": "intent",
+   "gold": "track_order"
+  },
+  {
+   "id": "C9",
+   "category": "intent",
+   "state": "msg9",
+   "type": "choice",
+   "instructions": "What does the customer want?",
+   "options": "intent",
+   "gold": "other"
+  },
+  {
+   "id": "C10",
+   "category": "intent",
+   "state": "msg10",
+   "type": "choice",
+   "instructions": "What does the customer want?",
+   "options": "intent",
+   "gold": "product_question"
+  },
+  {
+   "id": "D1",
+   "category": "moderation",
+   "state": "post1",
+   "type": "choice",
+   "instructions": "Which rule, if any, does this forum post break?",
+   "options": "moderation",
+   "gold": "none"
+  },
+  {
+   "id": "D2",
+   "category": "moderation",
+   "state": "post2",
+   "type": "choice",
+   "instructions": "Which rule, if any, does this forum post break?",
+   "options": "moderation",
+   "gold": "harassment"
+  },
+  {
+   "id": "D3",
+   "category": "moderation",
+   "state": "post3",
+   "type": "choice",
+   "instructions": "Which rule, if any, does this forum post break?",
+   "options": "moderation",
+   "gold": "spam"
+  },
+  {
+   "id": "D4",
+   "category": "moderation",
+   "state": "post4",
+   "type": "choice",
+   "instructions": "Which rule, if any, does this forum post break?",
+   "options": "moderation",
+   "gold": "self_harm"
+  },
+  {
+   "id": "D5",
+   "category": "moderation",
+   "state": "post5",
+   "type": "choice",
+   "instructions": "Which rule, if any, does this forum post break?",
+   "options": "moderation",
+   "gold": "none"
+  },
+  {
+   "id": "D6",
+   "category": "moderation",
+   "state": "post6",
+   "type": "choice",
+   "instructions": "Which rule, if any, does this forum post break?",
+   "options": "moderation",
+   "gold": "spam"
+  },
+  {
+   "id": "D7",
+   "category": "moderation",
+   "state": "post7",
+   "type": "choice",
+   "instructions": "Which rule, if any, does this forum post break?",
+   "options": "moderation",
+   "gold": "harassment"
+  },
+  {
+   "id": "D8",
+   "category": "moderation",
+   "state": "post8",
+   "type": "choice",
+   "instructions": "Which rule, if any, does this forum post break?",
+   "options": "moderation",
+   "gold": "none"
+  },
+  {
+   "id": "E1",
+   "category": "entailment",
+   "state": "nli1",
+   "type": "noul",
+   "instructions": "The hypothesis follows from the premise.",
+   "gold": true
+  },
+  {
+   "id": "E2",
+   "category": "entailment",
+   "state": "nli2",
+   "type": "noul",
+   "instructions": "The hypothesis follows from the premise.",
+   "gold": false
+  },
+  {
+   "id": "E3",
+   "category": "entailment",
+   "state": "nli3",
+   "type": "noul",
+   "instructions": "The hypothesis follows from the premise.",
+   "gold": false
+  },
+  {
+   "id": "E4",
+   "category": "entailment",
+   "state": "nli4",
+   "type": "noul",
+   "instructions": "The hypothesis follows from the premise.",
+   "gold": true
+  },
+  {
+   "id": "E5",
+   "category": "entailment",
+   "state": "nli5",
+   "type": "noul",
+   "instructions": "The hypothesis follows from the premise.",
+   "gold": true
+  },
+  {
+   "id": "E6",
+   "category": "entailment",
+   "state": "nli6",
+   "type": "noul",
+   "instructions": "The hypothesis follows from the premise.",
+   "gold": false
+  },
+  {
+   "id": "E7",
+   "category": "entailment",
+   "state": "nli7",
+   "type": "noul",
+   "instructions": "The hypothesis follows from the premise.",
+   "gold": true
+  },
+  {
+   "id": "E8",
+   "category": "entailment",
+   "state": "nli8",
+   "type": "noul",
+   "instructions": "The hypothesis follows from the premise.",
+   "gold": false
+  },
+  {
+   "id": "F1",
+   "category": "routing",
+   "state": "tick1",
+   "type": "choice",
+   "instructions": "Which team should handle this support ticket?",
+   "options": "routing",
+   "gold": "outage"
+  },
+  {
+   "id": "F2",
+   "category": "routing",
+   "state": "tick2",
+   "type": "choice",
+   "instructions": "Which team should handle this support ticket?",
+   "options": "routing",
+   "gold": "feature_request"
+  },
+  {
+   "id": "F3",
+   "category": "routing",
+   "state": "tick3",
+   "type": "choice",
+   "instructions": "Which team should handle this support ticket?",
+   "options": "routing",
+   "gold": "how_to"
+  },
+  {
+   "id": "F4",
+   "category": "routing",
+   "state": "tick4",
+   "type": "choice",
+   "instructions": "Which team should handle this support ticket?",
+   "options": "routing",
+   "gold": "billing"
+  },
+  {
+   "id": "F5",
+   "category": "routing",
+   "state": "tick5",
+   "type": "choice",
+   "instructions": "Which team should handle this support ticket?",
+   "options": "routing",
+   "gold": "outage"
+  },
+  {
+   "id": "F6",
+   "category": "routing",
+   "state": "tick6",
+   "type": "choice",
+   "instructions": "Which team should handle this support ticket?",
+   "options": "routing",
+   "gold": "feature_request"
+  },
+  {
+   "id": "F7",
+   "category": "routing",
+   "state": "tick7",
+   "type": "choice",
+   "instructions": "Which team should handle this support ticket?",
+   "options": "routing",
+   "gold": "how_to"
+  },
+  {
+   "id": "F8",
+   "category": "routing",
+   "state": "tick8",
+   "type": "choice",
+   "instructions": "Which team should handle this support ticket?",
+   "options": "routing",
+   "gold": "billing"
+  },
+  {
+   "id": "F9",
+   "category": "urgency",
+   "state": "tick1",
+   "type": "noul",
+   "instructions": "This ticket needs a response within the hour.",
+   "gold": true
+  },
+  {
+   "id": "F10",
+   "category": "urgency",
+   "state": "tick2",
+   "type": "noul",
+   "instructions": "This ticket needs a response within the hour.",
+   "gold": false
+  },
+  {
+   "id": "F11",
+   "category": "urgency",
+   "state": "tick3",
+   "type": "noul",
+   "instructions": "This ticket needs a response within the hour.",
+   "gold": false
+  },
+  {
+   "id": "F12",
+   "category": "urgency",
+   "state": "tick5",
+   "type": "noul",
+   "instructions": "This ticket needs a response within the hour.",
+   "gold": true
+  },
+  {
+   "id": "G1",
+   "category": "compliance",
+   "state": "inst1",
+   "type": "noul",
+   "instructions": "The response follows the instruction.",
+   "gold": true
+  },
+  {
+   "id": "G2",
+   "category": "compliance",
+   "state": "inst2",
+   "type": "noul",
+   "instructions": "The response follows the instruction.",
+   "gold": false
+  },
+  {
+   "id": "G3",
+   "category": "compliance",
+   "state": "inst3",
+   "type": "noul",
+   "instructions": "The response follows the instruction.",
+   "gold": true
+  },
+  {
+   "id": "G4",
+   "category": "compliance",
+   "state": "inst4",
+   "type": "noul",
+   "instructions": "The response follows the instruction.",
+   "gold": false
+  },
+  {
+   "id": "G5",
+   "category": "compliance",
+   "state": "inst5",
+   "type": "noul",
+   "instructions": "The response follows the instruction.",
+   "gold": true
+  },
+  {
+   "id": "G6",
+   "category": "compliance",
+   "state": "inst6",
+   "type": "noul",
+   "instructions": "The response follows the instruction.",
+   "gold": false
+  },
+  {
+   "id": "G7",
+   "category": "compliance",
+   "state": "inst7",
+   "type": "noul",
+   "instructions": "The response follows the instruction.",
+   "gold": false
+  },
+  {
+   "id": "G8",
+   "category": "compliance",
+   "state": "inst8",
+   "type": "noul",
+   "instructions": "The response follows the instruction.",
+   "gold": true
+  },
+  {
+   "id": "H1",
+   "category": "numbers",
+   "state": "num1",
+   "type": "noul",
+   "instructions": "Item A is more expensive than item B.",
+   "gold": true
+  },
+  {
+   "id": "H2",
+   "category": "numbers",
+   "state": "num1",
+   "type": "noul",
+   "instructions": "Item B is more expensive than item A.",
+   "gold": false
+  },
+  {
+   "id": "H3",
+   "category": "numbers",
+   "state": "num2",
+   "type": "noul",
+   "instructions": "The meeting has already started.",
+   "gold": false
+  },
+  {
+   "id": "H4",
+   "category": "numbers",
+   "state": "num3",
+   "type": "noul",
+   "instructions": "There are more oranges than apples.",
+   "gold": true
+  },
+  {
+   "id": "I1",
+   "category": "language",
+   "state": "lang1",
+   "type": "choice",
+   "instructions": "Which language is the text written in?",
+   "options": "language",
+   "gold": "french"
+  },
+  {
+   "id": "I2",
+   "category": "language",
+   "state": "lang2",
+   "type": "choice",
+   "instructions": "Which language is the text written in?",
+   "options": "language",
+   "gold": "german"
+  },
+  {
+   "id": "I3",
+   "category": "language",
+   "state": "lang3",
+   "type": "choice",
+   "instructions": "Which language is the text written in?",
+   "options": "language",
+   "gold": "spanish"
+  },
+  {
+   "id": "I4",
+   "category": "language",
+   "state": "lang4",
+   "type": "choice",
+   "instructions": "Which language is the text written in?",
+   "options": "language",
+   "gold": "english"
+  },
+  {
+   "id": "J1",
+   "category": "multi-hop",
+   "state": "hop1",
+   "type": "noul",
+   "instructions": "Priya gets five weeks of holiday.",
+   "gold": true
+  },
+  {
+   "id": "J2",
+   "category": "multi-hop",
+   "state": "hop1",
+   "type": "noul",
+   "instructions": "The text guarantees that Daniel gets five weeks of holiday.",
+   "gold": false
+  },
+  {
+   "id": "J3",
+   "category": "multi-hop",
+   "state": "hop2",
+   "type": "choice",
+   "instructions": "On which weekday is the report due?",
+   "options": [
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday"
+   ],
+   "gold": "friday"
+  },
+  {
+   "id": "J4",
+   "category": "multi-hop",
+   "state": "hop3",
+   "type": "choice",
+   "instructions": "What is Lena to Karim?",
+   "options": [
+    "mother",
+    "aunt",
+    "sister",
+    "grandmother"
+   ],
+   "gold": "aunt"
+  },
+  {
+   "id": "J5",
+   "category": "multi-hop",
+   "state": "hop4",
+   "type": "choice",
+   "instructions": "Which box is the lightest?",
+   "options": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "gold": "C"
+  },
+  {
+   "id": "J6",
+   "category": "multi-hop",
+   "state": "timeline",
+   "type": "noul",
+   "instructions": "The reminder was sent before the payment.",
+   "gold": false
+  },
+  {
+   "id": "K1",
+   "category": "negation",
+   "state": "neg1",
+   "type": "noul",
+   "instructions": "The venue can be booked on Friday.",
+   "gold": true
+  },
+  {
+   "id": "K2",
+   "category": "negation",
+   "state": "neg2",
+   "type": "noul",
+   "instructions": "Everyone submitted the form on time.",
+   "gold": true
+  },
+  {
+   "id": "K3",
+   "category": "negation",
+   "state": "neg3",
+   "type": "noul",
+   "instructions": "Damage caused by a manufacturing defect is covered.",
+   "gold": true
+  },
+  {
+   "id": "K4",
+   "category": "negation",
+   "state": "neg3",
+   "type": "noul",
+   "instructions": "Damage from dropping the device is covered.",
+   "gold": false
+  },
+  {
+   "id": "H5",
+   "category": "numbers",
+   "state": "num4",
+   "type": "choice",
+   "instructions": "How much does a student pay?",
+   "options": [
+    "$20",
+    "$55",
+    "$60",
+    "$80"
+   ],
+   "gold": "$60"
+  },
+  {
+   "id": "H6",
+   "category": "numbers",
+   "state": "num5",
+   "type": "choice",
+   "instructions": "At what time does the train arrive?",
+   "options": [
+    "15:15",
+    "16:05",
+    "16:15",
+    "16:25"
+   ],
+   "gold": "16:15"
+  },
+  {
+   "id": "H7",
+   "category": "numbers",
+   "state": "num6",
+   "type": "noul",
+   "instructions": "Her brother was born in 1994.",
+   "gold": true
+  },
+  {
+   "id": "H8",
+   "category": "numbers",
+   "state": "num6",
+   "type": "noul",
+   "instructions": "Her brother is older than Sam.",
+   "gold": false
+  },
+  {
+   "id": "B9",
+   "category": "sentiment",
+   "state": "rev9",
+   "type": "score",
+   "instructions": "Overall sentiment of the text.",
+   "levels": "sentiment",
+   "gold": "negative"
+  },
+  {
+   "id": "B11",
+   "category": "sentiment",
+   "state": "rev11",
+   "type": "score",
+   "instructions": "Overall sentiment of the review about the product.",
+   "levels": "sentiment",
+   "gold": "negative"
+  },
+  {
+   "id": "M1",
+   "category": "pragmatics",
+   "state": "prag1",
+   "type": "noul",
+   "instructions": "The agent implies that the item is not available in blue.",
+   "gold": true
+  },
+  {
+   "id": "M2",
+   "category": "pragmatics",
+   "state": "prag2",
+   "type": "noul",
+   "instructions": "The employee committed to having the slides ready by Monday.",
+   "gold": false
+  },
+  {
+   "id": "M3",
+   "category": "pragmatics",
+   "state": "prag3",
+   "type": "choice",
+   "instructions": "What is the customer's main intent?",
+   "options": "intent",
+   "gold": "refund"
+  },
+  {
+   "id": "M4",
+   "category": "pragmatics",
+   "state": "prag4",
+   "type": "choice",
+   "instructions": "Which team should handle this ticket?",
+   "options": "routing",
+   "gold": "billing"
+  },
+  {
+   "id": "G9",
+   "category": "compliance",
+   "state": "inst9",
+   "type": "noul",
+   "instructions": "The response follows the instruction.",
+   "gold": false
+  },
+  {
+   "id": "G10",
+   "category": "compliance",
+   "state": "inst10",
+   "type": "noul",
+   "instructions": "The response follows the instruction.",
+   "gold": true
+  },
+  {
+   "id": "G12",
+   "category": "compliance",
+   "state": "inst12",
+   "type": "noul",
+   "instructions": "The response follows the instruction.",
+   "gold": false
+  },
+  {
+   "id": "G13",
+   "category": "compliance",
+   "state": "inst13",
+   "type": "noul",
+   "instructions": "The response follows the instruction.",
+   "gold": false
+  },
+  {
+   "id": "A13",
+   "category": "reading",
+   "state": "policy",
+   "type": "noul",
+   "instructions": "A customer outside the EU can return a sale item within 30 days.",
+   "gold": false
+  },
+  {
+   "id": "A16",
+   "category": "reading",
+   "state": "schedule",
+   "type": "choice",
+   "instructions": "When does the speaker originally scheduled at 9:00 now present?",
+   "options": [
+    "9:00",
+    "12:30",
+    "14:00",
+    "not at all"
+   ],
+   "gold": "14:00"
+  }
+ ]
+}

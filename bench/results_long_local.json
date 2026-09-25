@@ -1,0 +1,3655 @@
+{
+ "llm_model": "accounts/fireworks/models/deepseek-v4p1-flash",
+ "n_items": 100,
+ "n_states": 10,
+ "engines": {
+  "decider": {
+   "summary": {
+    "accuracy": 0.8,
+    "brier": 0.2011868492,
+    "ece": 0.056462999999999985,
+    "mean_conf": 0.792599,
+    "ms_per_call": 124890.64838886261,
+    "ms_per_question": 12489.064838886261,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cost_usd": 0.0,
+    "by_category": {
+     "numbers": {
+      "n": 22,
+      "accuracy": 0.6363636363636364
+     },
+     "timeline": {
+      "n": 12,
+      "accuracy": 1.0
+     },
+     "attribution": {
+      "n": 7,
+      "accuracy": 0.7142857142857143
+     },
+     "counting": {
+      "n": 10,
+      "accuracy": 0.8
+     },
+     "reading": {
+      "n": 7,
+      "accuracy": 1.0
+     },
+     "multi-hop": {
+      "n": 16,
+      "accuracy": 0.6875
+     },
+     "negation": {
+      "n": 9,
+      "accuracy": 0.7777777777777778
+     },
+     "routing": {
+      "n": 3,
+      "accuracy": 0.6666666666666666
+     },
+     "urgency": {
+      "n": 2,
+      "accuracy": 1.0
+     },
+     "entailment": {
+      "n": 2,
+      "accuracy": 1.0
+     },
+     "sentiment": {
+      "n": 3,
+      "accuracy": 1.0
+     },
+     "compliance": {
+      "n": 6,
+      "accuracy": 1.0
+     },
+     "language": {
+      "n": 1,
+      "accuracy": 1.0
+     }
+    },
+    "by_type": {
+     "choice": {
+      "n": 40,
+      "accuracy": 0.85
+     },
+     "score": {
+      "n": 20,
+      "accuracy": 0.85
+     },
+     "noul": {
+      "n": 40,
+      "accuracy": 0.725
+     }
+    }
+   },
+   "items": {
+    "S1Q1": {
+     "pred": "$60.00",
+     "correct": true,
+     "p_gold": 0.8609,
+     "brier": 0.024835,
+     "conf": 0.8609,
+     "answer": {
+      "answer": "$60.00",
+      "probabilities": {
+       "$0.00": 0.0468,
+       "$60.00": 0.8609,
+       "$64.35": 0.0311,
+       "$124.35": 0.0457,
+       "$489.00": 0.0155
+      },
+      "confidence": 0.8609,
+      "engine_confidence": 0.8609
+     }
+    },
+    "S1Q2": {
+     "pred": "the missing table box",
+     "correct": true,
+     "p_gold": 0.5465,
+     "brier": 0.30902802,
+     "conf": 0.5465,
+     "answer": {
+      "answer": "the missing table box",
+      "probabilities": {
+       "the missing table box": 0.5465,
+       "the replacement chair": 0.2104,
+       "both arrived on the same day": 0.2431
+      },
+      "confidence": 0.5465,
+      "engine_confidence": 0.5465
+     }
+    },
+    "S1Q3": {
+     "pred": "Tomas Vellek",
+     "correct": false,
+     "p_gold": 0.0147,
+     "brier": 1.93279539,
+     "conf": 0.9808,
+     "answer": {
+      "answer": "Tomas Vellek",
+      "probabilities": {
+       "Tomas Vellek": 0.9808,
+       "Ingrid Solano": 0.0147,
+       "the carrier contacted the customer directly": 0.0021,
+       "nobody; the customer found it herself": 0.0025
+      },
+      "confidence": 0.9808,
+      "engine_confidence": 0.9808
+     }
+    },
+    "S1Q4": {
+     "pred": "3",
+     "correct": false,
+     "p_gold": 0.141,
+     "brier": 1.03119162,
+     "conf": 0.383,
+     "answer": {
+      "answer": "3",
+      "probabilities": {
+       "3": 0.383,
+       "4": 0.3671,
+       "5": 0.141,
+       "6": 0.1089
+      },
+      "confidence": 0.383,
+      "engine_confidence": 0.383
+     }
+    },
+    "S1Q5": {
+     "pred": "high",
+     "correct": true,
+     "p_gold": 0.9773,
+     "brier": 0.0007557800000000024,
+     "conf": 0.9773,
+     "answer": {
+      "answer": "high",
+      "probabilities": {
+       "low": 0.0036,
+       "normal": 0.0048,
+       "high": 0.9773,
+       "critical": 0.0143
+      },
+      "confidence": 0.9773,
+      "expected_level": 2.0,
+      "engine_confidence": 0.9773
+     }
+    },
+    "S1Q6": {
+     "pred": "both",
+     "correct": true,
+     "p_gold": 0.8967,
+     "brier": 0.018722179999999988,
+     "conf": 0.8967,
+     "answer": {
+      "answer": "both",
+      "probabilities": {
+       "none": 0.0148,
+       "one": 0.0885,
+       "both": 0.8967
+      },
+      "confidence": 0.8967,
+      "expected_level": 1.88,
+      "engine_confidence": 0.8967
+     }
+    },
+    "S1Q7": {
+     "pred": true,
+     "correct": false,
+     "p_gold": 0.4678,
+     "brier": 0.28323684,
+     "conf": 0.5322,
+     "answer": {
+      "answer": 0.5322,
+      "probabilities": {
+       "yes": 0.5322,
+       "no": 0.4678
+      },
+      "confidence": 0.5322
+     }
+    },
+    "S1Q8": {
+     "pred": true,
+     "correct": false,
+     "p_gold": 0.011199999999999988,
+     "brier": 0.9777254400000001,
+     "conf": 0.9888,
+     "answer": {
+      "answer": 0.9888,
+      "probabilities": {
+       "yes": 0.9888,
+       "no": 0.0112
+      },
+      "confidence": 0.9888
+     }
+    },
+    "S1Q9": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.9385,
+     "brier": 0.00378225,
+     "conf": 0.9385,
+     "answer": {
+      "answer": 0.0615,
+      "probabilities": {
+       "yes": 0.0615,
+       "no": 0.9385
+      },
+      "confidence": 0.9385
+     }
+    },
+    "S1Q10": {
+     "pred": false,
+     "correct": false,
+     "p_gold": 0.0156,
+     "brier": 0.9690433600000001,
+     "conf": 0.9844,
+     "answer": {
+      "answer": 0.0156,
+      "probabilities": {
+       "yes": 0.0156,
+       "no": 0.9844
+      },
+      "confidence": 0.9844
+     }
+    },
+    "S2Q1": {
+     "pred": "71 minutes",
+     "correct": true,
+     "p_gold": 0.836,
+     "brier": 0.04051992000000001,
+     "conf": 0.836,
+     "answer": {
+      "answer": "71 minutes",
+      "probabilities": {
+       "45 minutes": 0.0406,
+       "61 minutes": 0.1084,
+       "71 minutes": 0.836,
+       "89 minutes": 0.015
+      },
+      "confidence": 0.836,
+      "engine_confidence": 0.836
+     }
+    },
+    "S2Q2": {
+     "pred": "the first automated alert",
+     "correct": true,
+     "p_gold": 0.9597,
+     "brier": 0.0022019400000000003,
+     "conf": 0.9597,
+     "answer": {
+      "answer": "the first automated alert",
+      "probabilities": {
+       "the first customer-reported ticket": 0.0167,
+       "the first automated alert": 0.9597,
+       "the escalation to Marcus Lindqvist": 0.0086,
+       "the rollback decision": 0.015
+      },
+      "confidence": 0.9597,
+      "engine_confidence": 0.9597
+     }
+    },
+    "S2Q3": {
+     "pred": "Marcus Lindqvist",
+     "correct": true,
+     "p_gold": 0.9866,
+     "brier": 0.0002539399999999991,
+     "conf": 0.9866,
+     "answer": {
+      "answer": "Marcus Lindqvist",
+      "probabilities": {
+       "Dana Okafor": 0.0074,
+       "Marcus Lindqvist": 0.9866,
+       "Ravi Thandeka": 0.0021,
+       "Lena Baxter": 0.0039
+      },
+      "confidence": 0.9866,
+      "engine_confidence": 0.9866
+     }
+    },
+    "S2Q4": {
+     "pred": "2",
+     "correct": true,
+     "p_gold": 0.548,
+     "brier": 0.29574933999999997,
+     "conf": 0.548,
+     "answer": {
+      "answer": "2",
+      "probabilities": {
+       "0": 0.0443,
+       "1": 0.2603,
+       "2": 0.548,
+       "3": 0.1474
+      },
+      "confidence": 0.548,
+      "engine_confidence": 0.548
+     }
+    },
+    "S2Q5": {
+     "pred": "SEV1",
+     "correct": true,
+     "p_gold": 0.9774,
+     "brier": 0.0007908499999999979,
+     "conf": 0.9774,
+     "answer": {
+      "answer": "SEV1",
+      "probabilities": {
+       "SEV3": 0.008,
+       "SEV2": 0.0147,
+       "SEV1": 0.9774
+      },
+      "confidence": 0.9774,
+      "expected_level": 1.97,
+      "engine_confidence": 0.9774
+     }
+    },
+    "S2Q6": {
+     "pred": "medium",
+     "correct": true,
+     "p_gold": 0.9886,
+     "brier": 0.00019885999999999922,
+     "conf": 0.9886,
+     "answer": {
+      "answer": "medium",
+      "probabilities": {
+       "low": 0.0071,
+       "medium": 0.9886,
+       "high": 0.0043
+      },
+      "confidence": 0.9886,
+      "expected_level": 1.0,
+      "engine_confidence": 0.9886
+     }
+    },
+    "S2Q7": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.9993,
+     "brier": 4.9e-07,
+     "conf": 0.9993,
+     "answer": {
+      "answer": 0.0007,
+      "probabilities": {
+       "yes": 0.0007,
+       "no": 0.9993
+      },
+      "confidence": 0.9993
+     }
+    },
+    "S2Q8": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.653,
+     "brier": 0.12040899999999999,
+     "conf": 0.653,
+     "answer": {
+      "answer": 0.347,
+      "probabilities": {
+       "yes": 0.347,
+       "no": 0.653
+      },
+      "confidence": 0.653
+     }
+    },
+    "S2Q9": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.8679,
+     "brier": 0.01745041,
+     "conf": 0.8679,
+     "answer": {
+      "answer": 0.8679,
+      "probabilities": {
+       "yes": 0.8679,
+       "no": 0.1321
+      },
+      "confidence": 0.8679
+     }
+    },
+    "S2Q10": {
+     "pred": false,
+     "correct": false,
+     "p_gold": 0.3,
+     "brier": 0.48999999999999994,
+     "conf": 0.7,
+     "answer": {
+      "answer": 0.3,
+      "probabilities": {
+       "yes": 0.3,
+       "no": 0.7
+      },
+      "confidence": 0.7
+     }
+    },
+    "S3Q1": {
+     "pred": "213",
+     "correct": true,
+     "p_gold": 0.9649,
+     "brier": 0.0019111400000000015,
+     "conf": 0.9649,
+     "answer": {
+      "answer": "213",
+      "probabilities": {
+       "160": 0.0028,
+       "213": 0.9649,
+       "231": 0.0248,
+       "312": 0.0075
+      },
+      "confidence": 0.9649,
+      "engine_confidence": 0.9649
+     }
+    },
+    "S3Q2": {
+     "pred": "Chloe Marchetti",
+     "correct": true,
+     "p_gold": 0.9806,
+     "brier": 0.0004785599999999989,
+     "conf": 0.9806,
+     "answer": {
+      "answer": "Chloe Marchetti",
+      "probabilities": {
+       "Amara Osei": 0.0022,
+       "Ben Kristiansen": 0.0064,
+       "Chloe Marchetti": 0.9806,
+       "Dev Ramaswamy": 0.007,
+       "Elena Voss": 0.0022,
+       "Farid Haddad": 0.0016
+      },
+      "confidence": 0.9806,
+      "engine_confidence": 0.9806
+     }
+    },
+    "S3Q3": {
+     "pred": "onboarding redesign",
+     "correct": true,
+     "p_gold": 0.9988,
+     "brier": 2.0499999999999495e-06,
+     "conf": 0.9988,
+     "answer": {
+      "answer": "onboarding redesign",
+      "probabilities": {
+       "launch date": 0.0003,
+       "pricing tier": 0.0004,
+       "onboarding redesign": 0.9988,
+       "support backlog": 0.0006
+      },
+      "confidence": 0.9988,
+      "engine_confidence": 0.9988
+     }
+    },
+    "S3Q4": {
+     "pred": "3",
+     "correct": false,
+     "p_gold": 0.1302,
+     "brier": 1.10649658,
+     "conf": 0.4835,
+     "answer": {
+      "answer": "3",
+      "probabilities": {
+       "3": 0.4835,
+       "4": 0.3373,
+       "5": 0.1302,
+       "6": 0.049
+      },
+      "confidence": 0.4835,
+      "engine_confidence": 0.4835
+     }
+    },
+    "S3Q5": {
+     "pred": "high",
+     "correct": true,
+     "p_gold": 0.9526,
+     "brier": 0.0035431200000000003,
+     "conf": 0.9526,
+     "answer": {
+      "answer": "high",
+      "probabilities": {
+       "low": 0.0144,
+       "medium": 0.033,
+       "high": 0.9526
+      },
+      "confidence": 0.9526,
+      "expected_level": 1.94,
+      "engine_confidence": 0.9526
+     }
+    },
+    "S3Q6": {
+     "pred": "negative",
+     "correct": true,
+     "p_gold": 0.9376,
+     "brier": 0.006378560000000002,
+     "conf": 0.9376,
+     "answer": {
+      "answer": "negative",
+      "probabilities": {
+       "negative": 0.9376,
+       "neutral": 0.0476,
+       "positive": 0.0148
+      },
+      "confidence": 0.9376,
+      "expected_level": 0.08,
+      "engine_confidence": 0.9376
+     }
+    },
+    "S3Q7": {
+     "pred": true,
+     "correct": false,
+     "p_gold": 0.42269999999999996,
+     "brier": 0.33327529000000006,
+     "conf": 0.5773,
+     "answer": {
+      "answer": 0.5773,
+      "probabilities": {
+       "yes": 0.5773,
+       "no": 0.4227
+      },
+      "confidence": 0.5773
+     }
+    },
+    "S3Q8": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.7224,
+     "brier": 0.07706175999999998,
+     "conf": 0.7224,
+     "answer": {
+      "answer": 0.7224,
+      "probabilities": {
+       "yes": 0.7224,
+       "no": 0.2776
+      },
+      "confidence": 0.7224
+     }
+    },
+    "S3Q9": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.7974,
+     "brier": 0.04104676,
+     "conf": 0.7974,
+     "answer": {
+      "answer": 0.7974,
+      "probabilities": {
+       "yes": 0.7974,
+       "no": 0.2026
+      },
+      "confidence": 0.7974
+     }
+    },
+    "S3Q10": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.5343,
+     "brier": 0.21687649,
+     "conf": 0.5343,
+     "answer": {
+      "answer": 0.4657,
+      "probabilities": {
+       "yes": 0.4657,
+       "no": 0.5343
+      },
+      "confidence": 0.5343
+     }
+    },
+    "S4Q1": {
+     "pred": "$105.00",
+     "correct": false,
+     "p_gold": 0.2421,
+     "brier": 0.7460109,
+     "conf": 0.318,
+     "answer": {
+      "answer": "$105.00",
+      "probabilities": {
+       "$75.00": 0.1722,
+       "$105.00": 0.318,
+       "$115.00": 0.2421,
+       "$125.00": 0.1838,
+       "$200.00": 0.0839
+      },
+      "confidence": 0.318,
+      "engine_confidence": 0.318
+     }
+    },
+    "S4Q2": {
+     "pred": "prohibited absolutely",
+     "correct": true,
+     "p_gold": 0.9924,
+     "brier": 8.646000000000078e-05,
+     "conf": 0.9924,
+     "answer": {
+      "answer": "prohibited absolutely",
+      "probabilities": {
+       "allowed without consent": 0.005,
+       "allowed only with the Landlord's written consent": 0.0017,
+       "prohibited absolutely": 0.9924,
+       "allowed on payment of a fee": 0.0009
+      },
+      "confidence": 0.9924,
+      "engine_confidence": 0.9924
+     }
+    },
+    "S4Q3": {
+     "pred": "not allowed because the dog exceeds the weight limit",
+     "correct": true,
+     "p_gold": 0.9784,
+     "brier": 0.000762739999999998,
+     "conf": 0.9784,
+     "answer": {
+      "answer": "not allowed because the dog exceeds the weight limit",
+      "probabilities": {
+       "allowed with the pet deposit and pet rent": 0.0035,
+       "allowed with written consent only": 0.0168,
+       "not allowed because the dog exceeds the weight limit": 0.9784,
+       "allowed because dogs are exempt from the limit": 0.0013
+      },
+      "confidence": 0.9784,
+      "engine_confidence": 0.9784
+     }
+    },
+    "S4Q4": {
+     "pred": "1 August 2027",
+     "correct": true,
+     "p_gold": 0.9722,
+     "brier": 0.0011329600000000025,
+     "conf": 0.9722,
+     "answer": {
+      "answer": "1 August 2027",
+      "probabilities": {
+       "1 July 2027": 0.0154,
+       "1 August 2027": 0.9722,
+       "31 August 2027": 0.011,
+       "30 September 2027": 0.0014
+      },
+      "confidence": 0.9722,
+      "engine_confidence": 0.9722
+     }
+    },
+    "S4Q5": {
+     "pred": "1.5 months",
+     "correct": true,
+     "p_gold": 0.9891,
+     "brier": 0.00018042000000000044,
+     "conf": 0.9891,
+     "answer": {
+      "answer": "1.5 months",
+      "probabilities": {
+       "1 month": 0.0044,
+       "1.5 months": 0.9891,
+       "2 months": 0.0065
+      },
+      "confidence": 0.9891,
+      "expected_level": 1.0,
+      "engine_confidence": 0.9891
+     }
+    },
+    "S4Q6": {
+     "pred": "within 24 hours",
+     "correct": true,
+     "p_gold": 0.9668,
+     "brier": 0.0017451300000000006,
+     "conf": 0.9668,
+     "answer": {
+      "answer": "within 24 hours",
+      "probabilities": {
+       "within 24 hours": 0.9668,
+       "within 7 days": 0.01,
+       "within 30 days": 0.0233
+      },
+      "confidence": 0.9668,
+      "expected_level": 0.06,
+      "engine_confidence": 0.9668
+     }
+    },
+    "S4Q7": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.9803,
+     "brier": 0.00038808999999999995,
+     "conf": 0.9803,
+     "answer": {
+      "answer": 0.0197,
+      "probabilities": {
+       "yes": 0.0197,
+       "no": 0.9803
+      },
+      "confidence": 0.9803
+     }
+    },
+    "S4Q8": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.5322,
+     "brier": 0.21883684,
+     "conf": 0.5322,
+     "answer": {
+      "answer": 0.4678,
+      "probabilities": {
+       "yes": 0.4678,
+       "no": 0.5322
+      },
+      "confidence": 0.5322
+     }
+    },
+    "S4Q9": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.9534,
+     "brier": 0.0021715599999999977,
+     "conf": 0.9534,
+     "answer": {
+      "answer": 0.9534,
+      "probabilities": {
+       "yes": 0.9534,
+       "no": 0.0466
+      },
+      "confidence": 0.9534
+     }
+    },
+    "S4Q10": {
+     "pred": false,
+     "correct": false,
+     "p_gold": 0.3293,
+     "brier": 0.4498384900000001,
+     "conf": 0.6707000000000001,
+     "answer": {
+      "answer": 0.3293,
+      "probabilities": {
+       "yes": 0.3293,
+       "no": 0.6707
+      },
+      "confidence": 0.6707
+     }
+    },
+    "S5Q1": {
+     "pred": "2",
+     "correct": true,
+     "p_gold": 0.3574,
+     "brier": 0.5728236200000001,
+     "conf": 0.3574,
+     "answer": {
+      "answer": "2",
+      "probabilities": {
+       "0": 0.1015,
+       "1": 0.3105,
+       "2": 0.3574,
+       "3": 0.2306
+      },
+      "confidence": 0.3574,
+      "engine_confidence": 0.3574
+     }
+    },
+    "S5Q2": {
+     "pred": "3",
+     "correct": true,
+     "p_gold": 0.3186,
+     "brier": 0.62930113,
+     "conf": 0.3186,
+     "answer": {
+      "answer": "3",
+      "probabilities": {
+       "2": 0.3028,
+       "3": 0.3186,
+       "4": 0.2182,
+       "5": 0.1603
+      },
+      "confidence": 0.3186,
+      "engine_confidence": 0.3186
+     }
+    },
+    "S5Q3": {
+     "pred": "Jake M.",
+     "correct": true,
+     "p_gold": 0.9498,
+     "brier": 0.003372380000000002,
+     "conf": 0.9498,
+     "answer": {
+      "answer": "Jake M.",
+      "probabilities": {
+       "Colin B.": 0.0196,
+       "Jake M.": 0.9498,
+       "Omar F.": 0.0153,
+       "Tom R.": 0.0153
+      },
+      "confidence": 0.9498,
+      "engine_confidence": 0.9498
+     }
+    },
+    "S5Q4": {
+     "pred": "spanish",
+     "correct": true,
+     "p_gold": 0.973,
+     "brier": 0.0011019700000000014,
+     "conf": 0.973,
+     "answer": {
+      "answer": "spanish",
+      "probabilities": {
+       "english": 0.0087,
+       "french": 0.0172,
+       "spanish": 0.973,
+       "german": 0.0012
+      },
+      "confidence": 0.973,
+      "engine_confidence": 0.973
+     }
+    },
+    "S5Q5": {
+     "pred": "negative",
+     "correct": true,
+     "p_gold": 0.9522,
+     "brier": 0.003945679999999996,
+     "conf": 0.9522,
+     "answer": {
+      "answer": "negative",
+      "probabilities": {
+       "negative": 0.9522,
+       "neutral": 0.04,
+       "positive": 0.0078
+      },
+      "confidence": 0.9522,
+      "expected_level": 0.06,
+      "engine_confidence": 0.9522
+     }
+    },
+    "S5Q6": {
+     "pred": "4.0 or above",
+     "correct": false,
+     "p_gold": 0.3568,
+     "brier": 0.65107369,
+     "conf": 0.4452,
+     "answer": {
+      "answer": "4.0 or above",
+      "probabilities": {
+       "below 3.0": 0.1979,
+       "3.0 to 3.9": 0.3568,
+       "4.0 or above": 0.4452
+      },
+      "confidence": 0.4452,
+      "expected_level": 1.25,
+      "engine_confidence": 0.4452
+     }
+    },
+    "S5Q7": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.8813,
+     "brier": 0.014089690000000007,
+     "conf": 0.8813,
+     "answer": {
+      "answer": 0.8813,
+      "probabilities": {
+       "yes": 0.8813,
+       "no": 0.1187
+      },
+      "confidence": 0.8813
+     }
+    },
+    "S5Q8": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.5052,
+     "brier": 0.24482704000000002,
+     "conf": 0.5052,
+     "answer": {
+      "answer": 0.4948,
+      "probabilities": {
+       "yes": 0.4948,
+       "no": 0.5052
+      },
+      "confidence": 0.5052
+     }
+    },
+    "S5Q9": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.9491,
+     "brier": 0.0025908099999999946,
+     "conf": 0.9491,
+     "answer": {
+      "answer": 0.9491,
+      "probabilities": {
+       "yes": 0.9491,
+       "no": 0.0509
+      },
+      "confidence": 0.9491
+     }
+    },
+    "S5Q10": {
+     "pred": true,
+     "correct": false,
+     "p_gold": 0.48650000000000004,
+     "brier": 0.26368224999999995,
+     "conf": 0.5135,
+     "answer": {
+      "answer": 0.5135,
+      "probabilities": {
+       "yes": 0.5135,
+       "no": 0.4865
+      },
+      "confidence": 0.5135
+     }
+    },
+    "S6Q1": {
+     "pred": "at least five years building production data pipelines",
+     "correct": true,
+     "p_gold": 0.4722,
+     "brier": 0.38228806000000004,
+     "conf": 0.4722,
+     "answer": {
+      "answer": "at least five years building production data pipelines",
+      "probabilities": {
+       "at least five years building production data pipelines": 0.4722,
+       "expert-level Python and SQL": 0.079,
+       "hands-on cloud data warehouse experience": 0.0738,
+       "right to work in the UK without sponsorship": 0.0833,
+       "all four are met": 0.2917
+      },
+      "confidence": 0.4722,
+      "engine_confidence": 0.4722
+     }
+    },
+    "S6Q2": {
+     "pred": "the claim about a master's degree in computer science",
+     "correct": true,
+     "p_gold": 0.7625,
+     "brier": 0.07559966000000001,
+     "conf": 0.7625,
+     "answer": {
+      "answer": "the claim about a master's degree in computer science",
+      "probabilities": {
+       "the claim about a master's degree in computer science": 0.7625,
+       "the claim about relocating to Bristol": 0.0762,
+       "the claim about leading the warehouse migration": 0.0669,
+       "the claim about mentoring two junior analysts": 0.0944
+      },
+      "confidence": 0.7625,
+      "engine_confidence": 0.7625
+     }
+    },
+    "S6Q3": {
+     "pred": "about 3.5 years",
+     "correct": true,
+     "p_gold": 0.5144,
+     "brier": 0.39412294000000003,
+     "conf": 0.5144,
+     "answer": {
+      "answer": "about 3.5 years",
+      "probabilities": {
+       "about 1.5 years": 0.3923,
+       "about 3.5 years": 0.5144,
+       "about 5 years": 0.041,
+       "about 7 years": 0.0523
+      },
+      "confidence": 0.5144,
+      "engine_confidence": 0.5144
+     }
+    },
+    "S6Q4": {
+     "pred": "2",
+     "correct": true,
+     "p_gold": 0.4577,
+     "brier": 0.40888114000000003,
+     "conf": 0.4577,
+     "answer": {
+      "answer": "2",
+      "probabilities": {
+       "0": 0.1652,
+       "1": 0.2791,
+       "2": 0.4577,
+       "3": 0.098
+      },
+      "confidence": 0.4577,
+      "engine_confidence": 0.4577
+     }
+    },
+    "S6Q5": {
+     "pred": "before the closing date",
+     "correct": true,
+     "p_gold": 0.9532,
+     "brier": 0.0033173599999999958,
+     "conf": 0.9532,
+     "answer": {
+      "answer": "before the closing date",
+      "probabilities": {
+       "before the closing date": 0.9532,
+       "on the closing date": 0.0274,
+       "after the closing date": 0.0194
+      },
+      "confidence": 0.9532,
+      "expected_level": 0.07,
+      "engine_confidence": 0.9532
+     }
+    },
+    "S6Q6": {
+     "pred": "above the range",
+     "correct": false,
+     "p_gold": 0.097,
+     "brier": 1.3886560799999998,
+     "conf": 0.7392,
+     "answer": {
+      "answer": "above the range",
+      "probabilities": {
+       "below the range": 0.1638,
+       "within the range": 0.097,
+       "above the range": 0.7392
+      },
+      "confidence": 0.7392,
+      "expected_level": 1.58,
+      "engine_confidence": 0.7392
+     }
+    },
+    "S6Q7": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.9976,
+     "brier": 5.759999999999999e-06,
+     "conf": 0.9976,
+     "answer": {
+      "answer": 0.0024,
+      "probabilities": {
+       "yes": 0.0024,
+       "no": 0.9976
+      },
+      "confidence": 0.9976
+     }
+    },
+    "S6Q8": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.9802,
+     "brier": 0.0003920400000000016,
+     "conf": 0.9802,
+     "answer": {
+      "answer": 0.9802,
+      "probabilities": {
+       "yes": 0.9802,
+       "no": 0.0198
+      },
+      "confidence": 0.9802
+     }
+    },
+    "S6Q9": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.6148,
+     "brier": 0.14837904,
+     "conf": 0.6148,
+     "answer": {
+      "answer": 0.6148,
+      "probabilities": {
+       "yes": 0.6148,
+       "no": 0.3852
+      },
+      "confidence": 0.6148
+     }
+    },
+    "S6Q10": {
+     "pred": true,
+     "correct": false,
+     "p_gold": 0.49550000000000005,
+     "brier": 0.25452024999999995,
+     "conf": 0.5045,
+     "answer": {
+      "answer": 0.5045,
+      "probabilities": {
+       "yes": 0.5045,
+       "no": 0.4955
+      },
+      "confidence": 0.5045
+     }
+    },
+    "S7Q1": {
+     "pred": "$15.20",
+     "correct": true,
+     "p_gold": 0.99,
+     "brier": 0.0001559400000000002,
+     "conf": 0.99,
+     "answer": {
+      "answer": "$15.20",
+      "probabilities": {
+       "$14.00": 0.0011,
+       "$15.20": 0.99,
+       "$16.00": 0.0072,
+       "$18.00": 0.0017
+      },
+      "confidence": 0.99,
+      "engine_confidence": 0.99
+     }
+    },
+    "S7Q2": {
+     "pred": "26 June",
+     "correct": true,
+     "p_gold": 0.9818,
+     "brier": 0.00044687999999999976,
+     "conf": 0.9818,
+     "answer": {
+      "answer": "26 June",
+      "probabilities": {
+       "15 June": 0.0046,
+       "20 June": 0.0058,
+       "26 June": 0.9818,
+       "30 June": 0.0078
+      },
+      "confidence": 0.9818,
+      "engine_confidence": 0.9818
+     }
+    },
+    "S7Q3": {
+     "pred": "Dario Benedetti",
+     "correct": true,
+     "p_gold": 0.9488,
+     "brier": 0.0035474400000000024,
+     "conf": 0.9488,
+     "answer": {
+      "answer": "Dario Benedetti",
+      "probabilities": {
+       "Tessa Marlowe": 0.0154,
+       "Kwame Osei": 0.013,
+       "Dario Benedetti": 0.9488,
+       "nobody asked": 0.0228
+      },
+      "confidence": 0.9488,
+      "engine_confidence": 0.9488
+     }
+    },
+    "S7Q4": {
+     "pred": "11 June",
+     "correct": true,
+     "p_gold": 0.9153,
+     "brier": 0.01018326,
+     "conf": 0.9153,
+     "answer": {
+      "answer": "11 June",
+      "probabilities": {
+       "1 June": 0.0086,
+       "9 June": 0.0336,
+       "11 June": 0.9153,
+       "15 June": 0.0425
+      },
+      "confidence": 0.9153,
+      "engine_confidence": 0.9153
+     }
+    },
+    "S7Q5": {
+     "pred": "under 10%",
+     "correct": false,
+     "p_gold": 0.2729,
+     "brier": 0.7932464300000002,
+     "conf": 0.3759,
+     "answer": {
+      "answer": "under 10%",
+      "probabilities": {
+       "under 10%": 0.3759,
+       "10% to 20%": 0.2729,
+       "over 20%": 0.3511
+      },
+      "confidence": 0.3759,
+      "expected_level": 0.98,
+      "engine_confidence": 0.3759
+     }
+    },
+    "S7Q6": {
+     "pred": "only after month 12",
+     "correct": true,
+     "p_gold": 0.9859,
+     "brier": 0.00034146000000000003,
+     "conf": 0.9859,
+     "answer": {
+      "answer": "only after month 12",
+      "probabilities": {
+       "at any time": 0.0024,
+       "only after month 12": 0.9859,
+       "not at all during the two-year term": 0.0117
+      },
+      "confidence": 0.9859,
+      "expected_level": 1.01,
+      "engine_confidence": 0.9859
+     }
+    },
+    "S7Q7": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.994,
+     "brier": 3.6e-05,
+     "conf": 0.994,
+     "answer": {
+      "answer": 0.006,
+      "probabilities": {
+       "yes": 0.006,
+       "no": 0.994
+      },
+      "confidence": 0.994
+     }
+    },
+    "S7Q8": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.9489,
+     "brier": 0.0026112100000000036,
+     "conf": 0.9489,
+     "answer": {
+      "answer": 0.9489,
+      "probabilities": {
+       "yes": 0.9489,
+       "no": 0.0511
+      },
+      "confidence": 0.9489
+     }
+    },
+    "S7Q9": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.5835,
+     "brier": 0.17347225,
+     "conf": 0.5835,
+     "answer": {
+      "answer": 0.4165,
+      "probabilities": {
+       "yes": 0.4165,
+       "no": 0.5835
+      },
+      "confidence": 0.5835
+     }
+    },
+    "S7Q10": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.9255,
+     "brier": 0.005550250000000001,
+     "conf": 0.9255,
+     "answer": {
+      "answer": 0.9255,
+      "probabilities": {
+       "yes": 0.9255,
+       "no": 0.0745
+      },
+      "confidence": 0.9255
+     }
+    },
+    "S8Q1": {
+     "pred": "$10.6 million",
+     "correct": false,
+     "p_gold": 0.2264,
+     "brier": 0.8082415400000001,
+     "conf": 0.3303,
+     "answer": {
+      "answer": "$10.6 million",
+      "probabilities": {
+       "$4.2 million": 0.1868,
+       "$4.6 million": 0.2565,
+       "$6.0 million": 0.2264,
+       "$10.6 million": 0.3303
+      },
+      "confidence": 0.3303,
+      "engine_confidence": 0.3303
+     }
+    },
+    "S8Q2": {
+     "pred": "Councillor Ruben Castellanos",
+     "correct": true,
+     "p_gold": 0.9963,
+     "brier": 1.850000000000027e-05,
+     "conf": 0.9963,
+     "answer": {
+      "answer": "Councillor Ruben Castellanos",
+      "probabilities": {
+       "Mayor Delphine Aurelio": 0.0009,
+       "Councillor Ruben Castellanos": 0.9963,
+       "Finance Director Margit Halloran": 0.0012,
+       "none of the quoted officials": 0.0016
+      },
+      "confidence": 0.9963,
+      "engine_confidence": 0.9963
+     }
+    },
+    "S8Q3": {
+     "pred": "11.8%",
+     "correct": true,
+     "p_gold": 0.9672,
+     "brier": 0.0016692900000000034,
+     "conf": 0.9672,
+     "answer": {
+      "answer": "11.8%",
+      "probabilities": {
+       "6%": 0.023,
+       "11.8%": 0.9672,
+       "12%": 0.0019,
+       "18.9%": 0.0078
+      },
+      "confidence": 0.9672,
+      "engine_confidence": 0.9672
+     }
+    },
+    "S8Q4": {
+     "pred": "7",
+     "correct": true,
+     "p_gold": 0.879,
+     "brier": 0.020656980000000002,
+     "conf": 0.879,
+     "answer": {
+      "answer": "7",
+      "probabilities": {
+       "2": 0.015,
+       "5": 0.0437,
+       "7": 0.879,
+       "9": 0.0623
+      },
+      "confidence": 0.879,
+      "engine_confidence": 0.879
+     }
+    },
+    "S8Q5": {
+     "pred": "above the minimum",
+     "correct": true,
+     "p_gold": 0.9761,
+     "brier": 0.0010354200000000015,
+     "conf": 0.9761,
+     "answer": {
+      "answer": "above the minimum",
+      "probabilities": {
+       "below the minimum": 0.0025,
+       "at the minimum": 0.0214,
+       "above the minimum": 0.9761
+      },
+      "confidence": 0.9761,
+      "expected_level": 1.97,
+      "engine_confidence": 0.9761
+     }
+    },
+    "S8Q6": {
+     "pred": "opposed",
+     "correct": true,
+     "p_gold": 0.9871,
+     "brier": 0.00027342000000000056,
+     "conf": 0.9871,
+     "answer": {
+      "answer": "opposed",
+      "probabilities": {
+       "opposed": 0.9871,
+       "neutral": 0.0099,
+       "supportive": 0.003
+      },
+      "confidence": 0.9871,
+      "expected_level": 0.02,
+      "engine_confidence": 0.9871
+     }
+    },
+    "S8Q7": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.9972,
+     "brier": 7.84e-06,
+     "conf": 0.9972,
+     "answer": {
+      "answer": 0.0028,
+      "probabilities": {
+       "yes": 0.0028,
+       "no": 0.9972
+      },
+      "confidence": 0.9972
+     }
+    },
+    "S8Q8": {
+     "pred": true,
+     "correct": false,
+     "p_gold": 0.404,
+     "brier": 0.355216,
+     "conf": 0.596,
+     "answer": {
+      "answer": 0.596,
+      "probabilities": {
+       "yes": 0.596,
+       "no": 0.404
+      },
+      "confidence": 0.596
+     }
+    },
+    "S8Q9": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.7247,
+     "brier": 0.07579008999999999,
+     "conf": 0.7247,
+     "answer": {
+      "answer": 0.7247,
+      "probabilities": {
+       "yes": 0.7247,
+       "no": 0.2753
+      },
+      "confidence": 0.7247
+     }
+    },
+    "S8Q10": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.8329,
+     "brier": 0.02792241000000001,
+     "conf": 0.8329,
+     "answer": {
+      "answer": 0.8329,
+      "probabilities": {
+       "yes": 0.8329,
+       "no": 0.1671
+      },
+      "confidence": 0.8329
+     }
+    },
+    "S9Q1": {
+     "pred": "26-28 June",
+     "correct": true,
+     "p_gold": 0.9981,
+     "brier": 4.940000000000048e-06,
+     "conf": 0.9981,
+     "answer": {
+      "answer": "26-28 June",
+      "probabilities": {
+       "19-21 June": 0.0006,
+       "26-28 June": 0.9981,
+       "12-14 June": 0.0009,
+       "3-5 July": 0.0004
+      },
+      "confidence": 0.9981,
+      "engine_confidence": 0.9981
+     }
+    },
+    "S9Q2": {
+     "pred": "Leon",
+     "correct": true,
+     "p_gold": 0.9898,
+     "brier": 0.00013437999999999973,
+     "conf": 0.9898,
+     "answer": {
+      "answer": "Leon",
+      "probabilities": {
+       "Maya": 0.0019,
+       "Theo": 0.0028,
+       "Zara": 0.0017,
+       "Leon": 0.9898,
+       "Ines": 0.004
+      },
+      "confidence": 0.9898,
+      "engine_confidence": 0.9898
+     }
+    },
+    "S9Q3": {
+     "pred": "$184",
+     "correct": false,
+     "p_gold": 0.2886,
+     "brier": 0.7402058600000001,
+     "conf": 0.4063,
+     "answer": {
+      "answer": "$184",
+      "probabilities": {
+       "$180": 0.0465,
+       "$184": 0.4063,
+       "$210": 0.2586,
+       "$220": 0.2886
+      },
+      "confidence": 0.4063,
+      "engine_confidence": 0.4063
+     }
+    },
+    "S9Q4": {
+     "pred": "3",
+     "correct": true,
+     "p_gold": 0.7009,
+     "brier": 0.12092451000000001,
+     "conf": 0.7009,
+     "answer": {
+      "answer": "3",
+      "probabilities": {
+       "2": 0.0704,
+       "3": 0.7009,
+       "4": 0.1273,
+       "5": 0.1015
+      },
+      "confidence": 0.7009,
+      "engine_confidence": 0.7009
+     }
+    },
+    "S9Q5": {
+     "pred": "2",
+     "correct": true,
+     "p_gold": 0.9842,
+     "brier": 0.0004018400000000011,
+     "conf": 0.9842,
+     "answer": {
+      "answer": "2",
+      "probabilities": {
+       "1": 0.0042,
+       "2": 0.9842,
+       "3": 0.0116
+      },
+      "confidence": 0.9842,
+      "expected_level": 1.01,
+      "engine_confidence": 0.9842
+     }
+    },
+    "S9Q6": {
+     "pred": "after check-in opens",
+     "correct": true,
+     "p_gold": 0.7565,
+     "brier": 0.10082073000000003,
+     "conf": 0.7565,
+     "answer": {
+      "answer": "after check-in opens",
+      "probabilities": {
+       "before check-in opens": 0.1988,
+       "exactly when check-in opens": 0.0448,
+       "after check-in opens": 0.7565
+      },
+      "confidence": 0.7565,
+      "expected_level": 1.56,
+      "engine_confidence": 0.7565
+     }
+    },
+    "S9Q7": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.8701,
+     "brier": 0.016874010000000005,
+     "conf": 0.8701,
+     "answer": {
+      "answer": 0.8701,
+      "probabilities": {
+       "yes": 0.8701,
+       "no": 0.1299
+      },
+      "confidence": 0.8701
+     }
+    },
+    "S9Q8": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.7538,
+     "brier": 0.06061444,
+     "conf": 0.7538,
+     "answer": {
+      "answer": 0.2462,
+      "probabilities": {
+       "yes": 0.2462,
+       "no": 0.7538
+      },
+      "confidence": 0.7538
+     }
+    },
+    "S9Q9": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.652,
+     "brier": 0.12110399999999999,
+     "conf": 0.652,
+     "answer": {
+      "answer": 0.348,
+      "probabilities": {
+       "yes": 0.348,
+       "no": 0.652
+      },
+      "confidence": 0.652
+     }
+    },
+    "S9Q10": {
+     "pred": false,
+     "correct": false,
+     "p_gold": 0.4633,
+     "brier": 0.28804688999999994,
+     "conf": 0.5367,
+     "answer": {
+      "answer": 0.4633,
+      "probabilities": {
+       "yes": 0.4633,
+       "no": 0.5367
+      },
+      "confidence": 0.5367
+     }
+    },
+    "S10Q1": {
+     "pred": "3.4",
+     "correct": true,
+     "p_gold": 0.9602,
+     "brier": 0.0020311999999999956,
+     "conf": 0.9602,
+     "answer": {
+      "answer": "3.4",
+      "probabilities": {
+       "3.1": 0.0046,
+       "3.2": 0.0088,
+       "3.3": 0.0134,
+       "3.4": 0.9602,
+       "not fixed in any listed version": 0.013
+      },
+      "confidence": 0.9602,
+      "engine_confidence": 0.9602
+     }
+    },
+    "S10Q2": {
+     "pred": "BR-1",
+     "correct": true,
+     "p_gold": 0.9846,
+     "brier": 0.00034742999999999905,
+     "conf": 0.9846,
+     "answer": {
+      "answer": "BR-1",
+      "probabilities": {
+       "BR-1": 0.9846,
+       "BR-2": 0.0033,
+       "BR-3": 0.0023,
+       "it is not a duplicate": 0.0097
+      },
+      "confidence": 0.9846,
+      "engine_confidence": 0.9846
+     }
+    },
+    "S10Q3": {
+     "pred": "1",
+     "correct": true,
+     "p_gold": 0.8751,
+     "brier": 0.021553540000000003,
+     "conf": 0.8751,
+     "answer": {
+      "answer": "1",
+      "probabilities": {
+       "0": 0.0292,
+       "1": 0.8751,
+       "2": 0.064,
+       "3": 0.0317
+      },
+      "confidence": 0.8751,
+      "engine_confidence": 0.8751
+     }
+    },
+    "S10Q4": {
+     "pred": "3.3",
+     "correct": true,
+     "p_gold": 0.8628,
+     "brier": 0.02649656,
+     "conf": 0.8628,
+     "answer": {
+      "answer": "3.3",
+      "probabilities": {
+       "3.1": 0.0086,
+       "3.2": 0.071,
+       "3.3": 0.8628,
+       "3.4": 0.05,
+       "none": 0.0076
+      },
+      "confidence": 0.8628,
+      "engine_confidence": 0.8628
+     }
+    },
+    "S10Q5": {
+     "pred": "3",
+     "correct": true,
+     "p_gold": 0.3748,
+     "brier": 0.5520986999999999,
+     "conf": 0.3748,
+     "answer": {
+      "answer": "3",
+      "probabilities": {
+       "1": 0.1011,
+       "2": 0.3447,
+       "3": 0.3748,
+       "4": 0.1794
+      },
+      "confidence": 0.3748,
+      "expected_level": 1.63,
+      "engine_confidence": 0.3748
+     }
+    },
+    "S10Q6": {
+     "pred": "critical",
+     "correct": true,
+     "p_gold": 0.9375,
+     "brier": 0.007501020000000001,
+     "conf": 0.9375,
+     "answer": {
+      "answer": "critical",
+      "probabilities": {
+       "minor": 0.0026,
+       "major": 0.0599,
+       "critical": 0.9375
+      },
+      "confidence": 0.9375,
+      "expected_level": 1.93,
+      "engine_confidence": 0.9375
+     }
+    },
+    "S10Q7": {
+     "pred": true,
+     "correct": false,
+     "p_gold": 0.373,
+     "brier": 0.393129,
+     "conf": 0.627,
+     "answer": {
+      "answer": 0.627,
+      "probabilities": {
+       "yes": 0.627,
+       "no": 0.373
+      },
+      "confidence": 0.627
+     }
+    },
+    "S10Q8": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.9482,
+     "brier": 0.0026832399999999956,
+     "conf": 0.9482,
+     "answer": {
+      "answer": 0.9482,
+      "probabilities": {
+       "yes": 0.9482,
+       "no": 0.0518
+      },
+      "confidence": 0.9482
+     }
+    },
+    "S10Q9": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.7287,
+     "brier": 0.07360368999999999,
+     "conf": 0.7287,
+     "answer": {
+      "answer": 0.7287,
+      "probabilities": {
+       "yes": 0.7287,
+       "no": 0.2713
+      },
+      "confidence": 0.7287
+     }
+    },
+    "S10Q10": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.6261,
+     "brier": 0.13980121,
+     "conf": 0.6261,
+     "answer": {
+      "answer": 0.3739,
+      "probabilities": {
+       "yes": 0.3739,
+       "no": 0.6261
+      },
+      "confidence": 0.6261
+     }
+    }
+   },
+   "calls": [
+    {
+     "state": "support_thread",
+     "n": 10,
+     "ms": 142491.2919998169
+    },
+    {
+     "state": "postmortem",
+     "n": 10,
+     "ms": 137685.79053878784
+    },
+    {
+     "state": "meeting_transcript",
+     "n": 10,
+     "ms": 122416.19372367859
+    },
+    {
+     "state": "lease_agreement",
+     "n": 10,
+     "ms": 119021.14129066467
+    },
+    {
+     "state": "reviews_batch",
+     "n": 10,
+     "ms": 109305.18341064453
+    },
+    {
+     "state": "hiring_packet",
+     "n": 10,
+     "ms": 109022.34554290771
+    },
+    {
+     "state": "vendor_negotiation",
+     "n": 10,
+     "ms": 133406.86988830566
+    },
+    {
+     "state": "news_report",
+     "n": 10,
+     "ms": 103858.29401016235
+    },
+    {
+     "state": "group_chat",
+     "n": 10,
+     "ms": 148161.3793373108
+    },
+    {
+     "state": "release_notes",
+     "n": 10,
+     "ms": 123537.99414634705
+    }
+   ]
+  },
+  "kev": {
+   "summary": {
+    "accuracy": 0.78,
+    "brier": 0.2107290841,
+    "ece": 0.06695200000000005,
+    "mean_conf": 0.8336979999999999,
+    "ms_per_call": 228021.65005207062,
+    "ms_per_question": 22802.16500520706,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cost_usd": 0.0,
+    "by_category": {
+     "numbers": {
+      "n": 22,
+      "accuracy": 0.7727272727272727
+     },
+     "timeline": {
+      "n": 12,
+      "accuracy": 1.0
+     },
+     "attribution": {
+      "n": 7,
+      "accuracy": 0.8571428571428571
+     },
+     "counting": {
+      "n": 10,
+      "accuracy": 0.6
+     },
+     "reading": {
+      "n": 7,
+      "accuracy": 1.0
+     },
+     "multi-hop": {
+      "n": 16,
+      "accuracy": 0.5625
+     },
+     "negation": {
+      "n": 9,
+      "accuracy": 0.6666666666666666
+     },
+     "routing": {
+      "n": 3,
+      "accuracy": 0.6666666666666666
+     },
+     "urgency": {
+      "n": 2,
+      "accuracy": 1.0
+     },
+     "entailment": {
+      "n": 2,
+      "accuracy": 1.0
+     },
+     "sentiment": {
+      "n": 3,
+      "accuracy": 1.0
+     },
+     "compliance": {
+      "n": 6,
+      "accuracy": 0.8333333333333334
+     },
+     "language": {
+      "n": 1,
+      "accuracy": 1.0
+     }
+    },
+    "by_type": {
+     "choice": {
+      "n": 40,
+      "accuracy": 0.775
+     },
+     "score": {
+      "n": 20,
+      "accuracy": 0.95
+     },
+     "noul": {
+      "n": 40,
+      "accuracy": 0.7
+     }
+    }
+   },
+   "items": {
+    "S1Q1": {
+     "pred": "$60.00",
+     "correct": true,
+     "p_gold": 0.9628,
+     "brier": 0.0017732700000000008,
+     "conf": 0.9628,
+     "answer": {
+      "answer": "$60.00",
+      "probabilities": {
+       "$0.00": 0.0119,
+       "$60.00": 0.9628,
+       "$64.35": 0.0085,
+       "$124.35": 0.0126,
+       "$489.00": 0.0041
+      },
+      "confidence": 0.9628,
+      "engine_confidence": 0.9536
+     }
+    },
+    "S1Q2": {
+     "pred": "the missing table box",
+     "correct": true,
+     "p_gold": 0.523,
+     "brier": 0.34344517999999996,
+     "conf": 0.523,
+     "answer": {
+      "answer": "the missing table box",
+      "probabilities": {
+       "the missing table box": 0.523,
+       "the replacement chair": 0.2713,
+       "both arrived on the same day": 0.2057
+      },
+      "confidence": 0.523,
+      "engine_confidence": 0.2845
+     }
+    },
+    "S1Q3": {
+     "pred": "Tomas Vellek",
+     "correct": false,
+     "p_gold": 0.1304,
+     "brier": 1.3699043,
+     "conf": 0.7806,
+     "answer": {
+      "answer": "Tomas Vellek",
+      "probabilities": {
+       "Tomas Vellek": 0.7806,
+       "Ingrid Solano": 0.1304,
+       "the carrier contacted the customer directly": 0.0587,
+       "nobody; the customer found it herself": 0.0303
+      },
+      "confidence": 0.7806,
+      "engine_confidence": 0.7074
+     }
+    },
+    "S1Q4": {
+     "pred": "3",
+     "correct": false,
+     "p_gold": 0.3065,
+     "brier": 0.6711175,
+     "conf": 0.311,
+     "answer": {
+      "answer": "3",
+      "probabilities": {
+       "3": 0.311,
+       "4": 0.292,
+       "5": 0.3065,
+       "6": 0.0905
+      },
+      "confidence": 0.311,
+      "engine_confidence": 0.0813
+     }
+    },
+    "S1Q5": {
+     "pred": "high",
+     "correct": true,
+     "p_gold": 0.9802,
+     "brier": 0.0005781300000000017,
+     "conf": 0.9802,
+     "answer": {
+      "answer": "high",
+      "probabilities": {
+       "low": 0.0022,
+       "normal": 0.005,
+       "high": 0.9802,
+       "critical": 0.0125
+      },
+      "confidence": 0.9802,
+      "expected_level": 2.003,
+      "engine_confidence": 0.9927
+     }
+    },
+    "S1Q6": {
+     "pred": "both",
+     "correct": true,
+     "p_gold": 0.9831,
+     "brier": 0.00043062000000000086,
+     "conf": 0.9831,
+     "answer": {
+      "answer": "both",
+      "probabilities": {
+       "none": 0.0074,
+       "one": 0.0095,
+       "both": 0.9831
+      },
+      "confidence": 0.9831,
+      "expected_level": 1.976,
+      "engine_confidence": 0.9879
+     }
+    },
+    "S1Q7": {
+     "pred": true,
+     "correct": false,
+     "p_gold": 0.033399999999999985,
+     "brier": 0.93431556,
+     "conf": 0.9666,
+     "answer": {
+      "answer": 0.9666,
+      "probabilities": {
+       "yes": 0.9666,
+       "no": 0.0334
+      },
+      "confidence": 0.9666
+     }
+    },
+    "S1Q8": {
+     "pred": true,
+     "correct": false,
+     "p_gold": 0.38839999999999997,
+     "brier": 0.37405456000000004,
+     "conf": 0.6116,
+     "answer": {
+      "answer": 0.6116,
+      "probabilities": {
+       "yes": 0.6116,
+       "no": 0.3884
+      },
+      "confidence": 0.6116
+     }
+    },
+    "S1Q9": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.9443,
+     "brier": 0.00310249,
+     "conf": 0.9443,
+     "answer": {
+      "answer": 0.0557,
+      "probabilities": {
+       "yes": 0.0557,
+       "no": 0.9443
+      },
+      "confidence": 0.9443
+     }
+    },
+    "S1Q10": {
+     "pred": false,
+     "correct": false,
+     "p_gold": 0.2425,
+     "brier": 0.5738062500000001,
+     "conf": 0.7575000000000001,
+     "answer": {
+      "answer": 0.2425,
+      "probabilities": {
+       "yes": 0.2425,
+       "no": 0.7575
+      },
+      "confidence": 0.7575
+     }
+    },
+    "S2Q1": {
+     "pred": "71 minutes",
+     "correct": true,
+     "p_gold": 0.9273,
+     "brier": 0.008040339999999998,
+     "conf": 0.9273,
+     "answer": {
+      "answer": "71 minutes",
+      "probabilities": {
+       "45 minutes": 0.013,
+       "61 minutes": 0.0499,
+       "71 minutes": 0.9273,
+       "89 minutes": 0.0098
+      },
+      "confidence": 0.9273,
+      "engine_confidence": 0.9031
+     }
+    },
+    "S2Q2": {
+     "pred": "the first automated alert",
+     "correct": true,
+     "p_gold": 0.46,
+     "brier": 0.39234848,
+     "conf": 0.46,
+     "answer": {
+      "answer": "the first automated alert",
+      "probabilities": {
+       "the first customer-reported ticket": 0.1492,
+       "the first automated alert": 0.46,
+       "the escalation to Marcus Lindqvist": 0.228,
+       "the rollback decision": 0.1628
+      },
+      "confidence": 0.46,
+      "engine_confidence": 0.28
+     }
+    },
+    "S2Q3": {
+     "pred": "Marcus Lindqvist",
+     "correct": true,
+     "p_gold": 0.9894,
+     "brier": 0.00014984000000000113,
+     "conf": 0.9894,
+     "answer": {
+      "answer": "Marcus Lindqvist",
+      "probabilities": {
+       "Dana Okafor": 0.0036,
+       "Marcus Lindqvist": 0.9894,
+       "Ravi Thandeka": 0.0034,
+       "Lena Baxter": 0.0036
+      },
+      "confidence": 0.9894,
+      "engine_confidence": 0.9859
+     }
+    },
+    "S2Q4": {
+     "pred": "2",
+     "correct": true,
+     "p_gold": 0.577,
+     "brier": 0.32429462000000003,
+     "conf": 0.577,
+     "answer": {
+      "answer": "2",
+      "probabilities": {
+       "0": 0.0089,
+       "1": 0.0345,
+       "2": 0.577,
+       "3": 0.3796
+      },
+      "confidence": 0.577,
+      "engine_confidence": 0.436
+     }
+    },
+    "S2Q5": {
+     "pred": "SEV1",
+     "correct": true,
+     "p_gold": 0.9833,
+     "brier": 0.00043694000000000165,
+     "conf": 0.9833,
+     "answer": {
+      "answer": "SEV1",
+      "probabilities": {
+       "SEV3": 0.0053,
+       "SEV2": 0.0114,
+       "SEV1": 0.9833
+      },
+      "confidence": 0.9833,
+      "expected_level": 1.978,
+      "engine_confidence": 0.989
+     }
+    },
+    "S2Q6": {
+     "pred": "medium",
+     "correct": true,
+     "p_gold": 0.9909,
+     "brier": 0.00013525999999999995,
+     "conf": 0.9909,
+     "answer": {
+      "answer": "medium",
+      "probabilities": {
+       "low": 0.0022,
+       "medium": 0.9909,
+       "high": 0.0069
+      },
+      "confidence": 0.9909,
+      "expected_level": 1.005,
+      "engine_confidence": 0.9954
+     }
+    },
+    "S2Q7": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.9858,
+     "brier": 0.00020164000000000003,
+     "conf": 0.9858,
+     "answer": {
+      "answer": 0.0142,
+      "probabilities": {
+       "yes": 0.0142,
+       "no": 0.9858
+      },
+      "confidence": 0.9858
+     }
+    },
+    "S2Q8": {
+     "pred": true,
+     "correct": false,
+     "p_gold": 0.39949999999999997,
+     "brier": 0.36060025000000007,
+     "conf": 0.6005,
+     "answer": {
+      "answer": 0.6005,
+      "probabilities": {
+       "yes": 0.6005,
+       "no": 0.3995
+      },
+      "confidence": 0.6005
+     }
+    },
+    "S2Q9": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.8981,
+     "brier": 0.010383609999999998,
+     "conf": 0.8981,
+     "answer": {
+      "answer": 0.8981,
+      "probabilities": {
+       "yes": 0.8981,
+       "no": 0.1019
+      },
+      "confidence": 0.8981
+     }
+    },
+    "S2Q10": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.9025,
+     "brier": 0.009506250000000006,
+     "conf": 0.9025,
+     "answer": {
+      "answer": 0.9025,
+      "probabilities": {
+       "yes": 0.9025,
+       "no": 0.0975
+      },
+      "confidence": 0.9025
+     }
+    },
+    "S3Q1": {
+     "pred": "213",
+     "correct": true,
+     "p_gold": 0.9834,
+     "brier": 0.0003744599999999983,
+     "conf": 0.9834,
+     "answer": {
+      "answer": "213",
+      "probabilities": {
+       "160": 0.0044,
+       "213": 0.9834,
+       "231": 0.0045,
+       "312": 0.0077
+      },
+      "confidence": 0.9834,
+      "engine_confidence": 0.9779
+     }
+    },
+    "S3Q2": {
+     "pred": "Chloe Marchetti",
+     "correct": true,
+     "p_gold": 0.9735,
+     "brier": 0.0008511499999999983,
+     "conf": 0.9735,
+     "answer": {
+      "answer": "Chloe Marchetti",
+      "probabilities": {
+       "Amara Osei": 0.0041,
+       "Ben Kristiansen": 0.0055,
+       "Chloe Marchetti": 0.9735,
+       "Dev Ramaswamy": 0.004,
+       "Elena Voss": 0.0078,
+       "Farid Haddad": 0.005
+      },
+      "confidence": 0.9735,
+      "engine_confidence": 0.9682
+     }
+    },
+    "S3Q3": {
+     "pred": "onboarding redesign",
+     "correct": true,
+     "p_gold": 0.9932,
+     "brier": 6.734000000000038e-05,
+     "conf": 0.9932,
+     "answer": {
+      "answer": "onboarding redesign",
+      "probabilities": {
+       "launch date": 0.0011,
+       "pricing tier": 0.0015,
+       "onboarding redesign": 0.9932,
+       "support backlog": 0.0042
+      },
+      "confidence": 0.9932,
+      "engine_confidence": 0.991
+     }
+    },
+    "S3Q4": {
+     "pred": "4",
+     "correct": false,
+     "p_gold": 0.0818,
+     "brier": 1.29316238,
+     "conf": 0.6005,
+     "answer": {
+      "answer": "4",
+      "probabilities": {
+       "3": 0.2985,
+       "4": 0.6005,
+       "5": 0.0818,
+       "6": 0.0192
+      },
+      "confidence": 0.6005,
+      "engine_confidence": 0.4673
+     }
+    },
+    "S3Q5": {
+     "pred": "high",
+     "correct": true,
+     "p_gold": 0.9743,
+     "brier": 0.0011171399999999972,
+     "conf": 0.9743,
+     "answer": {
+      "answer": "high",
+      "probabilities": {
+       "low": 0.0049,
+       "medium": 0.0208,
+       "high": 0.9743
+      },
+      "confidence": 0.9743,
+      "expected_level": 1.969,
+      "engine_confidence": 0.9847
+     }
+    },
+    "S3Q6": {
+     "pred": "negative",
+     "correct": true,
+     "p_gold": 0.9881,
+     "brier": 0.00024522000000000053,
+     "conf": 0.9881,
+     "answer": {
+      "answer": "negative",
+      "probabilities": {
+       "negative": 0.9881,
+       "neutral": 0.01,
+       "positive": 0.0019
+      },
+      "confidence": 0.9881,
+      "expected_level": 0.014,
+      "engine_confidence": 0.9931
+     }
+    },
+    "S3Q7": {
+     "pred": true,
+     "correct": false,
+     "p_gold": 0.19830000000000003,
+     "brier": 0.6427228899999999,
+     "conf": 0.8017,
+     "answer": {
+      "answer": 0.8017,
+      "probabilities": {
+       "yes": 0.8017,
+       "no": 0.1983
+      },
+      "confidence": 0.8017
+     }
+    },
+    "S3Q8": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.9655,
+     "brier": 0.0011902499999999984,
+     "conf": 0.9655,
+     "answer": {
+      "answer": 0.9655,
+      "probabilities": {
+       "yes": 0.9655,
+       "no": 0.0345
+      },
+      "confidence": 0.9655
+     }
+    },
+    "S3Q9": {
+     "pred": false,
+     "correct": false,
+     "p_gold": 0.1415,
+     "brier": 0.7370222500000001,
+     "conf": 0.8585,
+     "answer": {
+      "answer": 0.1415,
+      "probabilities": {
+       "yes": 0.1415,
+       "no": 0.8585
+      },
+      "confidence": 0.8585
+     }
+    },
+    "S3Q10": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.5351,
+     "brier": 0.21613200999999999,
+     "conf": 0.5351,
+     "answer": {
+      "answer": 0.4649,
+      "probabilities": {
+       "yes": 0.4649,
+       "no": 0.5351
+      },
+      "confidence": 0.5351
+     }
+    },
+    "S4Q1": {
+     "pred": "$200.00",
+     "correct": false,
+     "p_gold": 0.1124,
+     "brier": 1.1042485199999998,
+     "conf": 0.5019,
+     "answer": {
+      "answer": "$200.00",
+      "probabilities": {
+       "$75.00": 0.0555,
+       "$105.00": 0.2239,
+       "$115.00": 0.1124,
+       "$125.00": 0.1063,
+       "$200.00": 0.5019
+      },
+      "confidence": 0.5019,
+      "engine_confidence": 0.3774
+     }
+    },
+    "S4Q2": {
+     "pred": "prohibited absolutely",
+     "correct": true,
+     "p_gold": 0.9883,
+     "brier": 0.00018458000000000103,
+     "conf": 0.9883,
+     "answer": {
+      "answer": "prohibited absolutely",
+      "probabilities": {
+       "allowed without consent": 0.005,
+       "allowed only with the Landlord's written consent": 0.0037,
+       "prohibited absolutely": 0.9883,
+       "allowed on payment of a fee": 0.003
+      },
+      "confidence": 0.9883,
+      "engine_confidence": 0.9844
+     }
+    },
+    "S4Q3": {
+     "pred": "not allowed because the dog exceeds the weight limit",
+     "correct": true,
+     "p_gold": 0.9784,
+     "brier": 0.000629699999999998,
+     "conf": 0.9784,
+     "answer": {
+      "answer": "not allowed because the dog exceeds the weight limit",
+      "probabilities": {
+       "allowed with the pet deposit and pet rent": 0.0071,
+       "allowed with written consent only": 0.0092,
+       "not allowed because the dog exceeds the weight limit": 0.9784,
+       "allowed because dogs are exempt from the limit": 0.0053
+      },
+      "confidence": 0.9784,
+      "engine_confidence": 0.9712
+     }
+    },
+    "S4Q4": {
+     "pred": "1 August 2027",
+     "correct": true,
+     "p_gold": 0.9713,
+     "brier": 0.0012582299999999971,
+     "conf": 0.9713,
+     "answer": {
+      "answer": "1 August 2027",
+      "probabilities": {
+       "1 July 2027": 0.0198,
+       "1 August 2027": 0.9713,
+       "31 August 2027": 0.0055,
+       "30 September 2027": 0.0035
+      },
+      "confidence": 0.9713,
+      "engine_confidence": 0.9618
+     }
+    },
+    "S4Q5": {
+     "pred": "1.5 months",
+     "correct": true,
+     "p_gold": 0.9851,
+     "brier": 0.00037025000000000073,
+     "conf": 0.9851,
+     "answer": {
+      "answer": "1.5 months",
+      "probabilities": {
+       "1 month": 0.003,
+       "1.5 months": 0.9851,
+       "2 months": 0.0118
+      },
+      "confidence": 0.9851,
+      "expected_level": 1.009,
+      "engine_confidence": 0.9926
+     }
+    },
+    "S4Q6": {
+     "pred": "within 24 hours",
+     "correct": true,
+     "p_gold": 0.9876,
+     "brier": 0.0002386399999999992,
+     "conf": 0.9876,
+     "answer": {
+      "answer": "within 24 hours",
+      "probabilities": {
+       "within 24 hours": 0.9876,
+       "within 7 days": 0.0082,
+       "within 30 days": 0.0042
+      },
+      "confidence": 0.9876,
+      "expected_level": 0.017,
+      "engine_confidence": 0.9917
+     }
+    },
+    "S4Q7": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.911,
+     "brier": 0.007921,
+     "conf": 0.911,
+     "answer": {
+      "answer": 0.089,
+      "probabilities": {
+       "yes": 0.089,
+       "no": 0.911
+      },
+      "confidence": 0.911
+     }
+    },
+    "S4Q8": {
+     "pred": true,
+     "correct": false,
+     "p_gold": 0.42379999999999995,
+     "brier": 0.33200644000000007,
+     "conf": 0.5762,
+     "answer": {
+      "answer": 0.5762,
+      "probabilities": {
+       "yes": 0.5762,
+       "no": 0.4238
+      },
+      "confidence": 0.5762
+     }
+    },
+    "S4Q9": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.9854,
+     "brier": 0.00021315999999999843,
+     "conf": 0.9854,
+     "answer": {
+      "answer": 0.9854,
+      "probabilities": {
+       "yes": 0.9854,
+       "no": 0.0146
+      },
+      "confidence": 0.9854
+     }
+    },
+    "S4Q10": {
+     "pred": false,
+     "correct": false,
+     "p_gold": 0.2564,
+     "brier": 0.55294096,
+     "conf": 0.7436,
+     "answer": {
+      "answer": 0.2564,
+      "probabilities": {
+       "yes": 0.2564,
+       "no": 0.7436
+      },
+      "confidence": 0.7436
+     }
+    },
+    "S5Q1": {
+     "pred": "2",
+     "correct": true,
+     "p_gold": 0.3788,
+     "brier": 0.54039393,
+     "conf": 0.3788,
+     "answer": {
+      "answer": "2",
+      "probabilities": {
+       "0": 0.1076,
+       "1": 0.1823,
+       "2": 0.3788,
+       "3": 0.3312
+      },
+      "confidence": 0.3788,
+      "engine_confidence": 0.1718
+     }
+    },
+    "S5Q2": {
+     "pred": "4",
+     "correct": false,
+     "p_gold": 0.306,
+     "brier": 0.6814432899999999,
+     "conf": 0.3504,
+     "answer": {
+      "answer": "4",
+      "probabilities": {
+       "2": 0.0768,
+       "3": 0.306,
+       "4": 0.3504,
+       "5": 0.2667
+      },
+      "confidence": 0.3504,
+      "engine_confidence": 0.1339
+     }
+    },
+    "S5Q3": {
+     "pred": "Jake M.",
+     "correct": true,
+     "p_gold": 0.918,
+     "brier": 0.009749539999999994,
+     "conf": 0.918,
+     "answer": {
+      "answer": "Jake M.",
+      "probabilities": {
+       "Colin B.": 0.0117,
+       "Jake M.": 0.918,
+       "Omar F.": 0.0496,
+       "Tom R.": 0.0207
+      },
+      "confidence": 0.918,
+      "engine_confidence": 0.8907
+     }
+    },
+    "S5Q4": {
+     "pred": "spanish",
+     "correct": true,
+     "p_gold": 0.9787,
+     "brier": 0.0006234199999999994,
+     "conf": 0.9787,
+     "answer": {
+      "answer": "spanish",
+      "probabilities": {
+       "english": 0.0056,
+       "french": 0.0051,
+       "spanish": 0.9787,
+       "german": 0.0106
+      },
+      "confidence": 0.9787,
+      "engine_confidence": 0.9717
+     }
+    },
+    "S5Q5": {
+     "pred": "negative",
+     "correct": true,
+     "p_gold": 0.9303,
+     "brier": 0.008602979999999998,
+     "conf": 0.9303,
+     "answer": {
+      "answer": "negative",
+      "probabilities": {
+       "negative": 0.9303,
+       "neutral": 0.0605,
+       "positive": 0.0092
+      },
+      "confidence": 0.9303,
+      "expected_level": 0.079,
+      "engine_confidence": 0.9605
+     }
+    },
+    "S5Q6": {
+     "pred": "4.0 or above",
+     "correct": false,
+     "p_gold": 0.3135,
+     "brier": 0.88577635,
+     "conf": 0.6423,
+     "answer": {
+      "answer": "4.0 or above",
+      "probabilities": {
+       "below 3.0": 0.0441,
+       "3.0 to 3.9": 0.3135,
+       "4.0 or above": 0.6423
+      },
+      "confidence": 0.6423,
+      "expected_level": 1.598,
+      "engine_confidence": 0.7991
+     }
+    },
+    "S5Q7": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.7605,
+     "brier": 0.05736025000000002,
+     "conf": 0.7605,
+     "answer": {
+      "answer": 0.7605,
+      "probabilities": {
+       "yes": 0.7605,
+       "no": 0.2395
+      },
+      "confidence": 0.7605
+     }
+    },
+    "S5Q8": {
+     "pred": true,
+     "correct": false,
+     "p_gold": 0.26780000000000004,
+     "brier": 0.5361168399999999,
+     "conf": 0.7322,
+     "answer": {
+      "answer": 0.7322,
+      "probabilities": {
+       "yes": 0.7322,
+       "no": 0.2678
+      },
+      "confidence": 0.7322
+     }
+    },
+    "S5Q9": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.8756,
+     "brier": 0.015475359999999988,
+     "conf": 0.8756,
+     "answer": {
+      "answer": 0.8756,
+      "probabilities": {
+       "yes": 0.8756,
+       "no": 0.1244
+      },
+      "confidence": 0.8756
+     }
+    },
+    "S5Q10": {
+     "pred": true,
+     "correct": false,
+     "p_gold": 0.47840000000000005,
+     "brier": 0.27206655999999996,
+     "conf": 0.5216,
+     "answer": {
+      "answer": 0.5216,
+      "probabilities": {
+       "yes": 0.5216,
+       "no": 0.4784
+      },
+      "confidence": 0.5216
+     }
+    },
+    "S6Q1": {
+     "pred": "hands-on cloud data warehouse experience",
+     "correct": false,
+     "p_gold": 0.1589,
+     "brier": 0.9163087999999999,
+     "conf": 0.3635,
+     "answer": {
+      "answer": "hands-on cloud data warehouse experience",
+      "probabilities": {
+       "at least five years building production data pipelines": 0.1589,
+       "expert-level Python and SQL": 0.1378,
+       "hands-on cloud data warehouse experience": 0.3635,
+       "right to work in the UK without sponsorship": 0.1681,
+       "all four are met": 0.1717
+      },
+      "confidence": 0.3635,
+      "engine_confidence": 0.2043
+     }
+    },
+    "S6Q2": {
+     "pred": "the claim about a master's degree in computer science",
+     "correct": true,
+     "p_gold": 0.9028,
+     "brier": 0.01291793999999999,
+     "conf": 0.9028,
+     "answer": {
+      "answer": "the claim about a master's degree in computer science",
+      "probabilities": {
+       "the claim about a master's degree in computer science": 0.9028,
+       "the claim about relocating to Bristol": 0.0235,
+       "the claim about leading the warehouse migration": 0.0268,
+       "the claim about mentoring two junior analysts": 0.0469
+      },
+      "confidence": 0.9028,
+      "engine_confidence": 0.8704
+     }
+    },
+    "S6Q3": {
+     "pred": "about 3.5 years",
+     "correct": true,
+     "p_gold": 0.5587,
+     "brier": 0.32347754000000006,
+     "conf": 0.5587,
+     "answer": {
+      "answer": "about 3.5 years",
+      "probabilities": {
+       "about 1.5 years": 0.3526,
+       "about 3.5 years": 0.5587,
+       "about 5 years": 0.0597,
+       "about 7 years": 0.029
+      },
+      "confidence": 0.5587,
+      "engine_confidence": 0.4116
+     }
+    },
+    "S6Q4": {
+     "pred": "1",
+     "correct": false,
+     "p_gold": 0.358,
+     "brier": 0.7605414500000001,
+     "conf": 0.589,
+     "answer": {
+      "answer": "1",
+      "probabilities": {
+       "0": 0.0318,
+       "1": 0.589,
+       "2": 0.358,
+       "3": 0.0211
+      },
+      "confidence": 0.589,
+      "engine_confidence": 0.452
+     }
+    },
+    "S6Q5": {
+     "pred": "before the closing date",
+     "correct": true,
+     "p_gold": 0.897,
+     "brier": 0.015917249999999994,
+     "conf": 0.897,
+     "answer": {
+      "answer": "before the closing date",
+      "probabilities": {
+       "before the closing date": 0.897,
+       "on the closing date": 0.0541,
+       "after the closing date": 0.0488
+      },
+      "confidence": 0.897,
+      "expected_level": 0.152,
+      "engine_confidence": 0.9241
+     }
+    },
+    "S6Q6": {
+     "pred": "within the range",
+     "correct": true,
+     "p_gold": 0.9539,
+     "brier": 0.0035129400000000026,
+     "conf": 0.9539,
+     "answer": {
+      "answer": "within the range",
+      "probabilities": {
+       "below the range": 0.0103,
+       "within the range": 0.9539,
+       "above the range": 0.0358
+      },
+      "confidence": 0.9539,
+      "expected_level": 1.026,
+      "engine_confidence": 0.977
+     }
+    },
+    "S6Q7": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.9828,
+     "brier": 0.00029584,
+     "conf": 0.9828,
+     "answer": {
+      "answer": 0.0172,
+      "probabilities": {
+       "yes": 0.0172,
+       "no": 0.9828
+      },
+      "confidence": 0.9828
+     }
+    },
+    "S6Q8": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.9789,
+     "brier": 0.0004452100000000003,
+     "conf": 0.9789,
+     "answer": {
+      "answer": 0.9789,
+      "probabilities": {
+       "yes": 0.9789,
+       "no": 0.0211
+      },
+      "confidence": 0.9789
+     }
+    },
+    "S6Q9": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.9641,
+     "brier": 0.001288810000000003,
+     "conf": 0.9641,
+     "answer": {
+      "answer": 0.9641,
+      "probabilities": {
+       "yes": 0.9641,
+       "no": 0.0359
+      },
+      "confidence": 0.9641
+     }
+    },
+    "S6Q10": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.8049,
+     "brier": 0.038064009999999995,
+     "conf": 0.8049,
+     "answer": {
+      "answer": 0.1951,
+      "probabilities": {
+       "yes": 0.1951,
+       "no": 0.8049
+      },
+      "confidence": 0.8049
+     }
+    },
+    "S7Q1": {
+     "pred": "$15.20",
+     "correct": true,
+     "p_gold": 0.987,
+     "brier": 0.0002341800000000003,
+     "conf": 0.987,
+     "answer": {
+      "answer": "$15.20",
+      "probabilities": {
+       "$14.00": 0.0023,
+       "$15.20": 0.987,
+       "$16.00": 0.0065,
+       "$18.00": 0.0042
+      },
+      "confidence": 0.987,
+      "engine_confidence": 0.9827
+     }
+    },
+    "S7Q2": {
+     "pred": "26 June",
+     "correct": true,
+     "p_gold": 0.9824,
+     "brier": 0.0004459699999999982,
+     "conf": 0.9824,
+     "answer": {
+      "answer": "26 June",
+      "probabilities": {
+       "15 June": 0.0036,
+       "20 June": 0.0033,
+       "26 June": 0.9824,
+       "30 June": 0.0106
+      },
+      "confidence": 0.9824,
+      "engine_confidence": 0.9765
+     }
+    },
+    "S7Q3": {
+     "pred": "Dario Benedetti",
+     "correct": true,
+     "p_gold": 0.9781,
+     "brier": 0.0007531400000000013,
+     "conf": 0.9781,
+     "answer": {
+      "answer": "Dario Benedetti",
+      "probabilities": {
+       "Tessa Marlowe": 0.0032,
+       "Kwame Osei": 0.0027,
+       "Dario Benedetti": 0.9781,
+       "nobody asked": 0.016
+      },
+      "confidence": 0.9781,
+      "engine_confidence": 0.9709
+     }
+    },
+    "S7Q4": {
+     "pred": "11 June",
+     "correct": true,
+     "p_gold": 0.9197,
+     "brier": 0.010966140000000008,
+     "conf": 0.9197,
+     "answer": {
+      "answer": "11 June",
+      "probabilities": {
+       "1 June": 0.0022,
+       "9 June": 0.012,
+       "11 June": 0.9197,
+       "15 June": 0.0661
+      },
+      "confidence": 0.9197,
+      "engine_confidence": 0.893
+     }
+    },
+    "S7Q5": {
+     "pred": "10% to 20%",
+     "correct": true,
+     "p_gold": 0.5144,
+     "brier": 0.35498112000000004,
+     "conf": 0.5144,
+     "answer": {
+      "answer": "10% to 20%",
+      "probabilities": {
+       "under 10%": 0.268,
+       "10% to 20%": 0.5144,
+       "over 20%": 0.2176
+      },
+      "confidence": 0.5144,
+      "expected_level": 0.95,
+      "engine_confidence": 0.7572
+     }
+    },
+    "S7Q6": {
+     "pred": "only after month 12",
+     "correct": true,
+     "p_gold": 0.9842,
+     "brier": 0.0003949400000000012,
+     "conf": 0.9842,
+     "answer": {
+      "answer": "only after month 12",
+      "probabilities": {
+       "at any time": 0.0047,
+       "only after month 12": 0.9842,
+       "not at all during the two-year term": 0.0111
+      },
+      "confidence": 0.9842,
+      "expected_level": 1.006,
+      "engine_confidence": 0.9921
+     }
+    },
+    "S7Q7": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.9557,
+     "brier": 0.00196249,
+     "conf": 0.9557,
+     "answer": {
+      "answer": 0.0443,
+      "probabilities": {
+       "yes": 0.0443,
+       "no": 0.9557
+      },
+      "confidence": 0.9557
+     }
+    },
+    "S7Q8": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.9585,
+     "brier": 0.0017222499999999985,
+     "conf": 0.9585,
+     "answer": {
+      "answer": 0.9585,
+      "probabilities": {
+       "yes": 0.9585,
+       "no": 0.0415
+      },
+      "confidence": 0.9585
+     }
+    },
+    "S7Q9": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.7892,
+     "brier": 0.04443663999999999,
+     "conf": 0.7892,
+     "answer": {
+      "answer": 0.2108,
+      "probabilities": {
+       "yes": 0.2108,
+       "no": 0.7892
+      },
+      "confidence": 0.7892
+     }
+    },
+    "S7Q10": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.9901,
+     "brier": 9.80100000000004e-05,
+     "conf": 0.9901,
+     "answer": {
+      "answer": 0.9901,
+      "probabilities": {
+       "yes": 0.9901,
+       "no": 0.0099
+      },
+      "confidence": 0.9901
+     }
+    },
+    "S8Q1": {
+     "pred": "$4.2 million",
+     "correct": false,
+     "p_gold": 0.0144,
+     "brier": 1.88282546,
+     "conf": 0.9544,
+     "answer": {
+      "answer": "$4.2 million",
+      "probabilities": {
+       "$4.2 million": 0.9544,
+       "$4.6 million": 0.0207,
+       "$6.0 million": 0.0144,
+       "$10.6 million": 0.0105
+      },
+      "confidence": 0.9544,
+      "engine_confidence": 0.9391
+     }
+    },
+    "S8Q2": {
+     "pred": "Councillor Ruben Castellanos",
+     "correct": true,
+     "p_gold": 0.9563,
+     "brier": 0.002974259999999997,
+     "conf": 0.9563,
+     "answer": {
+      "answer": "Councillor Ruben Castellanos",
+      "probabilities": {
+       "Mayor Delphine Aurelio": 0.0042,
+       "Councillor Ruben Castellanos": 0.9563,
+       "Finance Director Margit Halloran": 0.0082,
+       "none of the quoted officials": 0.0313
+      },
+      "confidence": 0.9563,
+      "engine_confidence": 0.9417
+     }
+    },
+    "S8Q3": {
+     "pred": "11.8%",
+     "correct": true,
+     "p_gold": 0.9836,
+     "brier": 0.00041096999999999906,
+     "conf": 0.9836,
+     "answer": {
+      "answer": "11.8%",
+      "probabilities": {
+       "6%": 0.0026,
+       "11.8%": 0.9836,
+       "12%": 0.0114,
+       "18.9%": 0.0023
+      },
+      "confidence": 0.9836,
+      "engine_confidence": 0.9782
+     }
+    },
+    "S8Q4": {
+     "pred": "7",
+     "correct": true,
+     "p_gold": 0.9718,
+     "brier": 0.0011187900000000001,
+     "conf": 0.9718,
+     "answer": {
+      "answer": "7",
+      "probabilities": {
+       "2": 0.0049,
+       "5": 0.0077,
+       "7": 0.9718,
+       "9": 0.0155
+      },
+      "confidence": 0.9718,
+      "engine_confidence": 0.9624
+     }
+    },
+    "S8Q5": {
+     "pred": "above the minimum",
+     "correct": true,
+     "p_gold": 0.9806,
+     "brier": 0.000593129999999999,
+     "conf": 0.9806,
+     "answer": {
+      "answer": "above the minimum",
+      "probabilities": {
+       "below the minimum": 0.0061,
+       "at the minimum": 0.0134,
+       "above the minimum": 0.9806
+      },
+      "confidence": 0.9806,
+      "expected_level": 1.974,
+      "engine_confidence": 0.9872
+     }
+    },
+    "S8Q6": {
+     "pred": "opposed",
+     "correct": true,
+     "p_gold": 0.9905,
+     "brier": 0.00014549999999999912,
+     "conf": 0.9905,
+     "answer": {
+      "answer": "opposed",
+      "probabilities": {
+       "opposed": 0.9905,
+       "neutral": 0.007,
+       "supportive": 0.0025
+      },
+      "confidence": 0.9905,
+      "expected_level": 0.012,
+      "engine_confidence": 0.994
+     }
+    },
+    "S8Q7": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.9848,
+     "brier": 0.00023104,
+     "conf": 0.9848,
+     "answer": {
+      "answer": 0.0152,
+      "probabilities": {
+       "yes": 0.0152,
+       "no": 0.9848
+      },
+      "confidence": 0.9848
+     }
+    },
+    "S8Q8": {
+     "pred": true,
+     "correct": false,
+     "p_gold": 0.14339999999999997,
+     "brier": 0.7337635600000001,
+     "conf": 0.8566,
+     "answer": {
+      "answer": 0.8566,
+      "probabilities": {
+       "yes": 0.8566,
+       "no": 0.1434
+      },
+      "confidence": 0.8566
+     }
+    },
+    "S8Q9": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.9452,
+     "brier": 0.0030030399999999955,
+     "conf": 0.9452,
+     "answer": {
+      "answer": 0.9452,
+      "probabilities": {
+       "yes": 0.9452,
+       "no": 0.0548
+      },
+      "confidence": 0.9452
+     }
+    },
+    "S8Q10": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.9063,
+     "brier": 0.008779690000000001,
+     "conf": 0.9063,
+     "answer": {
+      "answer": 0.9063,
+      "probabilities": {
+       "yes": 0.9063,
+       "no": 0.0937
+      },
+      "confidence": 0.9063
+     }
+    },
+    "S9Q1": {
+     "pred": "26-28 June",
+     "correct": true,
+     "p_gold": 0.9888,
+     "brier": 0.00016997999999999972,
+     "conf": 0.9888,
+     "answer": {
+      "answer": "26-28 June",
+      "probabilities": {
+       "19-21 June": 0.0035,
+       "26-28 June": 0.9888,
+       "12-14 June": 0.005,
+       "3-5 July": 0.0027
+      },
+      "confidence": 0.9888,
+      "engine_confidence": 0.9851
+     }
+    },
+    "S9Q2": {
+     "pred": "Leon",
+     "correct": true,
+     "p_gold": 0.9931,
+     "brier": 6.305000000000023e-05,
+     "conf": 0.9931,
+     "answer": {
+      "answer": "Leon",
+      "probabilities": {
+       "Maya": 0.001,
+       "Theo": 0.0012,
+       "Zara": 0.0012,
+       "Leon": 0.9931,
+       "Ines": 0.0034
+      },
+      "confidence": 0.9931,
+      "engine_confidence": 0.9914
+     }
+    },
+    "S9Q3": {
+     "pred": "$210",
+     "correct": false,
+     "p_gold": 0.1293,
+     "brier": 1.13046733,
+     "conf": 0.4912,
+     "answer": {
+      "answer": "$210",
+      "probabilities": {
+       "$180": 0.0178,
+       "$184": 0.3616,
+       "$210": 0.4912,
+       "$220": 0.1293
+      },
+      "confidence": 0.4912,
+      "engine_confidence": 0.3216
+     }
+    },
+    "S9Q4": {
+     "pred": "3",
+     "correct": true,
+     "p_gold": 0.8589,
+     "brier": 0.02778566,
+     "conf": 0.8589,
+     "answer": {
+      "answer": "3",
+      "probabilities": {
+       "2": 0.0469,
+       "3": 0.8589,
+       "4": 0.072,
+       "5": 0.0222
+      },
+      "confidence": 0.8589,
+      "engine_confidence": 0.8119
+     }
+    },
+    "S9Q5": {
+     "pred": "2",
+     "correct": true,
+     "p_gold": 0.9549,
+     "brier": 0.0035161400000000027,
+     "conf": 0.9549,
+     "answer": {
+      "answer": "2",
+      "probabilities": {
+       "1": 0.0073,
+       "2": 0.9549,
+       "3": 0.0378
+      },
+      "confidence": 0.9549,
+      "expected_level": 1.03,
+      "engine_confidence": 0.9774
+     }
+    },
+    "S9Q6": {
+     "pred": "after check-in opens",
+     "correct": true,
+     "p_gold": 0.8833,
+     "brier": 0.022151180000000006,
+     "conf": 0.8833,
+     "answer": {
+      "answer": "after check-in opens",
+      "probabilities": {
+       "before check-in opens": 0.0877,
+       "exactly when check-in opens": 0.029,
+       "after check-in opens": 0.8833
+      },
+      "confidence": 0.8833,
+      "expected_level": 1.796,
+      "engine_confidence": 0.8978
+     }
+    },
+    "S9Q7": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.941,
+     "brier": 0.0034810000000000062,
+     "conf": 0.941,
+     "answer": {
+      "answer": 0.941,
+      "probabilities": {
+       "yes": 0.941,
+       "no": 0.059
+      },
+      "confidence": 0.941
+     }
+    },
+    "S9Q8": {
+     "pred": true,
+     "correct": false,
+     "p_gold": 0.4346,
+     "brier": 0.31967716,
+     "conf": 0.5654,
+     "answer": {
+      "answer": 0.5654,
+      "probabilities": {
+       "yes": 0.5654,
+       "no": 0.4346
+      },
+      "confidence": 0.5654
+     }
+    },
+    "S9Q9": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.6677,
+     "brier": 0.11042329,
+     "conf": 0.6677,
+     "answer": {
+      "answer": 0.3323,
+      "probabilities": {
+       "yes": 0.3323,
+       "no": 0.6677
+      },
+      "confidence": 0.6677
+     }
+    },
+    "S9Q10": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.9465,
+     "brier": 0.0028622499999999993,
+     "conf": 0.9465,
+     "answer": {
+      "answer": 0.9465,
+      "probabilities": {
+       "yes": 0.9465,
+       "no": 0.0535
+      },
+      "confidence": 0.9465
+     }
+    },
+    "S10Q1": {
+     "pred": "3.4",
+     "correct": true,
+     "p_gold": 0.9907,
+     "brier": 0.00011483999999999953,
+     "conf": 0.9907,
+     "answer": {
+      "answer": "3.4",
+      "probabilities": {
+       "3.1": 0.0012,
+       "3.2": 0.0015,
+       "3.3": 0.0021,
+       "3.4": 0.9907,
+       "not fixed in any listed version": 0.0045
+      },
+      "confidence": 0.9907,
+      "engine_confidence": 0.9884
+     }
+    },
+    "S10Q2": {
+     "pred": "BR-1",
+     "correct": true,
+     "p_gold": 0.9909,
+     "brier": 0.00011876999999999995,
+     "conf": 0.9909,
+     "answer": {
+      "answer": "BR-1",
+      "probabilities": {
+       "BR-1": 0.9909,
+       "BR-2": 0.0022,
+       "BR-3": 0.0014,
+       "it is not a duplicate": 0.0054
+      },
+      "confidence": 0.9909,
+      "engine_confidence": 0.9879
+     }
+    },
+    "S10Q3": {
+     "pred": "1",
+     "correct": true,
+     "p_gold": 0.9877,
+     "brier": 0.00020300999999999945,
+     "conf": 0.9877,
+     "answer": {
+      "answer": "1",
+      "probabilities": {
+       "0": 0.0038,
+       "1": 0.9877,
+       "2": 0.0052,
+       "3": 0.0032
+      },
+      "confidence": 0.9877,
+      "engine_confidence": 0.9836
+     }
+    },
+    "S10Q4": {
+     "pred": "3.3",
+     "correct": true,
+     "p_gold": 0.8285,
+     "brier": 0.03878954999999999,
+     "conf": 0.8285,
+     "answer": {
+      "answer": "3.3",
+      "probabilities": {
+       "3.1": 0.0087,
+       "3.2": 0.0369,
+       "3.3": 0.8285,
+       "3.4": 0.064,
+       "none": 0.062
+      },
+      "confidence": 0.8285,
+      "engine_confidence": 0.7856
+     }
+    },
+    "S10Q5": {
+     "pred": "3",
+     "correct": true,
+     "p_gold": 0.4059,
+     "brier": 0.51618481,
+     "conf": 0.4059,
+     "answer": {
+      "answer": "3",
+      "probabilities": {
+       "1": 0.158,
+       "2": 0.365,
+       "3": 0.4059,
+       "4": 0.071
+      },
+      "confidence": 0.4059,
+      "expected_level": 1.39,
+      "engine_confidence": 0.7493
+     }
+    },
+    "S10Q6": {
+     "pred": "critical",
+     "correct": true,
+     "p_gold": 0.9882,
+     "brier": 0.00025304000000000076,
+     "conf": 0.9882,
+     "answer": {
+      "answer": "critical",
+      "probabilities": {
+       "minor": 0.0012,
+       "major": 0.0106,
+       "critical": 0.9882
+      },
+      "confidence": 0.9882,
+      "expected_level": 1.987,
+      "engine_confidence": 0.9935
+     }
+    },
+    "S10Q7": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.6168,
+     "brier": 0.14684223999999999,
+     "conf": 0.6168,
+     "answer": {
+      "answer": 0.3832,
+      "probabilities": {
+       "yes": 0.3832,
+       "no": 0.6168
+      },
+      "confidence": 0.6168
+     }
+    },
+    "S10Q8": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.9804,
+     "brier": 0.0003841599999999981,
+     "conf": 0.9804,
+     "answer": {
+      "answer": 0.9804,
+      "probabilities": {
+       "yes": 0.9804,
+       "no": 0.0196
+      },
+      "confidence": 0.9804
+     }
+    },
+    "S10Q9": {
+     "pred": true,
+     "correct": true,
+     "p_gold": 0.6605,
+     "brier": 0.11526025000000002,
+     "conf": 0.6605,
+     "answer": {
+      "answer": 0.6605,
+      "probabilities": {
+       "yes": 0.6605,
+       "no": 0.3395
+      },
+      "confidence": 0.6605
+     }
+    },
+    "S10Q10": {
+     "pred": false,
+     "correct": true,
+     "p_gold": 0.5179,
+     "brier": 0.23242040999999997,
+     "conf": 0.5179,
+     "answer": {
+      "answer": 0.4821,
+      "probabilities": {
+       "yes": 0.4821,
+       "no": 0.5179
+      },
+      "confidence": 0.5179
+     }
+    }
+   },
+   "calls": [
+    {
+     "state": "support_thread",
+     "n": 10,
+     "ms": 247514.01376724243
+    },
+    {
+     "state": "postmortem",
+     "n": 10,
+     "ms": 258918.13492774963
+    },
+    {
+     "state": "meeting_transcript",
+     "n": 10,
+     "ms": 230641.5467262268
+    },
+    {
+     "state": "lease_agreement",
+     "n": 10,
+     "ms": 221002.68387794495
+    },
+    {
+     "state": "reviews_batch",
+     "n": 10,
+     "ms": 200514.7705078125
+    },
+    {
+     "state": "hiring_packet",
+     "n": 10,
+     "ms": 203320.16706466675
+    },
+    {
+     "state": "vendor_negotiation",
+     "n": 10,
+     "ms": 244698.89187812805
+    },
+    {
+     "state": "news_report",
+     "n": 10,
+     "ms": 191762.0177268982
+    },
+    {
+     "state": "group_chat",
+     "n": 10,
+     "ms": 274016.886472702
+    },
+    {
+     "state": "release_notes",
+     "n": 10,
+     "ms": 207827.38757133484
+    }
+   ]
+  }
+ }
+}

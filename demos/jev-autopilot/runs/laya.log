@@ -1,0 +1,8 @@
+== laya seed 42 real time
+timeout, last status: {"phase":"grounded","altitude":0,"distanceToPad":192.1,"simSeconds":271.8,"decisions":0,"stale":48,"errors":0,"landingCommitted":false}
+null
+== laya seed 42 timescale 0.1
+timeout, last status: {"phase":"grounded","altitude":0,"distanceToPad":192.1,"simSeconds":108.4,"decisions":0,"stale":167,"errors":0,"landingCommitted":false}
+video: /home/seb/jevlab/demos/jev-autopilot/runs/video-laya/page@830fef3070526c91027fef9761b75035.webm
+null
+LAYA_DONE
