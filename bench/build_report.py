@@ -555,6 +555,7 @@ page = f"""<!doctype html>
 
 <h2>Method</h2>
 <div class="card"><ul>
+<li><b>Code and data.</b> Everything here (question sets, adapters, benchmark and analysis scripts, the demo forks and every run log) is public at <a href="https://github.com/sebderhy/jevlab">github.com/sebderhy/jevlab</a>, MIT.</li>
 <li><b>Dataset.</b> {n_items} questions over {n_states} short states, written and labelled by hand for this benchmark. No product data. Categories: {', '.join(CATS)}. Question types: noul (true/false statement), choice (2 to 5 options, most with one-line descriptions), score (3 ordered levels).</li>
 <li><b>Protocol.</b> All questions about one state are sent together in one call, the way the Jev API works. Same state text and same question wording for every model. One run, no retries, no prompt tuning per model beyond the mapping below.</li>
 <li><b>Cost.</b> Token counts come from each API's usage field, summed over the run. Prices are list prices at the time of the run: TypeSafe $0.042 per million input tokens (output free); Fireworks serverless DeepSeek V4.1 Flash $0.30 per million input and $1.20 per million output tokens (the recipe emits one output token per question). The open models run on this box's CPU, so their marginal cost is zero and is shown as such.</li>
